@@ -1,0 +1,28 @@
+// MEDIA QUERIES SAMPLE
+@mixin devices($breakpoint){
+    @if $breakpoint == TV {
+        @media only screen and (min-width: 1201px) {
+            @content
+        }
+    };
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 1200px) {
+            @content
+        }
+    };
+    @if $breakpoint == laptops {
+        @media only screen and (max-width: 1024px) {
+            @content
+        }
+    };
+    @if $breakpoint == ipad {
+        @media only screen and (max-width: 820px) {
+          @content;
+        }
+    }
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: 481px) {
+          @content;
+        }
+    }
+}

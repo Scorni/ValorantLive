@@ -1,0 +1,26 @@
+@import  '../Helpers/flexboxLayout.scss' ;
+@import  '../Helpers/mediaQueries' ;
+@import  '../Helpers/ceaser' ;
+
+
+.table{
+    width: 95vw;
+    margin: 2%;
+    .leagues{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        overflow: hidden;
+        td{
+            .imgLeague{
+                height: 48px;
+             }
+            text-overflow: ellipsis;
+            padding-inline: 1.5vw;
+            padding-block: 0.975vh;
+            max-width: 350px;
+        }
+                
+    }
+}
+

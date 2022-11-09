@@ -1,0 +1,153 @@
+  /*******************************
+            Flex Layout
+  *******************************/
+  
+  /************************************
+                Flex
+  *********************************/
+  .flex  {
+    display: flex;
+  };
+  .flexRow  {
+    display: flex;
+    flex-direction: row;
+  };
+  
+  .flexRowReverse  {
+    display: flex;
+    flex-direction: row-reverse;
+  };
+  .flexColumn {
+    display: flex;
+    flex-direction: column;
+  };
+  .flexColumnReverse {
+    display: flex;
+    flex-direction: column-reverse;
+  };
+  
+  /************************************
+              Inline
+  *********************************/
+  .inlineRow  {
+    display: inline;
+    flex-direction: row;
+  };
+  
+  .inlineRowReverse  {
+    display: inline;
+    flex-direction: row-reverse;
+  };
+  .inlineColumn {
+    display: inline;
+    flex-direction: column;
+  };
+  .inlineColumnReverse {
+    display: inline; 
+    flex-direction: column-reverse;
+  };
+  /************************************
+        Wrap : align on one line or on multiple with auto resize
+  *********************************/
+ 
+  .flexWrap{
+    flex-wrap: wrap;
+  };
+
+  .flexNoWrap{
+    flex-wrap: nowrap;
+  };
+
+  .flexWrapReverse{
+    flex-wrap: wrap-reverse;
+  };
+
+  /************************************
+          Width inside the flexboc
+  *********************************/
+  .flex-auto {
+    flex: 1 1 auto
+  };
+  .flex-none {
+    flex: none
+  };
+  .flex-1 {
+    flex: 1
+  };
+  .flex-2 {
+    flex: 2
+  };
+  .flex-3 {
+    flex: 3
+  };
+  .flex-4 {
+    flex: 4
+  };
+  .flex-5 {
+    flex: 5  
+  };
+  .flex-6 {
+    flex: 6
+  };
+  .flex-7 {
+    flex: 7
+  };
+  .flex-8 {
+    flex: 8
+  };
+  .flex-9 {
+    flex: 9
+  };
+  .flex-10 {
+    flex: 10
+  };
+  .flex-11 {
+    flex: 11
+  };
+  .flex-12 {
+    flex: 12
+  };
+
+  /************************************
+          alignment in cross axis | and main axis -
+  *********************************/
+  
+  .alignStart{
+    align-items: flex-start;
+    justify-content: flex-start;
+
+  };
+  .alignCenter{
+    align-items: center;
+    justify-content: center;
+
+  };
+  .alignEnd{
+    align-items: flex-end;
+    justify-content: flex-end;
+
+  };
+  .spaceAround {
+    justify-content: space-around;
+
+  };
+  .spaceBetween {
+    justify-content: space-between;
+  };
+
+  /************************************
+        self alignment 
+  ************************************/
+
+  .selfStart{
+    align-self: flex-start
+  };
+  .selfCenter {
+    align-self: center
+  };
+  .selfEnd {
+    align-self: flex-end
+  };
+  .selfStretch {
+    align-self: stretch
+  };
