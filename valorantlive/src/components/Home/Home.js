@@ -24,12 +24,6 @@ export default function Rank(props) {
         
     }, [setData])
 
-    function linkGenerator(url){
-        let Element = (url).replaceAll('-', '')
-        Element = Element.charAt(0).toUpperCase() + Element.slice(1)
-        console.log(Element);
-        return Element
-    }
 
     return (
         <div>
@@ -42,9 +36,9 @@ export default function Rank(props) {
                             
                             
                             return (
-                                <tr id="ranks" className={value.id} key={index} title="loading..." >
+                                <tr id="ranks" className={value.id} key={index} title={value.name} >
                                     <td className='bordered'>
-                                        <NavLink className="navlink" to={`/${linkGenerator(value.slug)}/Leagues`}>{value.name}</NavLink>    
+                                        <NavLink className="navlink" to={`/${value.slug}/Leagues`}>{value.name}</NavLink>    
                                     </td>
                                 </tr>
                             )

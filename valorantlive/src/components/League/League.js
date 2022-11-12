@@ -1,32 +1,37 @@
 import '../../assets/style/Valorant/valorant.scss';
 import React,{ useState, useEffect} from "react";
 import axios from "axios";
-import {linkGenerator, matchingGame} from '../../utils/commun'
+import {linkGenerator, matchingGame,sortByTournament,withoutHyphen} from '../../utils/commun'
 import { NavLink,useParams } from "react-router-dom";
 
 export default function Valorant(props) {
     const [data, setData] = useState(false);
+    const [tournaments, setTournaments] = useState(false)
     const [table, setTable] = useState([])
     //setData will prevent from infinite call to the api
-    const {game} = useParams()
-
+    const {game,league,id}= useParams()
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'http://localhost:8000/leagues',
+            url: 'http://localhost:8000/league',
             params:{
-                games: matchingGame(game)
+                games: matchingGame(game),
+                league: league,
+                id: id
             }
         }
         const fetchData = async () => {
             await axios.request(options).then(function (response) {
+                setTournaments(sortByTournament(response.data))
+
                 const dataByFour = (response.data).reduce(function (dataByFour, key, index) { 
                     return (index % 4 === 0 ? dataByFour.push([key]) 
                       : dataByFour[dataByFour.length-1].push(key)) && dataByFour;
                   }, []);
                 setData(dataByFour);
+                // console.log(response.data);
             }).catch(function (error) {
-                console.error(error);
+                console.log(error);
             });
         }
         fetchData()
@@ -42,7 +47,8 @@ export default function Valorant(props) {
                     html += "<td class='tdImg'>"+
                                 "<img class='imgLeague' src='"+data[i][j].image_url +"'></img>"+
                                 "<br/>"+
-                                "<a target='_parent' href='/"+game +"/Leagues/"+ linkGenerator(data[i][j].slug)+"/"+ data[i][j].id +"'>"+data[i][j].name+"</a>"+
+                                "<a target='_parent' href='/"+game +"/Leagues/"+ linkGenerator(data[i][j].slug)+"'>"+data[i][j].name+"</a>"+
+                                "<p>"+data[i][j].tournament_id+"</p>"+
                             "</td>"
                 }
                 html += "</tr>"
@@ -51,7 +57,22 @@ export default function Valorant(props) {
 
         }
     },[data])
-    
+    useEffect(() => {
+        if(tournaments){
+            let html = ""
+                
+                for( let j in tournaments){
+                    // console.log(data);
+                    html += "<tr class='leagues'>"+
+                            "<td class='tdImg'>"+
+                                "<a target='_parent' href='/"+game +"/Leagues/"+ linkGenerator(tournaments[j])+"'>"+withoutHyphen(tournaments[j],game)+"</a>"+
+                            "</td>"+
+                            "</tr>"
+                }
+            setTable(html)
+
+        }
+    },[tournaments])
     return (
         <div>
             <h1>Welcome There</h1>

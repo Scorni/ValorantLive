@@ -1,7 +1,6 @@
 const PORT = 8000
 const express = require('express')
 const cors = require('cors')
-const axios = require('axios')
 require('dotenv').config()
 
 const app = express()
@@ -29,10 +28,11 @@ app.get('/live', (req,res) => {
 })
 app.get('/leagues', (req,res) => {
     const axios = require("axios");
-    console.log(req);
+    console.log(req.query.games);
+    const game = req.query.games
     const options = {
         method: 'GET',
-        url: 'https://api.pandascore.co/valorant/leagues?sort=&page=1&per_page=50',
+        url: 'https://api.pandascore.co/'+ game +'/leagues?sort=&page=1&per_page=100',
         headers: {
             'Authorization': 'Bearer '+ process.env.REACT_APP_PANDASCORE,
             'Accept': 'application/json'
@@ -40,8 +40,61 @@ app.get('/leagues', (req,res) => {
     };
     axios.request(options).then(function (response) {
         res.json(response.data);
+        // console.log(response.data);
     }).catch(function (error) {
         console.error(error);
     });
+
+})
+app.get('/league', (req,res) => {
+    const axios = require("axios");
+    console.log(req.query.games);
+    const game = req.query.games
+    const league = req.query.league
+    const id = req.query.id
+    console.log(id);
+    const options = {
+        method: 'GET',
+        url: 'https://api.pandascore.co/'+game+'/series?sort=begin_at&sort=slug&filter[league_id]='+id+'&page=1&per_page=50',
+
+        // url: 'https://api.pandascore.co/'+ game +'/matches?filter[league_id][0]='+ id +'&sort=&page=1&per_page=50',
+        headers: {
+            'Authorization': 'Bearer '+ process.env.REACT_APP_PANDASCORE,
+            'Accept': 'application/json'
+        }
+    };
+    axios.request(options).then(function (response) {
+        res.json(response.data);
+        // console.log(response.data);
+    }).catch(function (error) {
+        console.error(error);
+    });
+
+})
+app.get('/series', (req,res) => {
+    const axios = require("axios");
+    
+    const options = {
+        method: 'GET',
+        url: 'https://api.pandascore.co/valorant/series?filter[league_id]=4744&sort=&page=2&per_page=10',
+        // url: 'https://api.pandascore.co/'+ game +'/matches?filter[league_id][0]='+ id +'&sort=&page=1&per_page=50',
+        headers: {
+            'Authorization': 'Bearer '+ process.env.REACT_APP_PANDASCORE,
+            'Accept': 'application/json'
+        }
+    };
+    axios.request(options).then(function (response) {
+        res.json(response.data);
+        console.log(response.data);
+    }).catch(function (error) {
+        console.error(error);
+    });
+
 })
 app.listen(8000, () => console.log('Server is running on http://localhost:' + PORT))
+
+
+
+/*
+**  VALORANT'S SYSTEM  LEAGUE > SERIES > TOURNAMENT
+*/
