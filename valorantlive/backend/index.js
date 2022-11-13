@@ -46,7 +46,7 @@ app.get('/leagues', (req,res) => {
     });
 
 })
-app.get('/league', (req,res) => {
+app.get('/series', (req,res) => {
     const axios = require("axios");
     console.log(req.query.games);
     const game = req.query.games
@@ -55,7 +55,7 @@ app.get('/league', (req,res) => {
     console.log(id);
     const options = {
         method: 'GET',
-        url: 'https://api.pandascore.co/'+game+'/series?sort=begin_at&sort=slug&filter[league_id]='+id+'&page=1&per_page=50',
+        url: 'https://api.pandascore.co/'+game+'/series?sort=-year&filter[league_id]='+id+'&page=1&per_page=50',
 
         // url: 'https://api.pandascore.co/'+ game +'/matches?filter[league_id][0]='+ id +'&sort=&page=1&per_page=50',
         headers: {
@@ -65,18 +65,64 @@ app.get('/league', (req,res) => {
     };
     axios.request(options).then(function (response) {
         res.json(response.data);
-        // console.log(response.data);
+        console.log(response.data);
     }).catch(function (error) {
         console.error(error);
     });
 
 })
-app.get('/series', (req,res) => {
+app.get('/tournaments', (req,res) => {
     const axios = require("axios");
-    
+    const game = req.query.games
+    const league = req.query.league
+    const id = req.query.id
     const options = {
         method: 'GET',
-        url: 'https://api.pandascore.co/valorant/series?filter[league_id]=4744&sort=&page=2&per_page=10',
+        url: 'https://api.pandascore.co/'+game+'/tournaments?filter[serie_id]='+id+'&sort=&page=1&per_page=50',
+        // url: 'https://api.pandascore.co/'+ game +'/matches?filter[league_id][0]='+ id +'&sort=&page=1&per_page=50',
+        headers: {
+            'Authorization': 'Bearer '+ process.env.REACT_APP_PANDASCORE,
+            'Accept': 'application/json'
+        }
+    };
+    axios.request(options).then(function (response) {
+        res.json(response.data);
+        console.log(response.data);
+    }).catch(function (error) {
+        console.error(error);
+    });
+
+})
+app.get('/matches', (req,res) => {
+    const axios = require("axios");
+    const game = req.query.games
+    const league = req.query.league
+    const id = req.query.id
+    const options = {
+        method: 'GET',
+        url: 'https://api.pandascore.co/'+game+'/matches?filter[tournament_id]='+id+'&sort=&page=1&per_page=50',
+        // url: 'https://api.pandascore.co/'+ game +'/matches?filter[league_id][0]='+ id +'&sort=&page=1&per_page=50',
+        headers: {
+            'Authorization': 'Bearer '+ process.env.REACT_APP_PANDASCORE,
+            'Accept': 'application/json'
+        }
+    };
+    axios.request(options).then(function (response) {
+        res.json(response.data);
+        console.log(response.data);
+    }).catch(function (error) {
+        console.error(error);
+    });
+
+})
+app.get('/match', (req,res) => {
+    const axios = require("axios");
+    const game = req.query.games
+    const league = req.query.league
+    const id = req.query.id
+    const options = {
+        method: 'GET',
+        url: 'https://api.pandascore.co/'+game+'/matches?filter[id]='+id+'&sort=&page=1&per_page=50',
         // url: 'https://api.pandascore.co/'+ game +'/matches?filter[league_id][0]='+ id +'&sort=&page=1&per_page=50',
         headers: {
             'Authorization': 'Bearer '+ process.env.REACT_APP_PANDASCORE,

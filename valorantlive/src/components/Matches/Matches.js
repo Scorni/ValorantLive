@@ -4,18 +4,19 @@ import axios from "axios";
 import {linkGenerator, matchingGame} from '../../utils/commun'
 import { NavLink,useParams } from "react-router-dom";
 
-export default function Valorant(props) {
+export default function Matches(props) {
     const [data, setData] = useState(false);
     const [table, setTable] = useState([])
     //setData will prevent from infinite call to the api
-    const {game} = useParams()
-
+    const {game,id,seriesid,tournamentsid} = useParams()
+    console.log(useParams());
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'http://localhost:8000/leagues',
+            url: 'http://localhost:8000/matches',
             params:{
-                games: matchingGame(game)
+                games: matchingGame(game),
+                id: tournamentsid
             }
         }
         const fetchData = async () => {
@@ -40,9 +41,9 @@ export default function Valorant(props) {
                 for( let j in data[i]){
                     // console.log(data);
                     html += "<td class='tdImg'>"+
-                                "<img class='imgLeague' src='"+data[i][j].image_url +"'></img>"+
+                                "<img class='imgLeague' src='"+data[i][j].league.image_url +"'></img>"+
                                 "<br/>"+
-                                "<a target='_parent' href='/"+game +"/Leagues/"+  data[i][j].id +"/Series'>"+data[i][j].name+"</a>"+
+                                "<a target='_parent' href='/"+game +"/Leagues/"+ id +"/Series/" + seriesid +"/Tournaments/" + tournamentsid +"/Matches/"+data[i][j].id+"/Match'>"+data[i][j].name+"</a>"+
                             "</td>"
                 }
                 html += "</tr>"

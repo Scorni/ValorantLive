@@ -1,17 +1,23 @@
 import '../../assets/style/Valorant/valorant.scss';
 import React,{ useState, useEffect} from "react";
 import axios from "axios";
-import linkGenerator from '../../utils/commun'
-import { NavLink } from "react-router-dom";
+import {linkGenerator, matchingGame} from '../../utils/commun'
+import { NavLink,useParams } from "react-router-dom";
 
-export default function Valorant(props) {
+export default function Match(props) {
     const [data, setData] = useState(false);
     const [table, setTable] = useState([])
     //setData will prevent from infinite call to the api
+    const {game,id,seriesid,tournamentsid,matchid} = useParams()
+    console.log(useParams());
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'http://localhost:8000/leagues'
+            url: 'http://localhost:8000/match',
+            params:{
+                games: matchingGame(game),
+                id: matchid
+            }
         }
         const fetchData = async () => {
             await axios.request(options).then(function (response) {
@@ -27,15 +33,19 @@ export default function Valorant(props) {
         fetchData()
         
     }, [setData])
+    //TODO: get detailled of a game (using game endpoint ?)
     useEffect(() => {
         if(data){
-            console.log(data);
             let html = ""
             for (let i in data){
                 html += "<tr class='leagues'>"
                 for( let j in data[i]){
                     // console.log(data);
-                    html += "<td class='tdImg'><img class='imgLeague' src='"+data[i][j].image_url +"'></img><br/><a target='_parent' href='/Valorant/"+ linkGenerator(data[i][j].slug)+"'>"+data[i][j].name+"</a></td>"
+                    html += "<td class='tdImg'>"+
+                                "<img class='imgLeague' src='"+data[i][j].league.image_url +"'></img>"+
+                                "<br/>"+
+                                "<a target='_parent' href='/"+game +"/Leagues/"+ id +"/Series/" + seriesid +"/Tournaments/" + tournamentsid +"/Matches/"+data[i][j].id+"'>"+data[i][j].name+"</a>"+
+                            "</td>"
                 }
                 html += "</tr>"
             }
