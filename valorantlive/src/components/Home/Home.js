@@ -1,8 +1,7 @@
 
 import React,{ useState, useEffect} from "react";
-import axios from "axios";
 import { NavLink } from "react-router-dom";
-
+import { fetchData } from "../../utils/commun";
 
 export default function Rank(props) {
     const [data, setData] = useState(false);
@@ -13,17 +12,8 @@ export default function Rank(props) {
             method: 'GET',
             url: 'http://localhost:8000/live'
         }
-        const fetchData = async () => {
-            await axios.request(options).then(function (response) {
-                setData(response.data);
-            }).catch(function (error) {
-                console.error(error);
-            });
-        }
-        fetchData()
-        
+        fetchData(options,setData)
     }, [setData])
-
 
     return (
         <div>
@@ -33,8 +23,6 @@ export default function Rank(props) {
                 <tbody>
                 {data &&
                     data.map((value, index) => {
-                            
-                            
                             return (
                                 <tr id="ranks" className={value.id} key={index} title={value.name} >
                                     <td className='bordered'>

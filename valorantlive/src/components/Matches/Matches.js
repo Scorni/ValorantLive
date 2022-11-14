@@ -1,15 +1,14 @@
 import '../../assets/style/Valorant/valorant.scss';
 import React,{ useState, useEffect} from "react";
-import axios from "axios";
-import {linkGenerator, matchingGame} from '../../utils/commun'
-import { NavLink,useParams } from "react-router-dom";
+import { matchingGame,fetchDataByFour} from '../../utils/commun'
+import { useParams } from "react-router-dom";
 
 export default function Matches(props) {
     const [data, setData] = useState(false);
     const [table, setTable] = useState([])
     //setData will prevent from infinite call to the api
     const {game,id,seriesid,tournamentsid} = useParams()
-    console.log(useParams());
+
     useEffect(() => {
         const options = {
             method: 'GET',
@@ -19,20 +18,9 @@ export default function Matches(props) {
                 id: tournamentsid
             }
         }
-        const fetchData = async () => {
-            await axios.request(options).then(function (response) {
-                const dataByFour = (response.data).reduce(function (dataByFour, key, index) { 
-                    return (index % 4 === 0 ? dataByFour.push([key]) 
-                      : dataByFour[dataByFour.length-1].push(key)) && dataByFour;
-                  }, []);
-                setData(dataByFour);
-            }).catch(function (error) {
-                console.error(error);
-            });
-        }
-        fetchData()
-        
+        fetchDataByFour(options,setData)
     }, [setData])
+
     useEffect(() => {
         if(data){
             let html = ""
@@ -41,7 +29,6 @@ export default function Matches(props) {
                 for( let j in data[i]){
                     // console.log(data);
                     html += "<td class='tdImg'>"+
-                                "<img class='imgLeague' src='"+data[i][j].league.image_url +"'></img>"+
                                 "<br/>"+
                                 "<a target='_parent' href='/"+game +"/Leagues/"+ id +"/Series/" + seriesid +"/Tournaments/" + tournamentsid +"/Matches/"+data[i][j].id+"/Match'>"+data[i][j].name+"</a>"+
                             "</td>"

@@ -131,7 +131,26 @@ app.get('/match', (req,res) => {
     };
     axios.request(options).then(function (response) {
         res.json(response.data);
-        console.log(response.data);
+    }).catch(function (error) {
+        console.error(error);
+    });
+
+})
+app.get('/youtubeChannel', (req,res) => {
+    const axios = require("axios");
+    const channel = (req.query.channel).slice(24,-5)
+    console.log(channel);
+    const options = {
+        method: 'GET',
+        url:   'https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&forUsername='+channel+'&key=AIzaSyD7LRjg0SSmmn8U1AbtPWBoAJDr0REOGuo',
+        headers: {
+            'Authorization': 'Bearer ',
+            'Accept': 'application/json'
+        }
+    };
+    axios.request(options).then(function (response) {
+        res.json(response.data);
+        console.log(response.data.items);
     }).catch(function (error) {
         console.error(error);
     });

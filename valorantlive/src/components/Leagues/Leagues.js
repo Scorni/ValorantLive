@@ -1,8 +1,7 @@
 import '../../assets/style/Valorant/valorant.scss';
 import React,{ useState, useEffect} from "react";
-import axios from "axios";
-import {linkGenerator, matchingGame} from '../../utils/commun'
-import { NavLink,useParams } from "react-router-dom";
+import {fetchDataByFour, matchingGame} from '../../utils/commun'
+import { useParams } from "react-router-dom";
 
 export default function Valorant(props) {
     const [data, setData] = useState(false);
@@ -18,20 +17,9 @@ export default function Valorant(props) {
                 games: matchingGame(game)
             }
         }
-        const fetchData = async () => {
-            await axios.request(options).then(function (response) {
-                const dataByFour = (response.data).reduce(function (dataByFour, key, index) { 
-                    return (index % 4 === 0 ? dataByFour.push([key]) 
-                      : dataByFour[dataByFour.length-1].push(key)) && dataByFour;
-                  }, []);
-                setData(dataByFour);
-            }).catch(function (error) {
-                console.error(error);
-            });
-        }
-        fetchData()
-        
+        fetchDataByFour(options,setData)
     }, [setData])
+
     useEffect(() => {
         if(data){
             let html = ""

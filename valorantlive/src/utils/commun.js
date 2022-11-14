@@ -1,3 +1,6 @@
+import axios from "axios";
+
+
 export default function linkGenerator(url){
     let Element = (url).replaceAll('-', '')
     Element = Element.charAt(0).toUpperCase() + Element.slice(1)
@@ -9,6 +12,18 @@ export function withoutHyphen(string,game){
     Element = Element.charAt(1).toUpperCase() + Element.slice(2)
     console.log(Element);
     return Element
+}
+
+export function rawToEmbeddedUrl(string){
+    if(string.includes('twitch')){
+        string = string.slice(22)
+        string = 'https://player.twitch.tv/?channel=' + string + '&parent=localhost&muted=true'
+    }else{
+        string = string.slice(24)
+        string = 'https://www.youtube.com/embed/live_stream?channel=' + string
+    }
+    return string
+
 }
 export function matchingGame(title){
     let matchedArray = {
@@ -33,10 +48,6 @@ export function matchingGame(title){
     }
     return title
 }
-/*
-**  ITA PLAYOFF & REGULAR in tournament IDS !==
-**  
-*/
 export function sortByTournament(data){
     let historicOfTournament = []
     console.log(data);
@@ -48,4 +59,23 @@ export function sortByTournament(data){
     }
     return historicOfTournament
 }
+export async function fetchData(options ,setter){
+    await axios.request(options).then(function (response) {
+          setter(response.data);
+    }).catch(function (error) {
+        console.error(error);
+    });
+}
+export async function fetchDataByFour(options ,setter){
+    await axios.request(options).then(function (response) {
+        const dataByFour = (response.data).reduce(function (dataByFour, key, index) { 
+            return (index % 4 === 0 ? dataByFour.push([key]) 
+              : dataByFour[dataByFour.length-1].push(key)) && dataByFour;
+          }, []);
+          setter(dataByFour);
+    }).catch(function (error) {
+        console.error(error);
+    });
+}
+
 export {linkGenerator}
