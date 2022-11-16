@@ -1,0 +1,121 @@
+@import  '../Helpers/flexboxLayout.scss' ;
+@import  '../Helpers/mediaQueries' ;
+@import  '../Helpers/ceaser' ;
+@import  '../Helpers/font.scss';
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Monument_Regular';
+    overflow-y: hidden;
+}
+.background{
+    background: url('../../img/test.svg');
+    position: absolute;
+    mix-blend-mode: multiply;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.containerLeagues{
+    background: url('../../img/formsLeagues.png') #1F1F1F  ;
+    background-size: auto;
+    mix-blend-mode: overlay;
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    .mainHeader{
+        position: absolute;
+        z-index: 3;
+
+        animation: slideInLeft 2s $easeOutQuint  ;
+        p{
+            color: white;
+            text-transform: uppercase;
+            font-size: 5rem;
+            margin-top: 50px;
+            margin-left: 50px;
+            text-shadow: #553d3d 7px 7px  ;
+        }
+    }
+    
+}
+.table{
+    position: absolute;
+    background: #1a1418 url('../../img/test.svg') ;
+    background-blend-mode: overlay;
+    width: 100vw;
+    height: 60vh;
+    bottom: 0;
+    
+
+    .leagues{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        position: relative;
+        z-index: 3;
+        td{
+            .imgLeague{
+                height: 48px;
+             }
+             white-space: nowrap;
+
+            text-overflow: ellipsis;
+            padding-inline: 1.5vw;
+            padding-block: 0.975vh;
+            width: 300px;
+            .series{
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    font-size: 1.25rem;
+                    color: white;
+                    transition: 2s ;
+                    opacity: 0.2;
+                    background-color: #1a1418;
+                }
+                a:hover{
+                    font-size: 1.25rem;
+                    opacity: 1;
+                    filter: invert(1);
+                    color: white;
+                }
+            }
+        }
+                
+    }
+}
+.pagination{
+    position: absolute;
+    background: #1a1418 url('../../img/test.svg') ;
+    background-blend-mode: overlay;
+    right: 0;
+    bottom: 60vh;
+    width: 6vw;
+    color: white;
+    font-size: 2rem;
+}
+/*
+*** Animation
+*/
+@keyframes slideInLeft {
+    0%{
+        margin-left: -90%;
+    }
+    
+    100%{
+        margin-left: 0%;
+    }
+}
+@keyframes slideInTop{
+    0%{
+        margin-top: 120vh;
+    }
+    100%{
+        margin-top: 90vh;
+    }
+} 

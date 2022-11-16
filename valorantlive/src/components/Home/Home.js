@@ -17,7 +17,7 @@ export default function Rank(props) {
     }, [setData])
 
     return (
-        <div className='container'>
+        <div className='containerHome'>
             <div className='background'></div>
             <div className='mainHeader'>
                 <p>ESPORTS STATS</p>
@@ -26,16 +26,16 @@ export default function Rank(props) {
                 <div className='moba'>
                     <p className='gameType'>MOBA</p>
                     <p className='game'>
-                        <NavLink className="navlink" to={`/lol/Leagues`}>LoL</NavLink><br/>
+                        <NavLink className="navlink" to={`/lol/SeriesTournaments`}>LoL</NavLink><br/>
                     </p>
                     <p className='game'>
-                        <NavLink className="navlink" to={`/dota-2/Leagues`}>Dota 2</NavLink>   <br/>
+                        <NavLink className="navlink" to={`/dota-2/SeriesTournaments`}>Dota 2</NavLink>   <br/>
                     </p>
                     <p className='game'>
-                        <NavLink className="navlink" to={`/kog/Leagues`}>King of Glory</NavLink>   <br/>
+                        <NavLink className="navlink" to={`/kog/SeriesTournaments`}>King of Glory</NavLink>   <br/>
                     </p>
                     <p className='game'>
-                        <NavLink className="navlink" to={`/lol-wild-rift/Leagues`}>LoL Wild Rift</NavLink>   <br/>
+                        <NavLink className="navlink" to={`/lol-wild-rift/SeriesTournaments`}>LoL Wild Rift</NavLink>   <br/>
                     </p>
                 </div>
             </div>
@@ -43,22 +43,22 @@ export default function Rank(props) {
                 <div className='fps'>
                     <p className='gameType'>FPS</p>
                     <p className='game'>
-                        <NavLink className="navlink" to={"/valorant/Leagues"}>Valorant</NavLink><br/>
+                        <NavLink className="navlink" to={"/valorant/SeriesTournaments"}>Valorant</NavLink><br/>
                     </p>
                     <p className='game'>
-                        <NavLink className="navlink" to={"/cs-go/Leagues"}>CS:GO</NavLink><br/>
+                        <NavLink className="navlink" to={"/cs-go/SeriesTournaments"}>CS:GO</NavLink><br/>
                     </p>
                     <p className='game'>
-                        <NavLink className="navlink" to={"/r6-siege/Leagues"}>Rainbow 6 Siege</NavLink><br/>
+                        <NavLink className="navlink" to={"/r6-siege/SeriesTournaments"}>Rainbow 6 Siege</NavLink><br/>
                     </p>
                     <p className='game'>
-                        <NavLink className="navlink" to={"/cod-mw/Leagues"}>Call of Duty</NavLink><br/>
+                        <NavLink className="navlink" to={"/cod-mw/SeriesTournaments"}>Call of Duty</NavLink><br/>
                     </p>
                     <p className='game'>
-                        <NavLink className="navlink" to={"/pubg/Leagues"}>PUBG</NavLink><br/>
+                        <NavLink className="navlink" to={"/pubg/SeriesTournaments"}>PUBG</NavLink><br/>
                     </p>
                     <p className='game'>
-                        <NavLink className="navlink" to={"/ow/Leagues"}>Overwatch</NavLink><br/>
+                        <NavLink className="navlink" to={"/ow/SeriesTournaments"}>Overwatch</NavLink><br/>
                     </p>
                 </div>
             </div>
@@ -67,10 +67,10 @@ export default function Rank(props) {
                 <div className='rts'>
                     <p className='gameType'>RTS</p>
                     <p className='game'>
-                        <NavLink className="navlink" to={"/starcraft-brood-war/Leagues"}>StarCraft Brood War</NavLink><br/>
+                        <NavLink className="navlink" to={"/starcraft-brood-war/SeriesTournaments"}>StarCraft Brood War</NavLink><br/>
                     </p>
                     <p className='game'>
-                        <NavLink className="navlink" to={"/starcraft-2/Leagues"}>StarCraft 2</NavLink><br/>
+                        <NavLink className="navlink" to={"/starcraft-2/SeriesTournaments"}>StarCraft 2</NavLink><br/>
                     </p>
                 </div>
             </div>
@@ -78,10 +78,10 @@ export default function Rank(props) {
                 <div className='other'>
                     <p className='gameType'>OTHER</p>
                     <p className='game'>
-                        <NavLink className="navlink" to={"/fifa/Leagues"}>FIFA</NavLink><br/>
+                        <NavLink className="navlink" to={"/fifa/SeriesTournaments"}>FIFA</NavLink><br/>
                     </p>
                     <p className='game'>
-                        <NavLink className="navlink" to={"/rl/Leagues"}>Rocket League</NavLink><br/>
+                        <NavLink className="navlink" to={"/rl/SeriesTournaments"}>Rocket League</NavLink><br/>
                     </p>
                 </div>
             </div>

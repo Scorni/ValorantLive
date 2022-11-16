@@ -9,7 +9,7 @@ export default function linkGenerator(url){
 export function withoutHyphen(string,game){
     let Element = (string).replaceAll('-', ' ')
     Element= (Element).replace(game,'')
-    Element = Element.charAt(1).toUpperCase() + Element.slice(2)
+    Element = Element.charAt(0).toUpperCase() + Element.slice(1)
     console.log(Element);
     return Element
 }

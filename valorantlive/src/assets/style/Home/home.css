@@ -282,13 +282,13 @@ body {
 .background {
   background: url("../../img/test.svg");
   position: absolute;
-  mix-blend-mode: overlay;
+  mix-blend-mode: multiply;
   width: 100vw;
   height: 100vh;
   z-index: -1;
 }
 
-.container {
+.containerHome {
   background: url("../../img/formshm.png") #1F1F1F;
   background-size: auto;
   mix-blend-mode: overlay;
@@ -298,22 +298,23 @@ body {
   z-index: 2;
 }
 
-.mainHeader {
+.containerHome .mainHeader {
   position: absolute;
-  -webkit-animation: slideInLeft 2s forwards;
-          animation: slideInLeft 2s forwards;
+  -webkit-animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
+          animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.mainHeader p {
+.containerHome .mainHeader p {
   color: white;
   font-size: 5rem;
   margin-top: 50px;
   margin-left: 50px;
+  text-shadow: #553d3d 7px 7px;
 }
 
 .firstBorder {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   height: 100%;
   width: 20%;
   left: 5%;
@@ -322,7 +323,7 @@ body {
 
 .secondBorder {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   height: 100%;
   left: 25%;
   width: 25%;
@@ -332,7 +333,7 @@ body {
 .fourthBorder {
   position: absolute;
   text-align: center;
-  z-index: -1;
+  z-index: 1;
   height: 100%;
   left: 50%;
   width: 24%;
@@ -341,7 +342,7 @@ body {
 
 .fifthBorder {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   height: 100%;
   left: 75%;
   width: 20%;

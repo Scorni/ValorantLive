@@ -1,4 +1,3 @@
-import '../../assets/style/Valorant/valorant.scss';
 import React,{ useState, useEffect} from "react";
 import axios from "axios";
 import { matchingGame,rawToEmbeddedUrl,fetchDataByFour,fetchData} from '../../utils/commun'

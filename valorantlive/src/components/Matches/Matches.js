@@ -1,4 +1,3 @@
-import '../../assets/style/Valorant/valorant.scss';
 import React,{ useState, useEffect} from "react";
 import { matchingGame,fetchDataByFour} from '../../utils/commun'
 import { useParams } from "react-router-dom";
