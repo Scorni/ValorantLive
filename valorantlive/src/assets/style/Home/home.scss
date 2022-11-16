@@ -1,0 +1,224 @@
+@import  '../Helpers/flexboxLayout.scss' ;
+@import  '../Helpers/mediaQueries' ;
+@import  '../Helpers/ceaser' ;
+@import  '../Helpers/font.scss';
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Monument_Regular';
+    overflow-y: hidden;
+}
+.background{
+    background: url('../../img/test.svg');
+    position: absolute;
+    mix-blend-mode: overlay;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.container{
+    background: url('../../img/formshm.png') #1F1F1F  ;
+    background-size: auto;
+    mix-blend-mode: overlay;
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+.mainHeader{
+    position: absolute;
+    animation: slideInLeft 2s forwards;
+    p{
+        color: white;
+        font-size: 5rem;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+}
+.firstBorder{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 20%;
+    left: 5%;
+    border-inline: 1px #929292 solid;
+}
+.secondBorder{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    left: 25%;
+    width: 25%;
+    border-right: 1px #929292 solid;
+}
+
+.fourthBorder{
+    position: absolute;
+    text-align: center;
+    z-index: -1;
+    height: 100%;
+    left: 50%;
+    width: 24%;
+    border-right: 1px #929292 solid;
+}
+.fifthBorder{
+    position: absolute;
+    
+    z-index: -1;
+    height: 100%;
+    left: 75%;
+    width: 20%;
+    border-right: 1px #929292 solid;
+}
+.moba,.fps,.rts,.card,.other{
+    transition: 2s;
+    
+
+    margin-top: 90vh;
+    .gameType{
+        text-align: left;
+        font-size: 3rem;
+        color: white;
+        
+    }
+    .game{
+        text-align: left;
+        a{
+            text-decoration: none;
+            -webkit-text-stroke: 1px white;
+            font-size: 3rem;
+            color: transparent
+        }
+       
+    }
+    
+}
+.moba{
+    margin-left: 25%;
+    .game{
+        margin-left: -15%;
+
+    }
+}
+.fps{
+    margin-left: 35%;
+    .game{
+        margin-left: -35%;
+
+    }
+}
+.rts{
+    margin-left: 35%;
+    .game{
+        margin-left: -35%;
+
+    }
+}
+.card{
+    margin-left: 15%;
+    .game{
+        margin-left: -35%;
+
+    }
+}
+.other{
+    margin-left: 15%;
+    .game{
+        margin-left: -10%;
+
+    }
+}
+
+.firstBorder:hover,.secondBorder:hover,.thirdBorder:hover,.fourthBorder:hover,.fifthBorder:hover{
+    .moba,.fps,.rts,.card,.other{
+        margin-top: 20vh;
+        
+        transition: 2s;
+
+        .gameType{
+            text-align: left;
+            font-size: 3rem;
+            color: white;
+            
+        }
+        .game{
+            text-align: left;
+            a{
+                text-decoration: none;
+                -webkit-text-stroke: 1px white;
+                font-size: 3rem;
+                color: transparent
+            }
+            a:hover{
+                transition: 1s;
+                text-decoration: none;
+                -webkit-text-stroke: 1px white;
+                font-size: 3rem;
+                color: white
+            }
+           
+        }
+        
+    }
+    .moba{
+        margin-left: 25%;
+        .game{
+            margin-left: -15%;
+
+        }
+    }
+    .fps{
+        margin-left: 35%;
+        .game{
+            margin-left: -35%;
+
+        }
+    }
+    .rts{
+        margin-left: 35%;
+        .game{
+            margin-left: -35%;
+
+        }
+    }
+    .card{
+        margin-left: 15%;
+        .game{
+            margin-left: -35%;
+
+        }
+    }
+    .other{
+        margin-left: 15%;
+        .game{
+            margin-left: -10%;
+
+        }
+    }
+
+
+    
+}
+/*
+*** Animation
+*/
+@keyframes slideInLeft {
+    0%{
+        margin-left: -90%;
+    }
+    
+    100%{
+        margin-left: 0%;
+    }
+}
+@keyframes slideInTop{
+    0%{
+        margin-top: 120vh;
+    }
+    100%{
+        margin-top: 90vh;
+    }
+} 
