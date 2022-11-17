@@ -360,6 +360,8 @@ body {
 }
 
 .seriesGame a {
+  -webkit-transition: 1s;
+  transition: 1s;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
   font-size: 4rem;
@@ -397,6 +399,8 @@ body {
 }
 
 .tournamentsGame a {
+  -webkit-transition: 1s;
+  transition: 1s;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
   font-size: 4rem;

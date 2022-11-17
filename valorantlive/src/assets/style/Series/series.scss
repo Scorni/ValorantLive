@@ -18,8 +18,8 @@ body{
     height: 100vh;
     z-index: -1;
 }
-.containerLeagues{
-    background: url('../../img/formsLeagues.png') #1F1F1F  ;
+.containerSeries{
+    background: url('../../img/formsTournamentsSelected.png') #1f1f1f  ;
     background-size: auto;
     mix-blend-mode: overlay;
 
@@ -38,7 +38,7 @@ body{
             font-size: 5rem;
             margin-top: 3%;
             margin-left: 10%;
-            text-shadow: #553d3d 7px 7px  ;
+            text-shadow: #3f553d 7px 7px  ;
         }
     }
     .secondHeader{
@@ -53,6 +53,23 @@ body{
             color: transparent;
             margin-top: 40%;
             margin-left: 22%;
+        }
+    }
+    .thirdHeader{
+        position: absolute;
+        z-index: 3;
+        
+        animation: slideInLeft 3s $easeOutQuint  ;
+        p{
+            text-align: left;
+            text-decoration: none;
+            -webkit-text-stroke: 1px white;
+            font-size: 3rem;
+            color: transparent;
+            margin-top: 20%;
+            margin-left: 7%;
+
+            width: 50vw;
         }
     }
     
