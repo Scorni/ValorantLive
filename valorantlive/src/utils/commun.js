@@ -66,21 +66,10 @@ export async function fetchData(options ,setter){
         console.error(error);
     });
 }
-export async function fetchDataByFour(options ,setter){
+export async function fetchDataBy(options ,setter,number){
     await axios.request(options).then(function (response) {
         const dataByFour = (response.data).reduce(function (dataByFour, key, index) { 
-            return (index % 4 === 0 ? dataByFour.push([key]) 
-              : dataByFour[dataByFour.length-1].push(key)) && dataByFour;
-          }, []);
-          setter(dataByFour);
-    }).catch(function (error) {
-        console.error(error);
-    });
-}
-export async function fetchDataByThree(options ,setter){
-    await axios.request(options).then(function (response) {
-        const dataByFour = (response.data).reduce(function (dataByFour, key, index) { 
-            return (index % 3 === 0 ? dataByFour.push([key]) 
+            return (index % number === 0 ? dataByFour.push([key]) 
               : dataByFour[dataByFour.length-1].push(key)) && dataByFour;
           }, []);
           setter(dataByFour);

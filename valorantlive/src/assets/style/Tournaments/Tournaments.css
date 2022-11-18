@@ -288,7 +288,7 @@ body {
   z-index: -1;
 }
 
-.containerSeries {
+.containerTournaments {
   background: url("../../img/formsTournamentsSelected.png") #1f1f1f;
   background-size: auto;
   mix-blend-mode: overlay;
@@ -298,32 +298,32 @@ body {
   z-index: 2;
 }
 
-.containerSeries .mainHeader {
+.containerTournaments .mainHeader {
   position: absolute;
   z-index: 3;
   -webkit-animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.containerSeries .mainHeader p {
+.containerTournaments .mainHeader p {
   color: white;
   text-transform: uppercase;
   font-size: 5rem;
-  width: 82vw;
   text-align: left;
   margin-left: 4%;
   margin-top: 1%;
+  width: 82vw;
   text-shadow: #3f553d 7px 7px;
 }
 
-.containerSeries .secondHeader {
+.containerTournaments .secondHeader {
   position: absolute;
   z-index: 3;
   -webkit-animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.containerSeries .secondHeader p {
+.containerTournaments .secondHeader p {
   text-decoration: none;
   -webkit-text-stroke: 1px white;
   font-size: 3rem;
@@ -332,14 +332,14 @@ body {
   margin-left: 22%;
 }
 
-.containerSeries .thirdHeader {
+.containerTournaments .thirdHeader {
   position: absolute;
   z-index: 3;
   -webkit-animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.containerSeries .thirdHeader p {
+.containerTournaments .thirdHeader p {
   text-align: left;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
@@ -350,7 +350,25 @@ body {
   width: 50vw;
 }
 
-.containerSeries .table {
+.containerTournaments .fourthHeader {
+  position: absolute;
+  z-index: 3;
+  -webkit-animation: slideInLeft 3.5s cubic-bezier(0.23, 1, 0.32, 1);
+          animation: slideInLeft 3.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.containerTournaments .fourthHeader p {
+  text-align: left;
+  text-decoration: none;
+  -webkit-text-stroke: 1px white;
+  font-size: 3rem;
+  color: transparent;
+  margin-top: 13%;
+  margin-left: 100%;
+  width: 50vw;
+}
+
+.containerTournaments .table {
   position: absolute;
   background: #1a1418 url("../../img/test.svg");
   background-blend-mode: overlay;
@@ -359,7 +377,7 @@ body {
   bottom: 0;
 }
 
-.containerSeries .table .leagues {
+.containerTournaments .table .leagues {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -367,7 +385,7 @@ body {
   z-index: 3;
 }
 
-.containerSeries .table .leagues td {
+.containerTournaments .table .leagues td {
   white-space: nowrap;
   text-overflow: ellipsis;
   padding-inline: 1.5vw;
@@ -375,15 +393,15 @@ body {
   width: 300px;
 }
 
-.containerSeries .table .leagues td .imgLeague {
+.containerTournaments .table .leagues td .imgLeague {
   height: 48px;
 }
 
-.containerSeries .table .leagues td .series {
+.containerTournaments .table .leagues td .series {
   text-align: center;
 }
 
-.containerSeries .table .leagues td .series a {
+.containerTournaments .table .leagues td .series a {
   text-decoration: none;
   font-size: 1.25rem;
   -webkit-transition: 2s;
@@ -397,7 +415,7 @@ body {
   transition: .5s ease-out;
 }
 
-.containerSeries .table .leagues td .series a:hover {
+.containerTournaments .table .leagues td .series a:hover {
   font-size: 1.25rem;
   background-position: left;
   color: black;
@@ -514,4 +532,4 @@ body {
     fill: #1a1418;
   }
 }
-/*# sourceMappingURL=Series.css.map */
+/*# sourceMappingURL=Tournaments.css.map */

@@ -306,11 +306,13 @@ body {
 }
 
 .containerLeagues .mainHeader p {
+  text-align: left;
+  margin-left: 4%;
   color: white;
   text-transform: uppercase;
   font-size: 5rem;
-  margin-top: 3%;
-  margin-left: 10%;
+  margin-top: 1%;
+  width: 82vw;
   text-shadow: #553d3d 7px 7px;
 }
 
@@ -330,7 +332,7 @@ body {
   margin-left: 22%;
 }
 
-.table {
+.containerLeagues .table {
   position: absolute;
   background: #1a1418 url("../../img/test.svg");
   background-blend-mode: overlay;
@@ -339,7 +341,7 @@ body {
   bottom: 0;
 }
 
-.table .leagues {
+.containerLeagues .table .leagues {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -347,7 +349,7 @@ body {
   z-index: 3;
 }
 
-.table .leagues td {
+.containerLeagues .table .leagues td {
   white-space: nowrap;
   text-overflow: ellipsis;
   padding-inline: 1.5vw;
@@ -355,15 +357,15 @@ body {
   width: 300px;
 }
 
-.table .leagues td .imgLeague {
+.containerLeagues .table .leagues td .imgLeague {
   height: 48px;
 }
 
-.table .leagues td .series {
+.containerLeagues .table .leagues td .series {
   text-align: center;
 }
 
-.table .leagues td .series a {
+.containerLeagues .table .leagues td .series a {
   text-decoration: none;
   font-size: 1.25rem;
   -webkit-transition: 2s;
@@ -377,7 +379,7 @@ body {
   transition: .5s ease-out;
 }
 
-.table .leagues td .series a:hover {
+.containerLeagues .table .leagues td .series a:hover {
   font-size: 1.25rem;
   background-position: left;
   color: black;

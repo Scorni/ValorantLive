@@ -288,8 +288,8 @@ body {
   z-index: -1;
 }
 
-.containerSeries {
-  background: url("../../img/formsTournamentsSelected.png") #1f1f1f;
+.containerMatch {
+  background: url("../../img/formsMatch.png") #1f1f1f;
   background-size: auto;
   mix-blend-mode: overlay;
   position: absolute;
@@ -298,76 +298,147 @@ body {
   z-index: 2;
 }
 
-.containerSeries .mainHeader {
+.containerMatch .mainHeader {
   position: absolute;
   z-index: 3;
   -webkit-animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.containerSeries .mainHeader p {
+.containerMatch .mainHeader p {
   color: white;
   text-transform: uppercase;
   font-size: 5rem;
-  width: 82vw;
+  margin-top: 1%;
   text-align: left;
   margin-left: 4%;
-  margin-top: 1%;
-  text-shadow: #3f553d 7px 7px;
+  width: 82vw;
+  text-shadow: #a7771e 7px 7px;
 }
 
-.containerSeries .secondHeader {
+.containerMatch .secondHeader {
   position: absolute;
   z-index: 3;
   -webkit-animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.containerSeries .secondHeader p {
+.containerMatch .secondHeader p {
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3rem;
+  font-size: 2rem;
   color: transparent;
-  margin-top: 40%;
-  margin-left: 22%;
+  margin-top: 70%;
+  margin-left: 35%;
 }
 
-.containerSeries .thirdHeader {
+.containerMatch .thirdHeader {
   position: absolute;
   z-index: 3;
   -webkit-animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.containerSeries .thirdHeader p {
+.containerMatch .thirdHeader p {
   text-align: left;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3rem;
+  font-size: 2rem;
   color: transparent;
-  margin-top: 20%;
+  margin-top: 21%;
   margin-left: 7%;
   width: 50vw;
 }
 
-.containerSeries .table {
+.containerMatch .fourthHeader {
   position: absolute;
-  background: #1a1418 url("../../img/test.svg");
-  background-blend-mode: overlay;
-  width: 100vw;
-  height: 60vh;
-  bottom: 0;
+  z-index: 3;
+  -webkit-animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
+          animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.containerSeries .table .leagues {
+.containerMatch .fourthHeader p {
+  text-align: left;
+  text-decoration: none;
+  -webkit-text-stroke: 1px white;
+  font-size: 2rem;
+  color: transparent;
+  margin-top: 27%;
+  margin-left: 7%;
+  width: 50vw;
+}
+
+.containerMatch .fifthHeader {
+  position: absolute;
+  z-index: 3;
+  -webkit-animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
+          animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.containerMatch .fifthHeader p {
+  text-align: left;
+  text-decoration: none;
+  -webkit-text-stroke: 1px white;
+  font-size: 2rem;
+  color: transparent;
+  margin-top: 33%;
+  margin-left: 7%;
+  width: 50vw;
+}
+
+.containerMatch .sixthHeader {
+  position: absolute;
+  z-index: 3;
+  -webkit-animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
+          animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.containerMatch .sixthHeader p {
+  text-align: left;
+  text-decoration: none;
+  -webkit-text-stroke: 1px white;
+  font-size: 2.75rem;
+  color: white;
+  margin-top: 17%;
+  margin-left: 75%;
+  width: 60vw;
+}
+
+.containerMatch .seventhHeader {
+  position: absolute;
+  z-index: 3;
+  -webkit-animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
+          animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.containerMatch .seventhHeader p {
+  text-align: left;
+  text-decoration: none;
+  -webkit-text-stroke: 1px white;
+  font-size: 2.75rem;
+  color: white;
+  margin-top: 57%;
+  margin-left: 135%;
+  width: 60vw;
+}
+
+.containerMatch .table {
+  position: absolute;
+  width: 100vw;
+  height: 60vh;
+  bottom: 5%;
+}
+
+.containerMatch .table .leagues {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   position: relative;
   z-index: 3;
+  text-align: center;
 }
 
-.containerSeries .table .leagues td {
+.containerMatch .table .leagues td {
   white-space: nowrap;
   text-overflow: ellipsis;
   padding-inline: 1.5vw;
@@ -375,15 +446,34 @@ body {
   width: 300px;
 }
 
-.containerSeries .table .leagues td .imgLeague {
+.containerMatch .table .leagues td .imgLeague {
   height: 48px;
 }
 
-.containerSeries .table .leagues td .series {
+.containerMatch .table .leagues td .series {
   text-align: center;
 }
 
-.containerSeries .table .leagues td .series a {
+.containerMatch .table .leagues td .series a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  -webkit-transition: 2s;
+  transition: 2s;
+  background-color: #dbdbdb;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50.1%, rgba(255, 0, 0, 0)), color-stop(50%, #dbdbdb)) right;
+  background: linear-gradient(to left, rgba(255, 0, 0, 0) 50.1%, #dbdbdb 50%) right;
+  color: white;
+  -webkit-transition: .5s ease-out;
+  transition: .5s ease-out;
+}
+
+.containerMatch .table .leagues td .series a:hover {
+  font-size: 1.25rem;
+  background-position: left;
+  color: black;
+}
+
+.containerMatch .table .leagues a {
   text-decoration: none;
   font-size: 1.25rem;
   -webkit-transition: 2s;
@@ -397,10 +487,31 @@ body {
   transition: .5s ease-out;
 }
 
-.containerSeries .table .leagues td .series a:hover {
+.containerMatch .table .leagues a:hover {
   font-size: 1.25rem;
   background-position: left;
   color: black;
+}
+
+.containerMatch .table .leagues .score {
+  font-size: 1.25rem;
+  -webkit-transition: 2s;
+  transition: 2s;
+  color: white;
+}
+
+.containerMatch .backgroundBottom {
+  position: absolute;
+  height: 10vh;
+  width: 100vw;
+  background: #a7771e url("../../img/test.svg");
+  mix-blend-mode: normal;
+  bottom: 0%;
+}
+
+.player {
+  -webkit-box-shadow: #000000 17px 17px;
+          box-shadow: #000000 17px 17px;
 }
 
 .paginationNext {
@@ -514,4 +625,4 @@ body {
     fill: #1a1418;
   }
 }
-/*# sourceMappingURL=Series.css.map */
+/*# sourceMappingURL=match.css.map */

@@ -1,12 +1,20 @@
+import '../../assets/style/Tournaments/tournaments.scss';
+
 import React,{ useState, useEffect} from "react";
-import {fetchDataByFour, matchingGame} from '../../utils/commun'
+import { fetchDataBy, matchingGame,withoutHyphen } from '../../utils/commun'
 import { useParams } from "react-router-dom";
+import Arrow from '../../components/SVG/Arrow.js';
 
 export default function Tournaments(props) {
     const [data, setData] = useState(false);
     const [table, setTable] = useState([])
     //setData will prevent from infinite call to the api
     const {game,id,seriesid} = useParams()
+    const [page, setPage] = useState(1)
+    const [perPage,setPerPage] = useState(3);
+    const [league,setLeague] = useState("");
+    const [tournament,setTournament] = useState("");
+    const offset = (page - 1) * perPage;
     useEffect(() => {
         const options = {
             method: 'GET',
@@ -16,7 +24,7 @@ export default function Tournaments(props) {
                 id: seriesid
             }
         }
-        fetchDataByFour(options,setData)
+        fetchDataBy(options,setData,4)
     }, [setData])
 
     useEffect(() => {
@@ -36,20 +44,86 @@ export default function Tournaments(props) {
             setTable(html)
         }
     },[data])
-    
-    return (
-        <div>
-            <h1>Welcome There</h1>
-            <h3>Choose your League !</h3>
-            <table className='table'>
-                <tbody className='tbody' dangerouslySetInnerHTML={{ __html: table }}>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td id='pagination' className='pagination'></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-    );
+    useEffect(() => {
+        if(data){
+            setLeague(data[0][0].league.name)
+            setTournament(data[0][0].serie.full_name)
+        }
+    },[data,league])
+    if(data){
+        const paginatedData = data.slice(offset).slice(0, perPage);
+        console.log(data);
+        const totalPagesData = Math.ceil(data.length / perPage)
+        function nextPage(){
+            if(page < totalPagesData){
+                setPage(page +1)
+            }  
+        }
+        function previousPage(){
+            if(page > 1){
+                setPage(page - 1)
+            }  
+        }
+        return (
+
+            <div className='containerTournaments'>
+                <div className='background'></div>
+                <div className='firstBorder'></div>
+                <div className='secondBorder'></div>
+                <div className='fourthBorder'></div>
+                <div className='fifthBorder'></div>
+                <div className='mainHeader'>
+                    <p>{withoutHyphen(game)}</p>
+                </div>
+                <div className='secondHeader'>
+                    <p>LEAGUES</p>
+                </div>
+                <div className='thirdHeader'>
+                    <p>{league}</p>
+                </div>
+                <div className='fourthHeader'>
+                    <p>{tournament}</p>
+                </div>
+                <div>
+                    {totalPagesData > 1 &&
+                        <div>
+                            <div onClick={() => previousPage() } className='paginationPrevious'>
+                                    <Arrow  className="previousArrow"/>
+                                </div>
+                                <div onClick={() => nextPage()} className='paginationNext'>
+                                    <Arrow  className="nextArrow"/>
+                                </div>
+                        </div>
+                        
+                    }
+                    <table className='table'>
+                        <tbody className='tbody' >
+                        
+
+                        {paginatedData &&
+                        (paginatedData).map((value, index) => {
+                            return (
+                            <tr className='leagues' key={index}>
+
+                                {(paginatedData[index]).map((value, t) => {
+                                        return (
+                                            <td key={t}>
+                                                <p className='series'>
+                                                    <a  target='_parent' href={'/' +game + '/Leagues/'+  id  +'/Series/' + seriesid +'/Tournaments/'+paginatedData[index][t].id+'/Matches'} >{paginatedData[index][t].name}</a>
+                                                </p>
+                                            </td>
+                                            )
+                                        })}
+                                    </tr>
+                                    )
+                            
+                                })
+                                
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        );
+    }
 }

@@ -1,7 +1,7 @@
 import '../../assets/style/Series/series.scss';
 
 import React,{ useState, useEffect} from "react";
-import { fetchDataByThree, matchingGame,withoutHyphen } from '../../utils/commun'
+import { fetchDataBy, fetchDataByThree, matchingGame,withoutHyphen } from '../../utils/commun'
 import { useParams } from "react-router-dom";
 import Arrow from '../../components/SVG/Arrow.js';
 
@@ -24,7 +24,7 @@ export default function Valorant(props) {
                 id: id
             }
         }
-        fetchDataByThree(options,setData)
+        fetchDataBy(options,setData,3)
     }, [setData])
 
     useEffect(() => {
@@ -89,7 +89,7 @@ export default function Valorant(props) {
                                         return (
                                             <td key={t}>
                                                 <p className='series'>
-                                                    <a  target='_parent' href={'/' +game + '/Leagues/'+  id + paginatedData[index][t].id +'/Series/' + paginatedData[index][t].id +'/Tournaments'} >{paginatedData[index][t].full_name}</a>
+                                                    <a  target='_parent' href={'/' +game + '/Leagues/'+  id +'/Series/' + paginatedData[index][t].id +'/Tournaments'} >{paginatedData[index][t].full_name}</a>
                                                 </p>
                                             </td>
                                             )

@@ -33,12 +33,16 @@ body{
         
         animation: slideInLeft 2s $easeOutQuint  ;
         p{
+            text-align: left;
+            margin-left: 4%;
+
             color: white;
             text-transform: uppercase;
             font-size: 5rem;
-            margin-top: 3%;
-            margin-left: 10%;
+            margin-top: 1%;
+            width: 82vw;
             text-shadow: #553d3d 7px 7px  ;
+            
         }
     }
     .secondHeader{
@@ -55,56 +59,56 @@ body{
             margin-left: 22%;
         }
     }
+    .table{
+        position: absolute;
+        background: #1a1418 url('../../img/test.svg') ;
+        background-blend-mode: overlay;
+        width: 100vw;
+        height: 60vh;
+        bottom: 0;
+        
     
-}
-.table{
-    position: absolute;
-    background: #1a1418 url('../../img/test.svg') ;
-    background-blend-mode: overlay;
-    width: 100vw;
-    height: 60vh;
-    bottom: 0;
-    
-
-    .leagues{
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        position: relative;
-        z-index: 3;
-        td{
-            .imgLeague{
-                height: 48px;
-             }
-             white-space: nowrap;
-
+        .leagues{
+            white-space: nowrap;
             text-overflow: ellipsis;
-            padding-inline: 1.5vw;
-            padding-block: 0.975vh;
-            width: 300px;
-            .series{
-                text-align: center;
-                a{
-                    text-decoration: none;
-                    font-size: 1.25rem;
-                    transition: 2s ;
-                    background-color: #dbdbdb;
-                    background: linear-gradient(to left, rgba(255,0,0,0) 50.1%, #dbdbdb 50%) right;
-                    color: white;
-                    background-size: 200%;
-                    transition: .5s ease-out;
-                }
-                a:hover{
-                    font-size: 1.25rem;
-                    background-position: left;
-                    
-                    color: rgb(0, 0, 0);
+            overflow: hidden;
+            position: relative;
+            z-index: 3;
+            td{
+                .imgLeague{
+                    height: 48px;
+                 }
+                 white-space: nowrap;
+    
+                text-overflow: ellipsis;
+                padding-inline: 1.5vw;
+                padding-block: 0.975vh;
+                width: 300px;
+                .series{
+                    text-align: center;
+                    a{
+                        text-decoration: none;
+                        font-size: 1.25rem;
+                        transition: 2s ;
+                        background-color: #dbdbdb;
+                        background: linear-gradient(to left, rgba(255,0,0,0) 50.1%, #dbdbdb 50%) right;
+                        color: white;
+                        background-size: 200%;
+                        transition: .5s ease-out;
+                    }
+                    a:hover{
+                        font-size: 1.25rem;
+                        background-position: left;
+                        
+                        color: rgb(0, 0, 0);
+                    }
                 }
             }
+                    
         }
-                
     }
 }
+
 .paginationNext{
     position: absolute;
     background: #1a1418 url('../../img/test.svg') ;
