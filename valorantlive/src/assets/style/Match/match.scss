@@ -88,7 +88,7 @@ body{
             -webkit-text-stroke: 1px white;
             font-size: 2rem;
             color: transparent;
-            margin-top: 27%;
+            margin-top: 31%;
             margin-left: 7%;
 
             width: 50vw;
@@ -106,7 +106,7 @@ body{
             -webkit-text-stroke: 1px white;
             font-size: 2rem;
             color: transparent;
-            margin-top: 33%;
+            margin-top: 37%;
             margin-left: 7%;
 
             width: 50vw;
@@ -119,15 +119,16 @@ body{
         animation: slideInLeft 3s $easeOutQuint  ;
         p{
             text-align: left;
+            white-space: nowrap;
             
             text-decoration: none;
             -webkit-text-stroke: 1px white;
             font-size: 2.75rem;
             color: white;
-            margin-top: 17%;
+            margin-top: 13%;
             margin-left: 75%;
 
-            width: 60vw;
+            width: 55vw;
         }
     }
     .seventhHeader{
