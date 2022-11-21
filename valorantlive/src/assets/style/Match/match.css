@@ -316,76 +316,6 @@ body {
   text-shadow: #a7771e 7px 7px;
 }
 
-.containerMatch .secondHeader {
-  position: absolute;
-  z-index: 3;
-  -webkit-animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
-          animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.containerMatch .secondHeader p {
-  text-decoration: none;
-  -webkit-text-stroke: 1px white;
-  font-size: 2rem;
-  color: transparent;
-  margin-top: 70%;
-  margin-left: 35%;
-}
-
-.containerMatch .thirdHeader {
-  position: absolute;
-  z-index: 3;
-  -webkit-animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
-          animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.containerMatch .thirdHeader p {
-  text-align: left;
-  text-decoration: none;
-  -webkit-text-stroke: 1px white;
-  font-size: 2rem;
-  color: transparent;
-  margin-top: 21%;
-  margin-left: 7%;
-  width: 50vw;
-}
-
-.containerMatch .fourthHeader {
-  position: absolute;
-  z-index: 3;
-  -webkit-animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
-          animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.containerMatch .fourthHeader p {
-  text-align: left;
-  text-decoration: none;
-  -webkit-text-stroke: 1px white;
-  font-size: 2rem;
-  color: transparent;
-  margin-top: 31%;
-  margin-left: 7%;
-  width: 50vw;
-}
-
-.containerMatch .fifthHeader {
-  position: absolute;
-  z-index: 3;
-  -webkit-animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
-          animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.containerMatch .fifthHeader p {
-  text-align: left;
-  text-decoration: none;
-  -webkit-text-stroke: 1px white;
-  font-size: 2rem;
-  color: transparent;
-  margin-top: 37%;
-  margin-left: 7%;
-  width: 50vw;
-}
-
 .containerMatch .sixthHeader {
   position: absolute;
   z-index: 3;
@@ -394,16 +324,13 @@ body {
 }
 
 .containerMatch .sixthHeader p {
-  text-align: left;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   text-decoration: none;
+  text-align: center;
   -webkit-text-stroke: 1px white;
-  font-size: 2.75rem;
-  color: white;
-  margin-top: 13%;
-  margin-left: 25vw;
-  width: 40vw;
+  font-size: 2.35rem;
+  color: transparent;
+  margin-top: 12%;
+  width: 100vw;
 }
 
 .containerMatch .seventhHeader {
@@ -428,7 +355,7 @@ body {
   position: absolute;
   width: 100vw;
   height: 60vh;
-  bottom: 5%;
+  bottom: 10%;
 }
 
 .containerMatch .table .leagues {
@@ -502,9 +429,15 @@ body {
   color: white;
 }
 
+.containerMatch .table .leagues .starting {
+  -webkit-text-stroke: 1px white;
+  font-size: 1.5rem;
+  color: transparent;
+}
+
 .containerMatch .backgroundBottom {
   position: absolute;
-  height: 10vh;
+  height: 15vh;
   width: 100vw;
   background: #a7771e url("../../img/test.svg");
   mix-blend-mode: normal;
@@ -516,60 +449,52 @@ body {
           box-shadow: #000000 17px 17px;
 }
 
-.paginationNext {
+.banderoll {
+  z-index: 5;
   position: absolute;
-  background: #1a1418 url("../../img/test.svg");
-  background-blend-mode: overlay;
-  right: 0;
-  bottom: 60vh;
-  width: 6vw;
-  color: white;
-  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4vh;
+  overflow: hidden;
+  white-space: nowrap;
+  bottom: 0vh;
+  -webkit-animation: movingBanderoll 28s linear  infinite;
+          animation: movingBanderoll 28s linear  infinite;
 }
 
-.paginationNext div {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+.banderoll .marquee-top__item {
+  padding: 0 10px;
 }
 
-.paginationNext div Svg {
-  fill: #dbdbdb;
-  width: 3vw;
-  padding: 5%;
+.banderoll svg {
+  margin: 0 60px -3px 100px;
+  fill: #ffffff;
 }
 
-.paginationNext :hover {
-  cursor: pointer;
-  -webkit-animation: blinkingArrow 2s  infinite;
-          animation: blinkingArrow 2s  infinite;
+@-webkit-keyframes movingBanderoll {
+  0% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+  100% {
+    -webkit-transform: translate(-33.3%, 0%);
+            transform: translate(-33.3%, 0%);
+  }
 }
 
-.paginationPrevious {
-  position: absolute;
-  background: #1a1418 url("../../img/test.svg");
-  background-blend-mode: overlay;
-  left: 0;
-  bottom: 60vh;
-  width: 6vw;
-  color: white;
-  font-size: 2rem;
-}
-
-.paginationPrevious div {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.paginationPrevious div Svg {
-  fill: #dbdbdb;
-  width: 3vw;
-  padding: 5%;
-}
-
-.paginationPrevious :hover {
-  cursor: pointer;
-  -webkit-animation: blinkingArrow 2s  infinite;
-          animation: blinkingArrow 2s  infinite;
+@keyframes movingBanderoll {
+  0% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+  100% {
+    -webkit-transform: translate(-33.3%, 0%);
+            transform: translate(-33.3%, 0%);
+  }
 }
 
 /*

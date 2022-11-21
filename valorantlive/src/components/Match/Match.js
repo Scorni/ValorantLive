@@ -2,7 +2,7 @@ import React,{ useState, useEffect} from "react";
 import '../../assets/style/Match/match.scss';
 
 import axios from "axios";
-import { matchingGame,rawToEmbeddedUrl,fetchData,withoutHyphen, fetchDataBy} from '../../utils/commun'
+import { matchingGame,rawToEmbeddedUrl,fetchData,matchFullName, fetchDataBy} from '../../utils/commun'
 import { NavLink,useParams } from "react-router-dom";
 
 export default function Match(props) {
@@ -62,7 +62,7 @@ export default function Match(props) {
                         }else{
                             html += "<br/>"+
                                 "<br/>"+
-                                '<p>Starting at :'+data[i][j].begin_at+'</p>'
+                                '<p class="starting">Starting at :'+data[i][j].begin_at+'</p>'
                         }
                         if(YT){
                             html += '<iframe class="player" type="video/webm" src="'+rawToEmbeddedUrl(YT.items[0].id)+'" width="900" height="500" allowfullscreen></iframe>'
@@ -84,8 +84,12 @@ export default function Match(props) {
             setTournament(data[0][0].serie.full_name)
             setMatches(data[0][0].tournament.name)
             setMatch(data[0][0].name)
-            console.log(data[0][0]);
-            setScore((data[0][0].results[0].score+ " - " + data[0][0].results[1].score ))
+            if((data[0][0].results[0].score+ " - " + data[0][0].results[1].score ) === "0 - 0"){
+                setScore("To be played")
+            }else{
+                setScore((data[0][0].results[0].score+ " - " + data[0][0].results[1].score ))
+            }
+            
         }
     },[data,league])
     return (
@@ -96,26 +100,103 @@ export default function Match(props) {
                 <div className='fourthBorder'></div>
                 <div className='fifthBorder'></div>
             <div className='mainHeader'>
-                    <p>{withoutHyphen(game)}</p>
-            </div>
-            <div className='secondHeader'>
-                    <p>LEAGUES</p>
-            </div>
-            <div className='thirdHeader'>
-                <p>{league}</p>
-            </div>
-            <div className='fourthHeader'>
-                <p>{tournament}</p>
-            </div>
-            <div className='fifthHeader'>
-                <p>{matches}</p>
+                    <p>{matchFullName(game)}</p>
             </div>
             <div className='sixthHeader'>
                 <p>{match}</p>
             </div>
-            <div className='seventhHeader'>
-                <p>{score}</p>
-            </div>
+             <div className='banderoll'>
+                        <div class="marquee-top__item">
+                            <strong>{league}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{tournament}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{matches}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{score}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{match}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{league}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{tournament}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{matches}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{score}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{match}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{league}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{tournament}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{matches}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{score}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                        <div class="marquee-top__item">
+                            <strong>{match}</strong>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
+                            </svg>
+                        </div>
+                    </div>
             <table className='table'>
                 <tbody className='tbody' dangerouslySetInnerHTML={{ __html: table }}>
                     

@@ -48,6 +48,29 @@ export function matchingGame(title){
     }
     return title
 }
+export function matchFullName(shortName){
+    let matchedArray = {
+        "starcraft-brood-war" : "Starcraft Brood War",
+        "starcraft-2" : "Starcraft 2",
+        "lol-wild-rift" : "Lol Wild Rift",
+        "kog" : "King of Glory",
+        "valorant" : "Valorant",
+        "fifa" : "Fifa",
+        "r6-siege" : "Rainbow 6 Siege",
+        "cod-mw" : "Call of Duty",
+        "rl" : "Rocket League",
+        "pubg" : "Pubg",
+        "ow" : "Overwatch",
+        "dota-2" : "Dota 2",
+        "league-of-legends" : "League of Legends",
+        "cs-go" : "Counter-Strike : Global Offensive",
+    }
+    for(const [key, value] of Object.entries(matchedArray))
+    {
+        if(key === shortName) shortName = value
+    }
+    return shortName
+}
 export function sortByTournament(data){
     let historicOfTournament = []
     console.log(data);

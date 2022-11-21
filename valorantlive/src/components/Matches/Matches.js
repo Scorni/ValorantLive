@@ -1,6 +1,6 @@
 import '../../assets/style/Matches/matches.scss';
 import React,{ useState, useEffect} from "react";
-import { matchingGame,withoutHyphen, fetchDataBy} from '../../utils/commun'
+import { matchingGame,matchFullName, fetchDataBy} from '../../utils/commun'
 import { useParams } from "react-router-dom";
 import Arrow from '../../components/SVG/Arrow.js';
 
@@ -76,7 +76,7 @@ export default function Matches(props) {
                 <div className='fourthBorder'></div>
                 <div className='fifthBorder'></div>
                 <div className='mainHeader'>
-                    <p>{withoutHyphen(game)}</p>
+                    <p>{matchFullName(game)}</p>
                 </div>
                 <div className='secondHeader'>
                     <p>LEAGUES</p>

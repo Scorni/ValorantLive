@@ -44,90 +44,24 @@ body{
             text-shadow: #a7771e 7px 7px  ;
         }
     }
-    .secondHeader{
-        position: absolute;
-        z-index: 3;
-        
-        animation: slideInLeft 2.5s $easeOutQuint  ;
-        p{
-            text-decoration: none;
-            -webkit-text-stroke: 1px white;
-            font-size: 2rem;
-            color: transparent;
-            margin-top: 70%;
-            margin-left: 35%;
-        }
-    }
-    .thirdHeader{
-        position: absolute;
-        z-index: 3;
-        
-        animation: slideInLeft 3s $easeOutQuint  ;
-        p{
-            
-            text-align: left;
-            text-decoration: none;
-            -webkit-text-stroke: 1px white;
-            font-size: 2rem;
-            color: transparent;
-            margin-top: 21%;
-            margin-left: 7%;
 
-            width: 50vw;
-        }
-    }
-    .fourthHeader{
-        position: absolute;
-        z-index: 3;
-        
-        animation: slideInLeft 3s $easeOutQuint  ;
-        p{
-            text-align: left;
-            
-            text-decoration: none;
-            -webkit-text-stroke: 1px white;
-            font-size: 2rem;
-            color: transparent;
-            margin-top: 31%;
-            margin-left: 7%;
-
-            width: 50vw;
-        }
-    }
-    .fifthHeader{
-        position: absolute;
-        z-index: 3;
-        
-        animation: slideInLeft 3s $easeOutQuint  ;
-        p{
-            text-align: left;
-            
-            text-decoration: none;
-            -webkit-text-stroke: 1px white;
-            font-size: 2rem;
-            color: transparent;
-            margin-top: 37%;
-            margin-left: 7%;
-
-            width: 50vw;
-        }
-    }
     .sixthHeader{
         position: absolute;
         z-index: 3;
         
         animation: slideInLeft 3s $easeOutQuint  ;
+
         p{
-            text-align: left;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            // white-space: nowrap;
+            // text-overflow: ellipsis;
             text-decoration: none;
+            text-align: center;
             -webkit-text-stroke: 1px white;
-            font-size: 2.75rem;
-            color: white;
-            margin-top: 13%;
-            margin-left: 25vw;
-            width: 40vw;
+            font-size: 2.35rem;
+            color: transparent;
+            margin-top: 12%;
+            width: 100vw;
+
         }
     }
     .seventhHeader{
@@ -151,7 +85,7 @@ body{
         position: absolute;
         width: 100vw;
         height: 60vh;
-        bottom: 5%;
+        bottom: 10%;
         
     
         .leagues{
@@ -213,12 +147,17 @@ body{
                         transition: 2s ;
                         color: white;
             }
+            .starting{
+                -webkit-text-stroke: 1px white;
+            font-size: 1.5rem;
+            color: transparent;
+            }
                     
         }
     }
     .backgroundBottom{
         position: absolute;
-        height: 10vh;
+        height: 15vh;
         width: 100vw;
         background: #a7771e url('../../img/test.svg') ;
         mix-blend-mode: normal;
@@ -231,53 +170,33 @@ body{
     box-shadow: #000000 17px 17px  ;
 
 }
-.paginationNext{
+.banderoll{
+    z-index: 5;
     position: absolute;
-    background: #1a1418 url('../../img/test.svg') ;
-    background-blend-mode: overlay;
-    right: 0;
-    bottom: 60vh;
-    width: 6vw;
-    color: white;
-    font-size: 2rem;
-    div{
-        transform: rotate(90deg);
-        Svg{
-            fill: #dbdbdb;
-            width: 3vw;
-            padding: 5%;
-        }
+    display: flex;
+    align-items: center;
+    height: 4vh;
+    overflow: hidden;
+    white-space: nowrap;
+    bottom: 0vh;
+    .marquee-top__item{
+        padding: 0 10px;
     }
-    :hover{
-        cursor: pointer;
-        animation: blinkingArrow 2s  infinite;
+    svg{
+        margin: 0 60px -3px 100px ;
+        fill: #ffffff;
+    }
+    animation: movingBanderoll 28s linear  infinite ;
+}
+@keyframes movingBanderoll {
+    0%{
+        transform: translate(0%, 0%);
+    }
+    100%{
+        transform: translate(-33.3%, 0%);
 
     }
 }
-.paginationPrevious{
-    position: absolute;
-    background: #1a1418 url('../../img/test.svg') ;
-    background-blend-mode: overlay;
-    left: 0;
-    bottom: 60vh;
-    width: 6vw;
-    color: white;
-    font-size: 2rem;
-    div{
-        transform: rotate(-90deg);
-        Svg{
-            fill: #dbdbdb;
-            width: 3vw;
-            padding: 5%;
-        }
-    }
-    :hover{
-        cursor: pointer;
-        animation: blinkingArrow 2s  infinite;
-
-    }
-}
-
 /*
 *** Animation
 */

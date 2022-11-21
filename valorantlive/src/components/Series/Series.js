@@ -1,7 +1,7 @@
 import '../../assets/style/Series/series.scss';
 
 import React,{ useState, useEffect} from "react";
-import { fetchDataBy, fetchDataByThree, matchingGame,withoutHyphen } from '../../utils/commun'
+import { fetchDataBy, fetchDataByThree, matchingGame,matchFullName } from '../../utils/commun'
 import { useParams } from "react-router-dom";
 import Arrow from '../../components/SVG/Arrow.js';
 
@@ -56,7 +56,7 @@ export default function Valorant(props) {
                 <div className='fourthBorder'></div>
                 <div className='fifthBorder'></div>
                 <div className='mainHeader'>
-                    <p>{withoutHyphen(game)}</p>
+                    <p>{matchFullName(game)}</p>
                 </div>
                 <div className='secondHeader'>
                     <p>LEAGUES</p>

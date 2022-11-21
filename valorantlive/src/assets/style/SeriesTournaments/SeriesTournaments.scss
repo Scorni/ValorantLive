@@ -45,41 +45,12 @@ body{
     }
 }
 
-.diagonalBorderTop{
-    position: absolute;
-    z-index: 0;
-    transform-origin: bottom left;
-    width: 120vw;
-    transform: rotate(-27.5deg);
-    height: 100vh;
-    border: 1px solid #ffffff;
-}
-.diagonalBorderBottom{
-    position: absolute;
-    z-index: 0;
-    transform-origin: bottom left;
-    width: 120vw;
-    top: 113%;
-    // background-color: aliceblue;
-    transform: rotate(-27.5deg);
-    height: 100vh;
-}
-.seriesBox{
-    position: absolute;
-    transform-origin: bottom left;
-    z-index: -1;
-    background: linear-gradient(-27.5deg,  #ffffff00 50%,#16141a8f 50%);
-    width: 50vw;
-    height: 50vh;
-    left: 25%;
-    top: 25%;
-    animation: seriesBoxes 3s forwards  $easeOutQuint; 
-    
-}
+
+
 .seriesGame{
     position: absolute;
     z-index: 3;
-    left: 27%;
+    left: 35%;
     top: 25%;
     a{
         transition: 1s;
@@ -96,21 +67,10 @@ body{
         color: white
     }
 }
-.tournamentsBox{
-    position: absolute;
-    background: linear-gradient(-27.5deg,  #16141a8f 50%,#ffffff00 50%);
-    z-index: -1;
-    transform-origin: bottom left;
-    width: 50vw;
-    height: 50vh;        
-    left: 25%;
-    top: 25%;
-    animation: Boxes 3s  forwards $easeOutQuint;
-}
 .tournamentsGame{
     position: absolute;
     z-index: 3;
-    right: 27%;
+    right:15%;
     bottom: 25%;
     a{
         transition: 1s;
@@ -127,9 +87,87 @@ body{
         color: white
     }
 }
+.seriesBox{
+    position: absolute;
+    height:100vh;
+    margin-bottom:2em;
+    width:50%;
+    animation: test 3s  forwards $easeOutQuint;
+    a{
+        transition: 1s;
+        text-decoration: none;
+        -webkit-text-stroke: 1px white;
+        font-size: 4rem;
+        color: transparent
+    }
+    a:hover{
+        transition: 1s;
+        text-decoration: none;
+        -webkit-text-stroke: 1px white;
+        font-size: 4rem;
+        color: white
+    }
+  }
+.tournamentsBox{
+    position: absolute;
+    height:100vh;
+    margin-bottom:2em;
+    width:50%;
+    animation: test2 3s  forwards $easeOutQuint;
+    a{
+        transition: 1s;
+        text-decoration: none;
+        -webkit-text-stroke: 1px white;
+        font-size: 4rem;
+        color: transparent
+    }
+    a:hover{
+        transition: 1s;
+        text-decoration: none;
+        -webkit-text-stroke: 1px white;
+        font-size: 4rem;
+        color: white
+    }
+} 
+
 /*
 ** animation
 */
+@keyframes test {
+    0%{
+        background: linear-gradient(to top left, #ffffff00 calc(50% - 1px), #3d4d55, #16141a8f calc(50% + 1px) );
+        width: 50vw;
+        height: 50vh;
+        left: 20%;
+        top: 25%;
+    }
+    100%{
+        background: linear-gradient(to top left, #ffffff00 calc(50% - 1px), #3d4d55, #16141a8f calc(50% + 1px) );
+        width: 75vw;
+        height: 75vh;
+        left: 0%;
+        top: 25%;
+
+    }
+}
+@keyframes test2 {
+    0%{
+        background: linear-gradient(to top left, #16141a8f calc(50% - 1px), #3d4d55, #ffffff00 calc(50% + 1px) );
+        width: 50vw;
+        height: 50vh;
+        right: 20%;
+
+        top: 25%;
+    }
+    100%{
+        background: linear-gradient(to top left, #16141a8f calc(50% - 1px), #3d4d55, #ffffff00 calc(50% + 1px) );
+        width: 75vw;
+        height: 75vh;
+        right: 0%;
+        top: 0%;
+
+    }
+}
 @keyframes seriesBoxes {
     0%{
         border-top: 1px solid #000000;
