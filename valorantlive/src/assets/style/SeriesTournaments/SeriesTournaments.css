@@ -281,7 +281,7 @@ body {
 }
 
 .background {
-  background: url("../../img/test.svg");
+  background: url("../../img/noises.svg");
   position: absolute;
   mix-blend-mode: multiply;
   width: 100vw;
@@ -319,8 +319,8 @@ body {
 .seriesGame {
   position: absolute;
   z-index: 3;
-  left: 35%;
-  top: 25%;
+  left: 5%;
+  top: 5%;
 }
 
 .seriesGame a {
@@ -344,8 +344,8 @@ body {
 .tournamentsGame {
   position: absolute;
   z-index: 3;
-  right: 15%;
-  bottom: 25%;
+  right: 5%;
+  bottom: 5%;
 }
 
 .tournamentsGame a {
@@ -370,7 +370,7 @@ body {
   position: absolute;
   height: 100vh;
   margin-bottom: 2em;
-  width: 50%;
+  width: 100%;
   -webkit-animation: test 3s forwards cubic-bezier(0.23, 1, 0.32, 1);
           animation: test 3s forwards cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -380,8 +380,9 @@ body {
   transition: 1s;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: transparent;
+  padding-left: 25%;
 }
 
 .seriesBox a:hover {
@@ -389,7 +390,7 @@ body {
   transition: 1s;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: white;
 }
 
@@ -407,7 +408,7 @@ body {
   transition: 1s;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: transparent;
 }
 
@@ -416,7 +417,7 @@ body {
   transition: 1s;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: white;
 }
 
@@ -486,62 +487,6 @@ body {
     width: 72.9vw;
     height: 72.9vh;
     right: 0%;
-    top: 0%;
-  }
-}
-
-@-webkit-keyframes seriesBoxes {
-  0% {
-    border-top: 1px solid #000000;
-    width: 50vw;
-    left: 25%;
-  }
-  100% {
-    border-top: 1px solid #ffffff;
-    width: 75vw;
-    height: 75vh;
-    left: 0%;
-  }
-}
-
-@keyframes seriesBoxes {
-  0% {
-    border-top: 1px solid #000000;
-    width: 50vw;
-    left: 25%;
-  }
-  100% {
-    border-top: 1px solid #ffffff;
-    width: 75vw;
-    height: 75vh;
-    left: 0%;
-  }
-}
-
-@-webkit-keyframes Boxes {
-  0% {
-    border-bottom: 1px solid #000000;
-    width: 50vw;
-  }
-  100% {
-    border-bottom: 1px solid #ffffff;
-    width: 75vw;
-    height: 75vh;
-    margin-right: 200px;
-    top: 0%;
-  }
-}
-
-@keyframes Boxes {
-  0% {
-    border-bottom: 1px solid #000000;
-    width: 50vw;
-  }
-  100% {
-    border-bottom: 1px solid #ffffff;
-    width: 75vw;
-    height: 75vh;
-    margin-right: 200px;
     top: 0%;
   }
 }

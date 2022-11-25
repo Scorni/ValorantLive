@@ -11,7 +11,7 @@ body{
     overflow-y: hidden;
 }
 .background{
-    background: url('../../img/test.svg');
+    background: url('../../img/noises.svg');
     position: absolute;
     mix-blend-mode: multiply;
     width: 100vw;
@@ -19,7 +19,7 @@ body{
     z-index: -1;
 }
 .containerSeries{
-    background: url('../../img/formsTournamentsSelected.png') #1f1f1f  ;
+    background: url('../../img/formsSeries.png') #1f1f1f  ;
     background-size: auto;
     mix-blend-mode: overlay;
 
@@ -76,7 +76,7 @@ body{
     }
     .table{
         position: absolute;
-        background: #1a1418 url('../../img/test.svg') ;
+        background: #1a1418 url('../../img/noises.svg') ;
         background-blend-mode: overlay;
         width: 100vw;
         height: 60vh;
@@ -126,7 +126,7 @@ body{
 
 .paginationNext{
     position: absolute;
-    background: #1a1418 url('../../img/test.svg') ;
+    background: #1a1418 url('../../img/noises.svg') ;
     background-blend-mode: overlay;
     right: 0;
     bottom: 60vh;
@@ -149,7 +149,7 @@ body{
 }
 .paginationPrevious{
     position: absolute;
-    background: #1a1418 url('../../img/test.svg') ;
+    background: #1a1418 url('../../img/noises.svg') ;
     background-blend-mode: overlay;
     left: 0;
     bottom: 60vh;

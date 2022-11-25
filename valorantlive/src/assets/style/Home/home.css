@@ -280,7 +280,7 @@ body {
 }
 
 .background {
-  background: url("../../img/test.svg");
+  background: url("../../img/noises.svg");
   position: absolute;
   mix-blend-mode: multiply;
   width: 100vw;

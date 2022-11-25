@@ -277,10 +277,11 @@ body {
   height: 100%;
   font-family: 'Monument_Regular';
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .background {
-  background: url("../../img/test.svg");
+  background: url("../../img/noises.svg");
   position: absolute;
   mix-blend-mode: multiply;
   width: 100vw;
@@ -439,7 +440,7 @@ body {
   position: absolute;
   height: 15vh;
   width: 100vw;
-  background: #a7771e url("../../img/test.svg");
+  background: #a7771e url("../../img/noises.svg");
   mix-blend-mode: normal;
   bottom: 0%;
 }
