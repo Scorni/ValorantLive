@@ -11,7 +11,7 @@ export default function Rank(props) {
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'http://localhost:8000/live'
+            url: 'https://backend-api-pandascore.up.railway.app/live'
         }
         fetchData(options,setData)
     }, [setData])
