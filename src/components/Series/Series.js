@@ -18,7 +18,7 @@ export default function Valorant(props) {
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'http://localhost:8000/series',
+            url: 'https://backend-api-pandascore.up.railway.app/series',
             params:{
                 games: matchingGame(game),
                 id: id

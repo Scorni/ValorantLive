@@ -21,7 +21,7 @@ export default function Match(props) {
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'http://localhost:8000/match',
+            url: 'https://backend-api-pandascore.up.railway.app/match',
             params:{
                 games: matchingGame(game),
                 id: matchid

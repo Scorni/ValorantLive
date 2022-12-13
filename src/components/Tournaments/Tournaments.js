@@ -18,7 +18,7 @@ export default function Tournaments(props) {
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'http://localhost:8000/tournaments',
+            url: 'https://backend-api-pandascore.up.railway.app/tournaments',
             params:{
                 games: matchingGame(game),
                 id: seriesid
