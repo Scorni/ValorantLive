@@ -1,0 +1,524 @@
+/*******************************
+            Flex Layout
+  *******************************/
+/************************************
+                Flex
+  *********************************/
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flexRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flexRowReverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.flexColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flexColumnReverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+/************************************
+              Inline
+  *********************************/
+.inlineRow {
+  display: inline;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.inlineRowReverse {
+  display: inline;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.inlineColumn {
+  display: inline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inlineColumnReverse {
+  display: inline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+/************************************
+        Wrap : align on one line or on multiple with auto resize
+  *********************************/
+.flexWrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flexNoWrap {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.flexWrapReverse {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+/************************************
+          Width inside the flexboc
+  *********************************/
+.flex-auto {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.flex-none {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+.flex-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.flex-2 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.flex-3 {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.flex-4 {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.flex-5 {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.flex-6 {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+
+.flex-7 {
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+}
+
+.flex-8 {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+}
+
+.flex-9 {
+  -webkit-box-flex: 9;
+      -ms-flex: 9;
+          flex: 9;
+}
+
+.flex-10 {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+}
+
+.flex-11 {
+  -webkit-box-flex: 11;
+      -ms-flex: 11;
+          flex: 11;
+}
+
+.flex-12 {
+  -webkit-box-flex: 12;
+      -ms-flex: 12;
+          flex: 12;
+}
+
+/************************************
+          alignment in cross axis | and main axis -
+  *********************************/
+.alignStart {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.alignCenter {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.alignEnd {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.spaceAround {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.spaceBetween {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/************************************
+        self alignment 
+  ************************************/
+.selfStart {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.selfCenter {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.selfEnd {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.selfStretch {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+@font-face {
+  font-family: 'Monument_Black';
+  src: URL("../../font/PPMonumentExtended-Black.otf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Monument_Light';
+  src: URL("../../font/PPMonumentExtended-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Monument_Regular';
+  src: URL("../../font/PPMonumentExtended-Regular.otf") format("truetype");
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Monument_Regular';
+  overflow-y: hidden;
+}
+
+.background {
+  background: url("../../img/noises.svg");
+  position: absolute;
+  mix-blend-mode: multiply;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.containerHome {
+  background: url("../../img/formshm.png") #1F1F1F;
+  background-size: auto;
+  mix-blend-mode: overlay;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.containerHome .mainHeader {
+  position: absolute;
+  -webkit-animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
+          animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.containerHome .mainHeader p {
+  color: white;
+  font-size: 5rem;
+  margin-top: 50px;
+  margin-left: 50px;
+  text-shadow: #553d3d 7px 7px;
+}
+
+.firstBorder {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 20%;
+  left: 5%;
+  border-inline: 1px #929292 solid;
+}
+
+.secondBorder {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  left: 25%;
+  width: 25%;
+  border-right: 1px #929292 solid;
+}
+
+.fourthBorder {
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  height: 100%;
+  left: 50%;
+  width: 24%;
+  border-right: 1px #929292 solid;
+}
+
+.fifthBorder {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  left: 75%;
+  width: 20%;
+  border-right: 1px #929292 solid;
+}
+
+.moba, .fps, .rts, .card, .other {
+  -webkit-transition: 2s;
+  transition: 2s;
+  margin-top: 90vh;
+}
+
+.moba .gameType, .fps .gameType, .rts .gameType, .card .gameType, .other .gameType {
+  text-align: left;
+  font-size: 3rem;
+  color: white;
+}
+
+.moba .game, .fps .game, .rts .game, .card .game, .other .game {
+  text-align: left;
+}
+
+.moba .game a, .fps .game a, .rts .game a, .card .game a, .other .game a {
+  text-decoration: none;
+  -webkit-text-stroke: 1px white;
+  font-size: 3rem;
+  color: transparent;
+}
+
+.moba {
+  margin-left: 25%;
+}
+
+.moba .game {
+  margin-left: -15%;
+}
+
+.fps {
+  margin-left: 35%;
+}
+
+.fps .game {
+  margin-left: -35%;
+}
+
+.rts {
+  margin-left: 35%;
+}
+
+.rts .game {
+  margin-left: -35%;
+}
+
+.card {
+  margin-left: 15%;
+}
+
+.card .game {
+  margin-left: -35%;
+}
+
+.other {
+  margin-left: 15%;
+}
+
+.other .game {
+  margin-left: -10%;
+}
+
+.firstBorder:hover .moba, .firstBorder:hover .fps, .firstBorder:hover .rts, .firstBorder:hover .card, .firstBorder:hover .other, .secondBorder:hover .moba, .secondBorder:hover .fps, .secondBorder:hover .rts, .secondBorder:hover .card, .secondBorder:hover .other, .thirdBorder:hover .moba, .thirdBorder:hover .fps, .thirdBorder:hover .rts, .thirdBorder:hover .card, .thirdBorder:hover .other, .fourthBorder:hover .moba, .fourthBorder:hover .fps, .fourthBorder:hover .rts, .fourthBorder:hover .card, .fourthBorder:hover .other, .fifthBorder:hover .moba, .fifthBorder:hover .fps, .fifthBorder:hover .rts, .fifthBorder:hover .card, .fifthBorder:hover .other {
+  margin-top: 20vh;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.firstBorder:hover .moba .gameType, .firstBorder:hover .fps .gameType, .firstBorder:hover .rts .gameType, .firstBorder:hover .card .gameType, .firstBorder:hover .other .gameType, .secondBorder:hover .moba .gameType, .secondBorder:hover .fps .gameType, .secondBorder:hover .rts .gameType, .secondBorder:hover .card .gameType, .secondBorder:hover .other .gameType, .thirdBorder:hover .moba .gameType, .thirdBorder:hover .fps .gameType, .thirdBorder:hover .rts .gameType, .thirdBorder:hover .card .gameType, .thirdBorder:hover .other .gameType, .fourthBorder:hover .moba .gameType, .fourthBorder:hover .fps .gameType, .fourthBorder:hover .rts .gameType, .fourthBorder:hover .card .gameType, .fourthBorder:hover .other .gameType, .fifthBorder:hover .moba .gameType, .fifthBorder:hover .fps .gameType, .fifthBorder:hover .rts .gameType, .fifthBorder:hover .card .gameType, .fifthBorder:hover .other .gameType {
+  text-align: left;
+  font-size: 3rem;
+  color: white;
+}
+
+.firstBorder:hover .moba .game, .firstBorder:hover .fps .game, .firstBorder:hover .rts .game, .firstBorder:hover .card .game, .firstBorder:hover .other .game, .secondBorder:hover .moba .game, .secondBorder:hover .fps .game, .secondBorder:hover .rts .game, .secondBorder:hover .card .game, .secondBorder:hover .other .game, .thirdBorder:hover .moba .game, .thirdBorder:hover .fps .game, .thirdBorder:hover .rts .game, .thirdBorder:hover .card .game, .thirdBorder:hover .other .game, .fourthBorder:hover .moba .game, .fourthBorder:hover .fps .game, .fourthBorder:hover .rts .game, .fourthBorder:hover .card .game, .fourthBorder:hover .other .game, .fifthBorder:hover .moba .game, .fifthBorder:hover .fps .game, .fifthBorder:hover .rts .game, .fifthBorder:hover .card .game, .fifthBorder:hover .other .game {
+  text-align: left;
+}
+
+.firstBorder:hover .moba .game a, .firstBorder:hover .fps .game a, .firstBorder:hover .rts .game a, .firstBorder:hover .card .game a, .firstBorder:hover .other .game a, .secondBorder:hover .moba .game a, .secondBorder:hover .fps .game a, .secondBorder:hover .rts .game a, .secondBorder:hover .card .game a, .secondBorder:hover .other .game a, .thirdBorder:hover .moba .game a, .thirdBorder:hover .fps .game a, .thirdBorder:hover .rts .game a, .thirdBorder:hover .card .game a, .thirdBorder:hover .other .game a, .fourthBorder:hover .moba .game a, .fourthBorder:hover .fps .game a, .fourthBorder:hover .rts .game a, .fourthBorder:hover .card .game a, .fourthBorder:hover .other .game a, .fifthBorder:hover .moba .game a, .fifthBorder:hover .fps .game a, .fifthBorder:hover .rts .game a, .fifthBorder:hover .card .game a, .fifthBorder:hover .other .game a {
+  text-decoration: none;
+  -webkit-text-stroke: 1px white;
+  font-size: 3rem;
+  color: transparent;
+}
+
+.firstBorder:hover .moba .game a:hover, .firstBorder:hover .fps .game a:hover, .firstBorder:hover .rts .game a:hover, .firstBorder:hover .card .game a:hover, .firstBorder:hover .other .game a:hover, .secondBorder:hover .moba .game a:hover, .secondBorder:hover .fps .game a:hover, .secondBorder:hover .rts .game a:hover, .secondBorder:hover .card .game a:hover, .secondBorder:hover .other .game a:hover, .thirdBorder:hover .moba .game a:hover, .thirdBorder:hover .fps .game a:hover, .thirdBorder:hover .rts .game a:hover, .thirdBorder:hover .card .game a:hover, .thirdBorder:hover .other .game a:hover, .fourthBorder:hover .moba .game a:hover, .fourthBorder:hover .fps .game a:hover, .fourthBorder:hover .rts .game a:hover, .fourthBorder:hover .card .game a:hover, .fourthBorder:hover .other .game a:hover, .fifthBorder:hover .moba .game a:hover, .fifthBorder:hover .fps .game a:hover, .fifthBorder:hover .rts .game a:hover, .fifthBorder:hover .card .game a:hover, .fifthBorder:hover .other .game a:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  text-decoration: none;
+  -webkit-text-stroke: 1px white;
+  font-size: 3rem;
+  color: white;
+}
+
+.firstBorder:hover .moba, .secondBorder:hover .moba, .thirdBorder:hover .moba, .fourthBorder:hover .moba, .fifthBorder:hover .moba {
+  margin-left: 25%;
+}
+
+.firstBorder:hover .moba .game, .secondBorder:hover .moba .game, .thirdBorder:hover .moba .game, .fourthBorder:hover .moba .game, .fifthBorder:hover .moba .game {
+  margin-left: -15%;
+}
+
+.firstBorder:hover .fps, .secondBorder:hover .fps, .thirdBorder:hover .fps, .fourthBorder:hover .fps, .fifthBorder:hover .fps {
+  margin-left: 35%;
+}
+
+.firstBorder:hover .fps .game, .secondBorder:hover .fps .game, .thirdBorder:hover .fps .game, .fourthBorder:hover .fps .game, .fifthBorder:hover .fps .game {
+  margin-left: -35%;
+}
+
+.firstBorder:hover .rts, .secondBorder:hover .rts, .thirdBorder:hover .rts, .fourthBorder:hover .rts, .fifthBorder:hover .rts {
+  margin-left: 35%;
+}
+
+.firstBorder:hover .rts .game, .secondBorder:hover .rts .game, .thirdBorder:hover .rts .game, .fourthBorder:hover .rts .game, .fifthBorder:hover .rts .game {
+  margin-left: -35%;
+}
+
+.firstBorder:hover .card, .secondBorder:hover .card, .thirdBorder:hover .card, .fourthBorder:hover .card, .fifthBorder:hover .card {
+  margin-left: 15%;
+}
+
+.firstBorder:hover .card .game, .secondBorder:hover .card .game, .thirdBorder:hover .card .game, .fourthBorder:hover .card .game, .fifthBorder:hover .card .game {
+  margin-left: -35%;
+}
+
+.firstBorder:hover .other, .secondBorder:hover .other, .thirdBorder:hover .other, .fourthBorder:hover .other, .fifthBorder:hover .other {
+  margin-left: 15%;
+}
+
+.firstBorder:hover .other .game, .secondBorder:hover .other .game, .thirdBorder:hover .other .game, .fourthBorder:hover .other .game, .fifthBorder:hover .other .game {
+  margin-left: -10%;
+}
+
+/*
+*** Animation
+*/
+@-webkit-keyframes slideInLeft {
+  0% {
+    margin-left: -90%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    margin-left: -90%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+@-webkit-keyframes slideInTop {
+  0% {
+    margin-top: 120vh;
+  }
+  100% {
+    margin-top: 90vh;
+  }
+}
+
+@keyframes slideInTop {
+  0% {
+    margin-top: 120vh;
+  }
+  100% {
+    margin-top: 90vh;
+  }
+}
+/*# sourceMappingURL=home.css.map */

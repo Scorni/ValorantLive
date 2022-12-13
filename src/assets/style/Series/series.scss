@@ -1,0 +1,231 @@
+@import  '../Helpers/flexboxLayout.scss' ;
+@import  '../Helpers/mediaQueries' ;
+@import  '../Helpers/ceaser' ;
+@import  '../Helpers/font.scss';
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Monument_Regular';
+    overflow-y: hidden;
+}
+.background{
+    background: url('../../img/noises.svg');
+    position: absolute;
+    mix-blend-mode: multiply;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.containerSeries{
+    background: url('../../img/formsSeries.png') #1f1f1f  ;
+    background-size: auto;
+    mix-blend-mode: overlay;
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    .mainHeader{
+        position: absolute;
+        z-index: 3;
+        
+        animation: slideInLeft 2s $easeOutQuint  ;
+        p{
+            color: white;
+            text-transform: uppercase;
+            font-size: 5rem;
+            width: 82vw;
+            text-align: left;
+            margin-left: 4%;
+            margin-top: 1%;
+            text-shadow: #3f553d 7px 7px  ;
+        }
+    }
+    .secondHeader{
+        position: absolute;
+        z-index: 3;
+        
+        animation: slideInLeft 2.5s $easeOutQuint  ;
+        p{
+            text-decoration: none;
+            -webkit-text-stroke: 1px white;
+            font-size: 3rem;
+            color: transparent;
+            margin-top: 40%;
+            margin-left: 22%;
+        }
+    }
+    .thirdHeader{
+        position: absolute;
+        z-index: 3;
+        
+        animation: slideInLeft 3s $easeOutQuint  ;
+        p{
+            text-align: left;
+            text-decoration: none;
+            -webkit-text-stroke: 1px white;
+            font-size: 3rem;
+            color: transparent;
+            margin-top: 20%;
+            margin-left: 7%;
+
+            width: 50vw;
+        }
+    }
+    .table{
+        position: absolute;
+        background: #1a1418 url('../../img/noises.svg') ;
+        background-blend-mode: overlay;
+        width: 100vw;
+        height: 60vh;
+        bottom: 0;
+        
+    
+        .leagues{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            position: relative;
+            z-index: 3;
+            td{
+                .imgLeague{
+                    height: 48px;
+                 }
+                 white-space: nowrap;
+    
+                text-overflow: ellipsis;
+                padding-inline: 1.5vw;
+                padding-block: 0.975vh;
+                width: 300px;
+                .series{
+                    text-align: center;
+                    a{
+                        text-decoration: none;
+                        font-size: 1.25rem;
+                        transition: 2s ;
+                        background-color: #dbdbdb;
+                        background: linear-gradient(to left, rgba(255,0,0,0) 50.1%, #dbdbdb 50%) right;
+                        color: white;
+                        background-size: 200%;
+                        transition: .5s ease-out;
+                    }
+                    a:hover{
+                        font-size: 1.25rem;
+                        background-position: left;
+                        
+                        color: rgb(0, 0, 0);
+                    }
+                }
+            }
+                    
+        }
+    }
+}
+
+.paginationNext{
+    position: absolute;
+    background: #1a1418 url('../../img/noises.svg') ;
+    background-blend-mode: overlay;
+    right: 0;
+    bottom: 60vh;
+    width: 6vw;
+    color: white;
+    font-size: 2rem;
+    div{
+        transform: rotate(90deg);
+        Svg{
+            fill: #dbdbdb;
+            width: 3vw;
+            padding: 5%;
+        }
+    }
+    :hover{
+        cursor: pointer;
+        animation: blinkingArrow 2s  infinite;
+
+    }
+}
+.paginationPrevious{
+    position: absolute;
+    background: #1a1418 url('../../img/noises.svg') ;
+    background-blend-mode: overlay;
+    left: 0;
+    bottom: 60vh;
+    width: 6vw;
+    color: white;
+    font-size: 2rem;
+    div{
+        transform: rotate(-90deg);
+        Svg{
+            fill: #dbdbdb;
+            width: 3vw;
+            padding: 5%;
+        }
+    }
+    :hover{
+        cursor: pointer;
+        animation: blinkingArrow 2s  infinite;
+
+    }
+}
+
+// BANDEROLL
+// .banderoll{
+//     position: absolute;
+//     display: flex;
+//     align-items: center;
+//     height: 4vh;
+//     overflow: hidden;
+//     white-space: nowrap;
+//     bottom: 60vh;
+//     .marquee-top__item{
+//         padding: 0 10px;
+//     }
+//     svg{
+//         margin: 0 30px -3px 10px ;
+//     }
+//     animation: movingBanderoll 20s linear  infinite ;
+// }
+// @keyframes movingBanderoll {
+//     0%{
+//         transform: translate(0%, 0%);
+//     }
+//     100%{
+//         transform: translate(-26.75%, 0%);
+
+//     }
+// }
+
+
+
+/*
+*** Animation
+*/
+@keyframes slideInLeft {
+    0%{
+        margin-left: -90%;
+    }
+    
+    100%{
+        margin-left: 0%;
+    }
+}
+@keyframes slideInTop{
+    0%{
+        margin-top: 120vh;
+    }
+    100%{
+        margin-top: 90vh;
+    }
+} 
+@keyframes blinkingArrow {
+    0%{
+        fill:  #ffffff;
+
+    }
+    100%{
+        fill: #1a1418;
+    }
+}
