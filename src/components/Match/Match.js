@@ -37,7 +37,7 @@ export default function Match(props) {
                         if((data[i][j].streams_list[k]).raw_url.includes('youtube')){
                             const options = {
                                 method: 'GET',
-                                url: 'http://localhost:8000/youtubeChannel',
+                                url: 'https://backend-api-pandascore.up.railway.app/youtubeChannel',
                                 params:{
                                     channel: (data[i][j].streams_list[k]).raw_url,
                                 }

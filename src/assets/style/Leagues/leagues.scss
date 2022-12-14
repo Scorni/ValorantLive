@@ -23,72 +23,119 @@ body{
     background-size: auto;
     mix-blend-mode: overlay;
 
-    position: absolute;
+    @extend 
+        .flexColumn;
     width: 100vw;
     height: 100vh;
     z-index: 2;
     .mainHeader{
-        position: absolute;
         z-index: 3;
         
         animation: slideInLeft 2s $easeOutQuint  ;
         p{
             text-align: left;
             margin-left: 4%;
-
+            margin-top: 0%;
+            margin-bottom: 0%;
             color: white;
             text-transform: uppercase;
-            font-size: 5rem;
-            margin-top: 1%;
+            @include devices(TV) {
+                font-size: 5vw;
+            }
+            @include devices(desktop) {
+                font-size: 5vw;
+            }
+            @include devices(laptops) {
+                font-size: 5vw;
+            }
+            @include devices(ipad) {
+                font-size: 7vw;
+            }
+            @include devices(mobile) {
+                font-size: 9vw;
+            }
             width: 82vw;
             text-shadow: #553d3d 7px 7px  ;
             
         }
     }
     .secondHeader{
-        position: absolute;
         z-index: 3;
-        
+        top: 0%;
+        height: auto;
         animation: slideInLeft 2.5s $easeOutQuint  ;
         p{
+            text-align: left;
             text-decoration: none;
             -webkit-text-stroke: 1px white;
-            font-size: 3rem;
+            @include devices(TV) {
+                font-size: 3vw;
+            }
+            @include devices(desktop) {
+                font-size: 3vw;
+            }
+            @include devices(laptops) {
+                font-size: 3vw;
+            }
+            @include devices(ipad) {
+                font-size: 5vw;
+            }
+            @include devices(mobile) {
+                font-size: 7vw;
+            }
+            top: 0%;
+            margin: 0%;
+            margin-left: 4%;
             color: transparent;
-            margin-top: 40%;
-            margin-left: 22%;
         }
     }
     .table{
-        position: absolute;
         background: #1a1418 url('../../img/noises.svg') ;
         background-blend-mode: overlay;
         width: 100vw;
-        height: 60vh;
-        bottom: 0;
-        
-    
+        @include devices(TV) {
+            height: 77vh;
+        }
+        @include devices(desktop) {
+            height: 80vh;
+        }
+        @include devices(laptops) {
+            height: 82vh;
+        }
+        @include devices(ipad) {
+            height: 80vh;
+        }
+        @include devices(mobile) {
+            height: 90vh;
+        }
+        margin-top: 0%;
+        margin-bottom: auto;
         .leagues{
-            white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
             position: relative;
             z-index: 3;
             td{
-                .imgLeague{
-                    height: 48px;
-                 }
-                 white-space: nowrap;
-    
-                text-overflow: ellipsis;
-                padding-inline: 1.5vw;
                 padding-block: 0.975vh;
-                width: 300px;
                 .series{
                     text-align: center;
                     a{
                         text-decoration: none;
-                        font-size: 1.25rem;
+                        @include devices(TV) {
+                            font-size: 1vw;
+                        }
+                        @include devices(desktop) {
+                            font-size: 1vw;
+                        }
+                        @include devices(laptops) {
+                            font-size: 1.5vw;
+                        }
+                        @include devices(ipad) {
+                            font-size: 1.5vw;
+                        }
+                        @include devices(mobile) {
+                            font-size: 2.5vw;
+                        }
                         transition: 2s ;
                         background-color: #dbdbdb;
                         background: linear-gradient(to left, rgba(255,0,0,0) 50.1%, #dbdbdb 50%) right;
@@ -97,9 +144,7 @@ body{
                         transition: .5s ease-out;
                     }
                     a:hover{
-                        font-size: 1.25rem;
                         background-position: left;
-                        
                         color: rgb(0, 0, 0);
                     }
                 }
@@ -107,54 +152,73 @@ body{
                     
         }
     }
-}
+    .pagination{
+        @extend 
+        .flexRow,
+        .spaceBetween;
+        width: 100%;
+    }
+    .paginationNextTest{
+        background: #1a1418 url('../../img/noises.svg') ;
+        background-blend-mode: overlay;
+        @include devices(TV) {
+            width: 6vw;
+        }
+        @include devices(desktop) {
+            width: 6vw;
+        }
+        @include devices(laptops) {
+            width: 6vw;
+        }
+        @include devices(ipad) {
+            width: 6vw;
+        }
+        @include devices(mobile) {
+            width: 12vw;
+        }
+        color: white;
+        font-size: 2rem;
+        div{
+            transform: rotate(90deg);
+            width: 5vw;
 
-.paginationNext{
-    position: absolute;
-    background: #1a1418 url('../../img/noises.svg') ;
-    background-blend-mode: overlay;
-    right: 0;
-    bottom: 60vh;
-    width: 6vw;
-    color: white;
-    font-size: 2rem;
-    div{
-        transform: rotate(90deg);
-        Svg{
-            fill: #dbdbdb;
-            width: 3vw;
-            padding: 5%;
+            Svg{
+                fill: #dbdbdb;
+                width: 3vw;
+                padding: 5%;
+            }
+        }
+        :hover{
+            cursor: pointer;
+            animation: blinkingArrow 2s  infinite;
+    
         }
     }
-    :hover{
-        cursor: pointer;
-        animation: blinkingArrow 2s  infinite;
+    .paginationPreviousTest{
+        background: #1a1418 url('../../img/noises.svg') ;
+        background-blend-mode: overlay;
 
-    }
-}
-.paginationPrevious{
-    position: absolute;
-    background: #1a1418 url('../../img/noises.svg') ;
-    background-blend-mode: overlay;
-    left: 0;
-    bottom: 60vh;
-    width: 6vw;
-    color: white;
-    font-size: 2rem;
-    div{
-        transform: rotate(-90deg);
-        Svg{
-            fill: #dbdbdb;
-            width: 3vw;
-            padding: 5%;
+        bottom: 60vh;
+        width: 6vw;
+        color: white;
+        font-size: 2rem;
+        div{
+            transform: rotate(-90deg);
+            Svg{
+                fill: #dbdbdb;
+                width: 3vw;
+                padding: 5%;
+            }
+        }
+        :hover{
+            cursor: pointer;
+            animation: blinkingArrow 2s  infinite;
+    
         }
     }
-    :hover{
-        cursor: pointer;
-        animation: blinkingArrow 2s  infinite;
-
-    }
 }
+
+
 
 // BANDEROLL
 // .banderoll{

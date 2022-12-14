@@ -10,7 +10,7 @@
   display: flex;
 }
 
-.flexRow {
+.flexRow, .containerLeagues .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,7 +30,7 @@
           flex-direction: row-reverse;
 }
 
-.flexColumn {
+.flexColumn, .containerLeagues {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,7 +225,7 @@
       justify-content: space-around;
 }
 
-.spaceBetween {
+.spaceBetween, .containerLeagues .pagination {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -292,14 +292,12 @@ body {
   background: url("../../img/formsLeagues.png") #1F1F1F;
   background-size: auto;
   mix-blend-mode: overlay;
-  position: absolute;
   width: 100vw;
   height: 100vh;
   z-index: 2;
 }
 
 .containerLeagues .mainHeader {
-  position: absolute;
   z-index: 3;
   -webkit-animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
@@ -308,41 +306,131 @@ body {
 .containerLeagues .mainHeader p {
   text-align: left;
   margin-left: 4%;
+  margin-top: 0%;
+  margin-bottom: 0%;
   color: white;
   text-transform: uppercase;
-  font-size: 5rem;
-  margin-top: 1%;
   width: 82vw;
   text-shadow: #553d3d 7px 7px;
 }
 
+@media only screen and (min-width: 1201px) {
+  .containerLeagues .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerLeagues .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerLeagues .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerLeagues .mainHeader p {
+    font-size: 7vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerLeagues .mainHeader p {
+    font-size: 9vw;
+  }
+}
+
 .containerLeagues .secondHeader {
-  position: absolute;
   z-index: 3;
+  top: 0%;
+  height: auto;
   -webkit-animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .containerLeagues .secondHeader p {
+  text-align: left;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3rem;
+  top: 0%;
+  margin: 0%;
+  margin-left: 4%;
   color: transparent;
-  margin-top: 40%;
-  margin-left: 22%;
+}
+
+@media only screen and (min-width: 1201px) {
+  .containerLeagues .secondHeader p {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerLeagues .secondHeader p {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerLeagues .secondHeader p {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerLeagues .secondHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerLeagues .secondHeader p {
+    font-size: 7vw;
+  }
 }
 
 .containerLeagues .table {
-  position: absolute;
   background: #1a1418 url("../../img/noises.svg");
   background-blend-mode: overlay;
   width: 100vw;
-  height: 60vh;
-  bottom: 0;
+  margin-top: 0%;
+  margin-bottom: auto;
+}
+
+@media only screen and (min-width: 1201px) {
+  .containerLeagues .table {
+    height: 77vh;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerLeagues .table {
+    height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerLeagues .table {
+    height: 82vh;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerLeagues .table {
+    height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerLeagues .table {
+    height: 90vh;
+  }
 }
 
 .containerLeagues .table .leagues {
-  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   position: relative;
@@ -350,15 +438,7 @@ body {
 }
 
 .containerLeagues .table .leagues td {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding-inline: 1.5vw;
   padding-block: 0.975vh;
-  width: 300px;
-}
-
-.containerLeagues .table .leagues td .imgLeague {
-  height: 48px;
 }
 
 .containerLeagues .table .leagues td .series {
@@ -367,7 +447,6 @@ body {
 
 .containerLeagues .table .leagues td .series a {
   text-decoration: none;
-  font-size: 1.25rem;
   -webkit-transition: 2s;
   transition: 2s;
   background-color: #dbdbdb;
@@ -379,63 +458,121 @@ body {
   transition: .5s ease-out;
 }
 
+@media only screen and (min-width: 1201px) {
+  .containerLeagues .table .leagues td .series a {
+    font-size: 1vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerLeagues .table .leagues td .series a {
+    font-size: 1vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerLeagues .table .leagues td .series a {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerLeagues .table .leagues td .series a {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerLeagues .table .leagues td .series a {
+    font-size: 2.5vw;
+  }
+}
+
 .containerLeagues .table .leagues td .series a:hover {
-  font-size: 1.25rem;
   background-position: left;
   color: black;
 }
 
-.paginationNext {
-  position: absolute;
+.containerLeagues .pagination {
+  width: 100%;
+}
+
+.containerLeagues .paginationNextTest {
   background: #1a1418 url("../../img/noises.svg");
   background-blend-mode: overlay;
-  right: 0;
-  bottom: 60vh;
-  width: 6vw;
   color: white;
   font-size: 2rem;
 }
 
-.paginationNext div {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+@media only screen and (min-width: 1201px) {
+  .containerLeagues .paginationNextTest {
+    width: 6vw;
+  }
 }
 
-.paginationNext div Svg {
+@media only screen and (max-width: 1200px) {
+  .containerLeagues .paginationNextTest {
+    width: 6vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerLeagues .paginationNextTest {
+    width: 6vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerLeagues .paginationNextTest {
+    width: 6vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerLeagues .paginationNextTest {
+    width: 12vw;
+  }
+}
+
+.containerLeagues .paginationNextTest div {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 5vw;
+}
+
+.containerLeagues .paginationNextTest div Svg {
   fill: #dbdbdb;
   width: 3vw;
   padding: 5%;
 }
 
-.paginationNext :hover {
+.containerLeagues .paginationNextTest :hover {
   cursor: pointer;
   -webkit-animation: blinkingArrow 2s  infinite;
           animation: blinkingArrow 2s  infinite;
 }
 
-.paginationPrevious {
-  position: absolute;
+.containerLeagues .paginationPreviousTest {
   background: #1a1418 url("../../img/noises.svg");
   background-blend-mode: overlay;
-  left: 0;
   bottom: 60vh;
   width: 6vw;
   color: white;
   font-size: 2rem;
 }
 
-.paginationPrevious div {
+.containerLeagues .paginationPreviousTest div {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
-.paginationPrevious div Svg {
+.containerLeagues .paginationPreviousTest div Svg {
   fill: #dbdbdb;
   width: 3vw;
   padding: 5%;
 }
 
-.paginationPrevious :hover {
+.containerLeagues .paginationPreviousTest :hover {
   cursor: pointer;
   -webkit-animation: blinkingArrow 2s  infinite;
           animation: blinkingArrow 2s  infinite;
