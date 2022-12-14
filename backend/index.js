@@ -5,7 +5,7 @@ require('dotenv').config()
 
 const app = express()
 
-// app.use(cors()) localhost
+// app.use(cors()) 
 app.use(cors({credentials: true, origin: 'https://esports-stats.up.railway.app'}))
 
 app.get('/', (req,res) => {
