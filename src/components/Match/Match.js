@@ -99,9 +99,9 @@ export default function Match(props) {
                 <div className='secondBorder'></div>
                 <div className='fourthBorder'></div>
                 <div className='fifthBorder'></div>
-            <div className='mainHeader'>
-                    <p>{matchFullName(game)}</p>
-            </div>
+                <div className='mainHeader'>
+                    <a href='/'><p>{matchFullName(game)}</p></a>
+                </div>
             <div className='sixthHeader'>
                 <p>{match}</p>
             </div>

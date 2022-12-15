@@ -30,7 +30,7 @@
           flex-direction: row-reverse;
 }
 
-.flexColumn {
+.flexColumn, .containerMatch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,6 +280,47 @@ body {
   overflow-x: hidden;
 }
 
+.firstBorder {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 20%;
+  left: 5%;
+  border-inline: 1px #929292 solid;
+}
+
+.secondBorder {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  left: 25%;
+  width: 25%;
+  border-right: 1px #929292 solid;
+}
+
+.fourthBorder {
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  height: 100%;
+  left: 50%;
+  width: 24%;
+  border-right: 1px #929292 solid;
+}
+
+.fifthBorder {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  height: 100%;
+  left: 75%;
+  width: 20%;
+  border-right: 1px #929292 solid;
+}
+
 .background {
   background: url("../../img/noises.svg");
   position: absolute;
@@ -293,28 +334,61 @@ body {
   background: url("../../img/formsMatch.png") #1f1f1f;
   background-size: auto;
   mix-blend-mode: overlay;
-  position: absolute;
   width: 100vw;
   height: 100vh;
   z-index: 2;
 }
 
 .containerMatch .mainHeader {
-  position: absolute;
   z-index: 3;
   -webkit-animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+.containerMatch .mainHeader a {
+  text-decoration: none;
+}
+
 .containerMatch .mainHeader p {
-  color: white;
-  text-transform: uppercase;
-  font-size: 5rem;
-  margin-top: 1%;
+  text-decoration: none;
   text-align: left;
   margin-left: 4%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: white;
+  text-transform: uppercase;
   width: 82vw;
-  text-shadow: #a7771e 7px 7px;
+  text-shadow: #553d3d 7px 7px;
+}
+
+@media only screen and (min-width: 1201px) {
+  .containerMatch .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerMatch .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatch .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatch .mainHeader p {
+    font-size: 7vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatch .mainHeader p {
+    font-size: 9vw;
+  }
 }
 
 .containerMatch .sixthHeader {

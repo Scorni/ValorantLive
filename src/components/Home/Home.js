@@ -11,7 +11,7 @@ export default function Rank(props) {
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'https://backend-api-pandascore.up.railway.app/live'
+            url: 'http://localhost:8000/live'
         }
         fetchData(options,setData)
     }, [setData])
@@ -22,7 +22,7 @@ export default function Rank(props) {
             <div className='mainHeader'>
                 <p>ESPORTS STATS</p>
             </div>
-            <div className='firstBorder'>
+            <div className='firstBorderHome'>
                 <div className='moba'>
                     <p className='gameType'>MOBA</p>
                     <p className='game'>
@@ -39,7 +39,7 @@ export default function Rank(props) {
                     </p>
                 </div>
             </div>
-            <div className='secondBorder'>
+            <div className='secondBorderHome'>
                 <div className='fps'>
                     <p className='gameType'>FPS</p>
                     <p className='game'>
@@ -63,7 +63,7 @@ export default function Rank(props) {
                 </div>
             </div>
             
-            <div className='fourthBorder'>
+            <div className='fourthBorderHome'>
                 <div className='rts'>
                     <p className='gameType'>RTS</p>
                     <p className='game'>
@@ -74,7 +74,7 @@ export default function Rank(props) {
                     </p>
                 </div>
             </div>
-            <div className='fifthBorder'>
+            <div className='fifthBorderHome'>
                 <div className='other'>
                     <p className='gameType'>OTHER</p>
                     <p className='game'>

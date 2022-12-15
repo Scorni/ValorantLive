@@ -18,7 +18,7 @@ export default function Valorant(props) {
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'https://backend-api-pandascore.up.railway.app/series',
+            url: 'http://localhost:8000/series',
             params:{
                 games: matchingGame(game),
                 id: id
@@ -35,7 +35,6 @@ export default function Valorant(props) {
     
     if(data){
         const paginatedData = data.slice(offset).slice(0, perPage);
-        console.log(data);
         const totalPagesData = Math.ceil(data.length / perPage)
         function nextPage(){
             if(page < totalPagesData){
@@ -56,7 +55,7 @@ export default function Valorant(props) {
                 <div className='fourthBorder'></div>
                 <div className='fifthBorder'></div>
                 <div className='mainHeader'>
-                    <p>{matchFullName(game)}</p>
+                    <a href='/'><p>{matchFullName(game)}</p></a>
                 </div>
                 <div className='secondHeader'>
                     <p>LEAGUES</p>
@@ -66,11 +65,11 @@ export default function Valorant(props) {
                 </div>
                 <div>
                     {totalPagesData > 1 &&
-                        <div>
-                            <div onClick={() => previousPage() } className='paginationPrevious'>
+                       <div className='pagination'>
+                            <div onClick={() => previousPage() } className='paginationPreviousTest'>
                                     <Arrow  className="previousArrow"/>
                                 </div>
-                                <div onClick={() => nextPage()} className='paginationNext'>
+                                <div onClick={() => nextPage()} className='paginationNextTest'>
                                     <Arrow  className="nextArrow"/>
                                 </div>
                         </div>

@@ -30,25 +30,48 @@ body{
     .mainHeader{
         position: absolute;
         animation: slideInLeft 2s $easeOutQuint  ;
+        a{
+            text-decoration: none;
+        }
         p{
+            text-decoration: none;
+            text-align: left;
+            margin-left: 4%;
+            margin-top: 0%;
+            margin-bottom: 0%;
             color: white;
-            font-size: 5rem;
-            margin-top: 50px;
-            margin-left: 50px;
+            text-transform: uppercase;
+            @include devices(TV) {
+                font-size: 5vw;
+            }
+            @include devices(desktop) {
+                font-size: 5vw;
+            }
+            @include devices(laptops) {
+                font-size: 5vw;
+            }
+            @include devices(ipad) {
+                font-size: 7vw;
+            }
+            @include devices(mobile) {
+                font-size: 12vw;
+            }
+            width: 82vw;
             text-shadow: #553d3d 7px 7px  ;
         }
     }
 }
 
-.firstBorder{
+.firstBorderHome{
     position: absolute;
     z-index: 1;
     height: 100%;
     width: 20%;
     left: 5%;
     border-inline: 1px #929292 solid;
+
 }
-.secondBorder{
+.secondBorderHome{
     position: absolute;
     z-index: 1;
     height: 100%;
@@ -57,7 +80,7 @@ body{
     border-right: 1px #929292 solid;
 }
 
-.fourthBorder{
+.fourthBorderHome{
     position: absolute;
     text-align: center;
     z-index: 1;
@@ -66,9 +89,8 @@ body{
     width: 24%;
     border-right: 1px #929292 solid;
 }
-.fifthBorder{
+.fifthBorderHome{
     position: absolute;
-    
     z-index: 1;
     height: 100%;
     left: 75%;
@@ -77,12 +99,38 @@ body{
 }
 .moba,.fps,.rts,.card,.other{
     transition: 2s;
-    
-
-    margin-top: 90vh;
+    @include devices(TV) {
+        margin-top: 85vh;
+    }
+    @include devices(desktop) {
+        margin-top: 90vh;
+    }
+    @include devices(laptops) {
+        margin-top: 90vh;
+    }
+    @include devices(ipad) {
+        margin-top: 90vh;
+    }
+    @include devices(mobile) {
+        margin-top: 95vh;
+    }
     .gameType{
         text-align: left;
-        font-size: 3rem;
+        @include devices(TV) {
+            font-size: 4vw;
+        }
+        @include devices(desktop) {
+            font-size: 4vw;
+        }
+        @include devices(laptops) {
+            font-size: 4vw;
+        }
+        @include devices(ipad) {
+            font-size: 4vw;
+        }
+        @include devices(mobile) {
+            font-size: 5vw;
+        }
         color: white;
         
     }
@@ -91,7 +139,21 @@ body{
         a{
             text-decoration: none;
             -webkit-text-stroke: 1px white;
-            font-size: 3rem;
+            @include devices(TV) {
+                font-size: 3vw;
+            }
+            @include devices(desktop) {
+                font-size: 4vw;
+            }
+            @include devices(laptops) {
+                font-size: 4vw;
+            }
+            @include devices(ipad) {
+                font-size: 4vw;
+            }
+            @include devices(mobile) {
+                font-size: 5vw;
+            }
             color: transparent
         }
        
@@ -99,50 +161,123 @@ body{
     
 }
 .moba{
-    margin-left: 25%;
+    margin-left: 0%;
     .game{
-        margin-left: -15%;
-
+        @include devices(TV) {
+            margin-left: -10%;
+        }
+        @include devices(desktop) {
+            margin-left: -15%;
+        }
+        @include devices(laptops) {
+            margin-left: -15%;
+        }
+        @include devices(ipad) {
+            margin-left: -15%;
+        }
+        @include devices(mobile) {
+            margin-left: -5%;
+        }
     }
 }
 .fps{
-    margin-left: 35%;
+    margin-left: 27%;
     .game{
-        margin-left: -35%;
-
+        @include devices(TV) {
+            margin-left: -45%;
+        }
+        @include devices(desktop) {
+            margin-left: -35%;
+        }
+        @include devices(laptops) {
+            margin-left: -35%;
+        }
+        @include devices(ipad) {
+            margin-left: -35%;
+        }
+        @include devices(mobile) {
+            margin-left: -40%;
+        }
     }
 }
 .rts{
-    margin-left: 35%;
+    margin-left: 20%;
     .game{
-        margin-left: -35%;
-
-    }
-}
-.card{
-    margin-left: 15%;
-    .game{
-        margin-left: -35%;
-
+        @include devices(TV) {
+            margin-left: -35%;
+        }
+        @include devices(desktop) {
+            margin-left: -35%;
+        }
+        @include devices(laptops) {
+            margin-left: -35%;
+        }
+        @include devices(ipad) {
+            margin-left: -35%;
+        }
+        @include devices(mobile) {
+            margin-left: -30%;
+        }
     }
 }
 .other{
-    margin-left: 15%;
+    margin-left: 0%;
     .game{
-        margin-left: -10%;
-
+        @include devices(TV) {
+            margin-left: -15%;
+        }
+        @include devices(desktop) {
+            margin-left: -15%;
+        }
+        @include devices(laptops) {
+            margin-left: -15%;
+        }
+        @include devices(ipad) {
+            margin-left: -15%;
+        }
+        @include devices(mobile) {
+            margin-left: -10%;
+        }
     }
 }
 
-.firstBorder:hover,.secondBorder:hover,.thirdBorder:hover,.fourthBorder:hover,.fifthBorder:hover{
-    .moba,.fps,.rts,.card,.other{
-        margin-top: 20vh;
-        
+.firstBorderHome:hover,.secondBorderHome:hover,.thirdBorderHome:hover,.fourthBorderHome:hover,.fifthBorderHome:hover{
+    .moba,.fps,.rts,.other{
+        margin-top: 10vh;
+        @include devices(TV) {
+            margin-top: 15vh;
+        }
+        @include devices(desktop) {
+            margin-top: 15vh;
+        }
+        @include devices(laptops) {
+            margin-top: 10vh;
+        }
+        @include devices(ipad) {
+            margin-top: 10vh;
+        }
+        @include devices(mobile) {
+            margin-top: 35vh;
+        }
         transition: 2s;
 
         .gameType{
             text-align: left;
-            font-size: 3rem;
+            @include devices(TV) {
+                font-size: 4vw;
+            }
+            @include devices(desktop) {
+                font-size: 4vw;
+            }
+            @include devices(laptops) {
+                font-size: 4vw;
+            }
+            @include devices(ipad) {
+                font-size: 4vw;
+            }
+            @include devices(mobile) {
+                font-size: 5vw;
+            }
             color: white;
             
         }
@@ -151,14 +286,42 @@ body{
             a{
                 text-decoration: none;
                 -webkit-text-stroke: 1px white;
-                font-size: 3rem;
+                @include devices(TV) {
+                    font-size: 3vw;
+                }
+                @include devices(desktop) {
+                    font-size: 4vw;
+                }
+                @include devices(laptops) {
+                    font-size: 4vw;
+                }
+                @include devices(ipad) {
+                    font-size: 4vw;
+                }
+                @include devices(mobile) {
+                    font-size: 5vw;
+                }
                 color: transparent
             }
             a:hover{
                 transition: 1s;
                 text-decoration: none;
                 -webkit-text-stroke: 1px white;
-                font-size: 3rem;
+                @include devices(TV) {
+                    font-size: 3vw;
+                }
+                @include devices(desktop) {
+                    font-size: 5vw;
+                }
+                @include devices(laptops) {
+                    font-size: 5vw;
+                }
+                @include devices(ipad) {
+                    font-size: 7vw;
+                }
+                @include devices(mobile) {
+                    font-size: 5vw;
+                }
                 color: white
             }
            
@@ -166,38 +329,87 @@ body{
         
     }
     .moba{
-        margin-left: 25%;
+        
         .game{
-            margin-left: -15%;
-
+            @include devices(TV) {
+                margin-left: -10%;
+            }
+            @include devices(desktop) {
+                margin-left: -15%;
+            }
+            @include devices(laptops) {
+                margin-left: -15%;
+            }
+            @include devices(ipad) {
+                margin-left: -15%;
+            }
+            @include devices(mobile) {
+                margin-left: -5%;
+            }
         }
     }
     .fps{
-        margin-left: 35%;
-        .game{
-            margin-left: -35%;
+        margin-left: 27%;
 
+        .game{
+            @include devices(TV) {
+                margin-left: -45%;
+            }
+            @include devices(desktop) {
+                margin-left: -35%;
+            }
+            @include devices(laptops) {
+                margin-left: -35%;
+            }
+            @include devices(ipad) {
+                margin-left: -35%;
+            }
+            @include devices(mobile) {
+                margin-left: -40%;                    
+
+            }
         }
     }
     .rts{
-        margin-left: 35%;
+        margin-left: 20%;
         .game{
-            margin-left: -35%;
+            @include devices(TV) {
+                margin-left: -35%;
+            }
+            @include devices(desktop) {
+                margin-left: -35%;
+            }
+            @include devices(laptops) {
+                margin-left: -35%;
+            }
+            @include devices(ipad) {
+                margin-left: -35%;
+            }
+            @include devices(mobile) {
+                margin-left: -30%;                    
 
-        }
-    }
-    .card{
-        margin-left: 15%;
-        .game{
-            margin-left: -35%;
-
+            }
         }
     }
     .other{
-        margin-left: 15%;
+        margin-left: 0%;
         .game{
-            margin-left: -10%;
+            @include devices(TV) {
+                margin-left: -15%;
+            }
+            @include devices(desktop) {
+                margin-left: -15%;
+            }
+            @include devices(laptops) {
+                margin-left: -15%;
+            }
+            @include devices(ipad) {
+                margin-left: -15%;
+            }
+            @include devices(mobile) {
+                margin-left: -10%;                    
 
+            }
         }
     }
 

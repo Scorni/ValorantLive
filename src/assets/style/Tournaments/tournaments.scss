@@ -10,6 +10,45 @@ body{
     font-family: 'Monument_Regular';
     overflow-y: hidden;
 }
+.firstBorder{
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 20%;
+    left: 5%;
+    border-inline: 1px #929292 solid;
+
+}
+.secondBorder{
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    left: 25%;
+    width: 25%;
+    border-right: 1px #929292 solid;
+}
+
+.fourthBorder{
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    height: 100%;
+    left: 50%;
+    width: 24%;
+    border-right: 1px #929292 solid;
+}
+.fifthBorder{
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    height: 100%;
+    left: 75%;
+    width: 20%;
+    border-right: 1px #929292 solid;
+}
 .background{
     background: url('../../img/noises.svg');
     position: absolute;
@@ -22,108 +61,216 @@ body{
     background: url('../../img/formsTournament.png') #1f1f1f  ;
     background-size: auto;
     mix-blend-mode: overlay;
-
-    position: absolute;
+    @extend 
+            .flexColumn;
     width: 100vw;
     height: 100vh;
     z-index: 2;
     .mainHeader{
-        position: absolute;
         z-index: 3;
         
         animation: slideInLeft 2s $easeOutQuint  ;
+         a{
+            text-decoration: none;
+        }
         p{
-            color: white;
-            text-transform: uppercase;
-            font-size: 5rem;
+            text-decoration: none;
             text-align: left;
             margin-left: 4%;
-            margin-top: 1%;
-
+            margin-top: 0%;
+            margin-bottom: 0%;
+            color: white;
+            text-transform: uppercase;
+            @include devices(TV) {
+                font-size: 5vw;
+            }
+            @include devices(desktop) {
+                font-size: 5vw;
+            }
+            @include devices(laptops) {
+                font-size: 5vw;
+            }
+            @include devices(ipad) {
+                font-size: 7vw;
+            }
+            @include devices(mobile) {
+                font-size: 9vw;
+            }
             width: 82vw;
-            text-shadow: #3f553d 7px 7px  ;
+            text-shadow: #553d3d 7px 7px  ;
         }
     }
     .secondHeader{
-        position: absolute;
         z-index: 3;
-        
+        height: auto;
+
         animation: slideInLeft 2.5s $easeOutQuint  ;
         p{
+            text-align: left;
             text-decoration: none;
             -webkit-text-stroke: 1px white;
-            font-size: 3rem;
+            @include devices(TV) {
+                font-size: 3vw;
+                margin-top: 0%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(desktop) {
+                font-size: 3vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(laptops) {
+                font-size: 3vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(ipad) {
+                font-size: 5vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(mobile) {
+                font-size: 5vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
             color: transparent;
-            margin-top: 40%;
-            margin-left: 22%;
         }
     }
     .thirdHeader{
-        position: absolute;
         z-index: 3;
         
         animation: slideInLeft 3s $easeOutQuint  ;
         p{
-            
             text-align: left;
             text-decoration: none;
             -webkit-text-stroke: 1px white;
-            font-size: 3rem;
+            @include devices(TV) {
+                font-size: 3vw;
+                margin-top: 0%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(desktop) {
+                font-size: 3vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(laptops) {
+                font-size: 3vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(ipad) {
+                font-size: 5vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(mobile) {
+                font-size: 5vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
             color: transparent;
-            margin-top: 20%;
-            margin-left: 7%;
-
-            width: 50vw;
         }
     }
     .fourthHeader{
-        position: absolute;
         z-index: 3;
         
         animation: slideInLeft 3.5s $easeOutQuint  ;
         p{
             text-align: left;
-            
             text-decoration: none;
             -webkit-text-stroke: 1px white;
-            font-size: 3rem;
+            @include devices(TV) {
+                font-size: 3vw;
+                margin-top: 0%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(desktop) {
+                font-size: 3vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(laptops) {
+                font-size: 3vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(ipad) {
+                font-size: 5vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(mobile) {
+                font-size: 5vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 10%;
+            }
             color: transparent;
-            margin-top: 13%;
-            margin-left: 100%;
-
-            width: 50vw;
         }
     }
     .table{
-        position: absolute;
         background: #1a1418 url('../../img/noises.svg') ;
         background-blend-mode: overlay;
         width: 100vw;
-        height: 60vh;
-        bottom: 0;
-        
-    
+        @include devices(TV) {
+            height: 77vh;
+        }
+        @include devices(desktop) {
+            height: 80vh;
+        }
+        @include devices(laptops) {
+            height: 82vh;
+        }
+        @include devices(ipad) {
+            height: 83vh;
+        }
+        @include devices(mobile) {
+            height: 82vh;
+
+        }
+        margin-bottom: auto;
         .leagues{
-            white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
             position: relative;
             z-index: 3;
             td{
-                .imgLeague{
-                    height: 48px;
-                 }
-                 white-space: nowrap;
-    
-                text-overflow: ellipsis;
-                padding-inline: 1.5vw;
                 padding-block: 0.975vh;
-                width: 300px;
                 .series{
                     text-align: center;
                     a{
                         text-decoration: none;
-                        font-size: 1.25rem;
+                        @include devices(TV) {
+                            font-size: 1vw;
+                        }
+                        @include devices(desktop) {
+                            font-size: 1vw;
+                        }
+                        @include devices(laptops) {
+                            font-size: 1.5vw;
+                        }
+                        @include devices(ipad) {
+                            font-size: 1.5vw;
+                        }
+                        @include devices(mobile) {
+                            font-size: 2.5vw;
+                        }
                         transition: 2s ;
                         background-color: #dbdbdb;
                         background: linear-gradient(to left, rgba(255,0,0,0) 50.1%, #dbdbdb 50%) right;
@@ -132,65 +279,121 @@ body{
                         transition: .5s ease-out;
                     }
                     a:hover{
-                        font-size: 1.25rem;
                         background-position: left;
-                        
                         color: rgb(0, 0, 0);
                     }
                 }
             }
-                    
+        }
+    }
+    .pagination{
+        @extend 
+        .flexRow,
+        .spaceBetween;
+        width: 100%;
+    }
+    .paginationNextTest{
+        background: #1a1418 url('../../img/noises.svg') ;
+        background-blend-mode: overlay;
+        @include devices(TV) {
+            width: 6vw;
+        }
+        @include devices(desktop) {
+            width: 6vw;
+        }
+        @include devices(laptops) {
+            width: 6vw;
+        }
+        @include devices(ipad) {
+            width: 6vw;
+        }
+        @include devices(mobile) {
+            width: 15vw;
+        }
+        color: white;
+        font-size: 2rem;
+        div{
+            margin-top: 15%;
+
+            Svg{
+                fill: #dbdbdb;
+                
+                @include devices(TV) {
+                    width: 3vw;
+                }
+                @include devices(desktop) {
+                    width: 3vw;
+                }
+                @include devices(laptops) {
+                    width: 3vw;
+                }
+                @include devices(ipad) {
+                    width: 3vw;
+                }
+                @include devices(mobile) {
+                    width: 6vw;
+                }
+                padding: 5%;
+            }
+        }
+        :hover{
+            cursor: pointer;
+            animation: blinkingArrow 2s  infinite;
+    
+        }
+    }
+    .paginationPreviousTest{
+        background: #1a1418 url('../../img/noises.svg') ;
+        background-blend-mode: overlay;
+
+        bottom: 60vh;
+        @include devices(TV) {
+            width: 6vw;
+        }
+        @include devices(desktop) {
+            width: 6vw;
+        }
+        @include devices(laptops) {
+            width: 6vw;
+        }
+        @include devices(ipad) {
+            width: 6vw;
+        }
+        @include devices(mobile) {
+            width: 15vw;
+        }
+        color: white;
+        font-size: 2rem;
+        div{
+            transform: rotate(-180deg);
+
+            Svg{
+                fill: #dbdbdb;
+                @include devices(TV) {
+                    width: 3vw;
+                }
+                @include devices(desktop) {
+                    width: 3vw;
+                }
+                @include devices(laptops) {
+                    width: 3vw;
+                }
+                @include devices(ipad) {
+                    width: 3vw;
+                }
+                @include devices(mobile) {
+                    width: 6vw;
+                }
+                padding: 5%;
+            }
+        }
+        :hover{
+            cursor: pointer;
+            animation: blinkingArrow 2s  infinite;
+    
         }
     }
 }
-
-.paginationNext{
-    position: absolute;
-    background: #1a1418 url('../../img/noises.svg') ;
-    background-blend-mode: overlay;
-    right: 0;
-    bottom: 60vh;
-    width: 6vw;
-    color: white;
-    font-size: 2rem;
-    div{
-        transform: rotate(90deg);
-        Svg{
-            fill: #dbdbdb;
-            width: 3vw;
-            padding: 5%;
-        }
-    }
-    :hover{
-        cursor: pointer;
-        animation: blinkingArrow 2s  infinite;
-
-    }
-}
-.paginationPrevious{
-    position: absolute;
-    background: #1a1418 url('../../img/noises.svg') ;
-    background-blend-mode: overlay;
-    left: 0;
-    bottom: 60vh;
-    width: 6vw;
-    color: white;
-    font-size: 2rem;
-    div{
-        transform: rotate(-90deg);
-        Svg{
-            fill: #dbdbdb;
-            width: 3vw;
-            padding: 5%;
-        }
-    }
-    :hover{
-        cursor: pointer;
-        animation: blinkingArrow 2s  infinite;
-
-    }
-}
-
 /*
 *** Animation
 */
