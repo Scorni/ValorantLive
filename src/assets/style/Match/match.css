@@ -30,7 +30,7 @@
           flex-direction: row-reverse;
 }
 
-.flexColumn {
+.flexColumn, .containerMatch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,6 +271,10 @@
   src: URL("../../font/PPMonumentExtended-Regular.otf") format("truetype");
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   width: 100%;
@@ -278,6 +282,47 @@ body {
   font-family: 'Monument_Regular';
   overflow-y: hidden;
   overflow-x: hidden;
+}
+
+.firstBorder {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 20%;
+  left: 5%;
+  border-inline: 1px #929292 solid;
+}
+
+.secondBorder {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  left: 25%;
+  width: 25%;
+  border-right: 1px #929292 solid;
+}
+
+.fourthBorder {
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  height: 100%;
+  left: 50%;
+  width: 24%;
+  border-right: 1px #929292 solid;
+}
+
+.fifthBorder {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  height: 100%;
+  left: 75%;
+  width: 20%;
+  border-right: 1px #929292 solid;
 }
 
 .background {
@@ -290,73 +335,218 @@ body {
 }
 
 .containerMatch {
+  position: relative;
   background: url("../../img/formsMatch.png") #1f1f1f;
   background-size: auto;
   mix-blend-mode: overlay;
-  position: absolute;
   width: 100vw;
   height: 100vh;
   z-index: 2;
 }
 
 .containerMatch .mainHeader {
-  position: absolute;
   z-index: 3;
   -webkit-animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+.containerMatch .mainHeader a {
+  text-decoration: none;
+}
+
 .containerMatch .mainHeader p {
-  color: white;
-  text-transform: uppercase;
-  font-size: 5rem;
-  margin-top: 1%;
+  text-decoration: none;
   text-align: left;
   margin-left: 4%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: white;
+  text-transform: uppercase;
   width: 82vw;
-  text-shadow: #a7771e 7px 7px;
+  text-shadow: #553d3d 7px 7px;
+}
+
+@media only screen and (min-width: 1201px) {
+  .containerMatch .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerMatch .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatch .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatch .mainHeader p {
+    font-size: 7vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatch .mainHeader p {
+    font-size: 9vw;
+  }
 }
 
 .containerMatch .sixthHeader {
-  position: absolute;
   z-index: 3;
-  -webkit-animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
-          animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
+  height: auto;
+  -webkit-animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
+          animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .containerMatch .sixthHeader p {
+  text-align: left;
   text-decoration: none;
-  text-align: center;
   -webkit-text-stroke: 1px white;
-  font-size: 2.35rem;
   color: transparent;
-  margin-top: 12%;
-  width: 100vw;
+}
+
+@media only screen and (min-width: 1201px) {
+  .containerMatch .sixthHeader p {
+    font-size: 3vw;
+    margin-top: 0%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerMatch .sixthHeader p {
+    font-size: 3vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatch .sixthHeader p {
+    font-size: 3vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatch .sixthHeader p {
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatch .sixthHeader p {
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
 }
 
 .containerMatch .seventhHeader {
-  position: absolute;
   z-index: 3;
-  -webkit-animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
-          animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
+  height: auto;
+  -webkit-animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
+          animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .containerMatch .seventhHeader p {
   text-align: left;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 2.75rem;
-  color: white;
-  margin-top: 57%;
-  margin-left: 135%;
-  width: 60vw;
+  color: transparent;
+}
+
+@media only screen and (min-width: 1201px) {
+  .containerMatch .seventhHeader p {
+    font-size: 3vw;
+    margin-top: 0%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerMatch .seventhHeader p {
+    font-size: 3vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatch .seventhHeader p {
+    font-size: 3vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatch .seventhHeader p {
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatch .seventhHeader p {
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
 }
 
 .containerMatch .table {
-  position: absolute;
-  width: 100vw;
-  height: 60vh;
   bottom: 10%;
+  margin-left: 10vw;
+}
+
+@media only screen and (min-width: 1201px) {
+  .containerMatch .table {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerMatch .table {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatch .table {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatch .table {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatch .table {
+    height: 70vh;
+  }
 }
 
 .containerMatch .table .leagues {
@@ -373,11 +563,6 @@ body {
   text-overflow: ellipsis;
   padding-inline: 1.5vw;
   padding-block: 0.975vh;
-  width: 300px;
-}
-
-.containerMatch .table .leagues td .imgLeague {
-  height: 48px;
 }
 
 .containerMatch .table .leagues td .series {
@@ -448,6 +633,41 @@ body {
 .player {
   -webkit-box-shadow: #000000 17px 17px;
           box-shadow: #000000 17px 17px;
+  margin-left: -15%;
+}
+
+@media only screen and (min-width: 1201px) {
+  .player {
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .player {
+    width: 70vw;
+    height: 55vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .player {
+    width: 70vw;
+    height: 40vh;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .player {
+    width: 60vw;
+    height: 35vh;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .player {
+    width: 80vw;
+    height: 35vh;
+  }
 }
 
 .banderoll {
@@ -460,7 +680,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 4vh;
-  overflow: hidden;
+  overflow-x: hidden;
   white-space: nowrap;
   bottom: 0vh;
   -webkit-animation: movingBanderoll 28s linear  infinite;
@@ -474,28 +694,6 @@ body {
 .banderoll svg {
   margin: 0 60px -3px 100px;
   fill: #ffffff;
-}
-
-@-webkit-keyframes movingBanderoll {
-  0% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-  100% {
-    -webkit-transform: translate(-33.3%, 0%);
-            transform: translate(-33.3%, 0%);
-  }
-}
-
-@keyframes movingBanderoll {
-  0% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-  100% {
-    -webkit-transform: translate(-33.3%, 0%);
-            transform: translate(-33.3%, 0%);
-  }
 }
 
 /*
@@ -551,6 +749,28 @@ body {
   }
   100% {
     fill: #1a1418;
+  }
+}
+
+@-webkit-keyframes movingBanderoll {
+  0% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+  100% {
+    -webkit-transform: translate(-33.3%, 0%);
+            transform: translate(-33.3%, 0%);
+  }
+}
+
+@keyframes movingBanderoll {
+  0% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+  100% {
+    -webkit-transform: translate(-33.3%, 0%);
+            transform: translate(-33.3%, 0%);
   }
 }
 /*# sourceMappingURL=match.css.map */

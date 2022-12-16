@@ -35,7 +35,21 @@ body{
         p{
             text-transform: uppercase;
             color: white;
-            font-size: 5rem;
+            @include devices(TV) {
+                font-size: 6vw;
+            }
+            @include devices(desktop) {
+                font-size: 8vw;
+            }
+            @include devices(laptops) {
+                font-size: 10vw;
+            }
+            @include devices(ipad) {
+                font-size: 10vw;
+            }
+            @include devices(mobile) {
+                font-size: 12vw;
+            }
             text-align: left;
             margin-left: 4%;
             margin-top: 1%;
@@ -52,40 +66,14 @@ body{
     z-index: 3;
     left: 5%;
     top: 5%;
-    a{
-        transition: 1s;
-        text-decoration: none;
-        -webkit-text-stroke: 1px white;
-        font-size: 4rem;
-        color: transparent
-    }
-    a:hover{
-        transition: 1s;
-        text-decoration: none;
-        -webkit-text-stroke: 1px white;
-        font-size: 4rem;
-        color: white
-    }
+
 }
 .tournamentsGame{
     position: absolute;
     z-index: 3;
     right:5%;
     bottom: 5%;
-    a{
-        transition: 1s;
-        text-decoration: none;
-        -webkit-text-stroke: 1px white;
-        font-size: 4rem;
-        color: transparent
-    }
-    a:hover{
-        transition: 1s;
-        text-decoration: none;
-        -webkit-text-stroke: 1px white;
-        font-size: 4rem;
-        color: white
-    }
+    
 }
 .seriesBox{
     position: absolute;
@@ -97,7 +85,21 @@ body{
         transition: 1s;
         text-decoration: none;
         -webkit-text-stroke: 1px white;
-        font-size: 3.5rem;
+        @include devices(TV) {
+            font-size: 3vw;
+        }
+        @include devices(desktop) {
+            font-size: 4vw;
+        }
+        @include devices(laptops) {
+            font-size: 4vw;
+        }
+        @include devices(ipad) {
+            font-size: 5vw;
+        }
+        @include devices(mobile) {
+            font-size: 6vw;
+        }
         color: transparent;
         padding-left: 25%;
         
@@ -106,7 +108,21 @@ body{
         transition: 1s;
         text-decoration: none;
         -webkit-text-stroke: 1px white;
-        font-size: 3.5rem;
+        @include devices(TV) {
+            font-size: 3vw;
+        }
+        @include devices(desktop) {
+            font-size: 4vw;
+        }
+        @include devices(laptops) {
+            font-size: 4vw;
+        }
+        @include devices(ipad) {
+            font-size: 5vw;
+        }
+        @include devices(mobile) {
+            font-size: 6vw;
+        }
         color: white
         
     }
@@ -121,14 +137,42 @@ body{
         transition: 1s;
         text-decoration: none;
         -webkit-text-stroke: 1px white;
-        font-size: 3.5rem;
+        @include devices(TV) {
+            font-size: 3vw;
+        }
+        @include devices(desktop) {
+            font-size: 4vw;
+        }
+        @include devices(laptops) {
+            font-size: 4vw;
+        }
+        @include devices(ipad) {
+            font-size: 5vw;
+        }
+        @include devices(mobile) {
+            font-size: 6vw;
+        }
         color: transparent
     }
     a:hover{
         transition: 1s;
         text-decoration: none;
         -webkit-text-stroke: 1px white;
-        font-size: 3.5rem;
+        @include devices(TV) {
+            font-size: 3vw;
+        }
+        @include devices(desktop) {
+            font-size: 4vw;
+        }
+        @include devices(laptops) {
+            font-size: 4vw;
+        }
+        @include devices(ipad) {
+            font-size: 5vw;
+        }
+        @include devices(mobile) {
+            font-size: 6vw;
+        }
         color: white
     }
 } 
