@@ -38,11 +38,8 @@ body{
 
     }
     @supports (contain: paint) { 
-        @supports (-webkit-appearance: none) {
           /* Safari Only CSS here */
           mix-blend-mode: overlay;
-
-        }
     }
     position: absolute;
     width: 100vw;

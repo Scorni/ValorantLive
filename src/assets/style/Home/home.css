@@ -320,11 +320,9 @@ body {
 }
 
 @supports (contain: paint) {
-  @supports (-webkit-appearance: none) {
-    .containerHome {
-      /* Safari Only CSS here */
-      mix-blend-mode: overlay;
-    }
+  .containerHome {
+    /* Safari Only CSS here */
+    mix-blend-mode: overlay;
   }
 }
 
