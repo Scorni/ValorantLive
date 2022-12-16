@@ -13,7 +13,19 @@ body{
 .background{
     background: url('../../img/noises.svg');
     position: absolute;
-    mix-blend-mode: multiply;
+    @media not all and (min-resolution:.001dpcm) { 
+        @supports (-webkit-appearance: none) {
+          /* Safari Only CSS here */
+          background-blend-mode: multiply;
+
+        }
+      }
+    @media  all{ 
+    @supports (-webkit-appearance: none) {
+        mix-blend-mode: multiply;
+
+    }
+    }
     width: 100vw;
     height: 100vh;
     z-index: -1;
@@ -29,10 +41,10 @@ body{
         }
       }
     @media  all{ 
-    @supports (-webkit-appearance: none) {
-        mix-blend-mode: non;
+        @supports (-webkit-appearance: none) {
+            mix-blend-mode: overlay;
 
-    }
+        }
     }
     position: absolute;
     width: 100vw;
