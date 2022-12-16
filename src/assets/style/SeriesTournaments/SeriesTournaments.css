@@ -308,12 +308,41 @@ body {
 .containerSeriesTournaments .mainHeader p {
   text-transform: uppercase;
   color: white;
-  font-size: 5rem;
   text-align: left;
   margin-left: 4%;
   margin-top: 1%;
   width: 82vw;
   text-shadow: #3d4d55 7px 7px;
+}
+
+@media only screen and (min-width: 1201px) {
+  .containerSeriesTournaments .mainHeader p {
+    font-size: 6vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerSeriesTournaments .mainHeader p {
+    font-size: 8vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerSeriesTournaments .mainHeader p {
+    font-size: 10vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerSeriesTournaments .mainHeader p {
+    font-size: 10vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerSeriesTournaments .mainHeader p {
+    font-size: 12vw;
+  }
 }
 
 .seriesGame {
@@ -323,47 +352,11 @@ body {
   top: 5%;
 }
 
-.seriesGame a {
-  -webkit-transition: 1s;
-  transition: 1s;
-  text-decoration: none;
-  -webkit-text-stroke: 1px white;
-  font-size: 4rem;
-  color: transparent;
-}
-
-.seriesGame a:hover {
-  -webkit-transition: 1s;
-  transition: 1s;
-  text-decoration: none;
-  -webkit-text-stroke: 1px white;
-  font-size: 4rem;
-  color: white;
-}
-
 .tournamentsGame {
   position: absolute;
   z-index: 3;
   right: 5%;
   bottom: 5%;
-}
-
-.tournamentsGame a {
-  -webkit-transition: 1s;
-  transition: 1s;
-  text-decoration: none;
-  -webkit-text-stroke: 1px white;
-  font-size: 4rem;
-  color: transparent;
-}
-
-.tournamentsGame a:hover {
-  -webkit-transition: 1s;
-  transition: 1s;
-  text-decoration: none;
-  -webkit-text-stroke: 1px white;
-  font-size: 4rem;
-  color: white;
 }
 
 .seriesBox {
@@ -380,9 +373,38 @@ body {
   transition: 1s;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3.5rem;
   color: transparent;
   padding-left: 25%;
+}
+
+@media only screen and (min-width: 1201px) {
+  .seriesBox a {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .seriesBox a {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .seriesBox a {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .seriesBox a {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .seriesBox a {
+    font-size: 6vw;
+  }
 }
 
 .seriesBox a:hover {
@@ -390,8 +412,37 @@ body {
   transition: 1s;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3.5rem;
   color: white;
+}
+
+@media only screen and (min-width: 1201px) {
+  .seriesBox a:hover {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .seriesBox a:hover {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .seriesBox a:hover {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .seriesBox a:hover {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .seriesBox a:hover {
+    font-size: 6vw;
+  }
 }
 
 .tournamentsBox {
@@ -408,8 +459,37 @@ body {
   transition: 1s;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3.5rem;
   color: transparent;
+}
+
+@media only screen and (min-width: 1201px) {
+  .tournamentsBox a {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .tournamentsBox a {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .tournamentsBox a {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .tournamentsBox a {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .tournamentsBox a {
+    font-size: 6vw;
+  }
 }
 
 .tournamentsBox a:hover {
@@ -417,8 +497,37 @@ body {
   transition: 1s;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3.5rem;
   color: white;
+}
+
+@media only screen and (min-width: 1201px) {
+  .tournamentsBox a:hover {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .tournamentsBox a:hover {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .tournamentsBox a:hover {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .tournamentsBox a:hover {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .tournamentsBox a:hover {
+    font-size: 6vw;
+  }
 }
 
 /*

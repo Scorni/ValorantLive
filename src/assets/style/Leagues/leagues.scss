@@ -10,6 +10,45 @@ body{
     font-family: 'Monument_Regular';
     overflow-y: hidden;
 }
+.firstBorderH{
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 20%;
+    left: 5%;
+    border-inline: 1px #929292 solid;
+
+}
+.secondBorder{
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    left: 25%;
+    width: 25%;
+    border-right: 1px #929292 solid;
+}
+
+.fourthBorder{
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    height: 100%;
+    left: 50%;
+    width: 24%;
+    border-right: 1px #929292 solid;
+}
+.fifthBorder{
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    height: 100%;
+    left: 75%;
+    width: 20%;
+    border-right: 1px #929292 solid;
+}
 .background{
     background: url('../../img/noises.svg');
     position: absolute;
@@ -32,7 +71,11 @@ body{
         z-index: 3;
         
         animation: slideInLeft 2s $easeOutQuint  ;
+        a{
+            text-decoration: none;
+        }
         p{
+            text-decoration: none;
             text-align: left;
             margin-left: 4%;
             margin-top: 0%;
@@ -81,7 +124,7 @@ body{
                 font-size: 5vw;
             }
             @include devices(mobile) {
-                font-size: 7vw;
+                font-size: 5vw;
             }
             top: 0%;
             margin: 0%;
@@ -103,10 +146,10 @@ body{
             height: 82vh;
         }
         @include devices(ipad) {
-            height: 80vh;
+            height: 83vh;
         }
         @include devices(mobile) {
-            height: 90vh;
+            height: 82vh;
         }
         margin-top: 0%;
         margin-bottom: auto;
@@ -174,17 +217,31 @@ body{
             width: 6vw;
         }
         @include devices(mobile) {
-            width: 12vw;
+            width: 15vw;
         }
         color: white;
         font-size: 2rem;
         div{
-            transform: rotate(90deg);
-            width: 5vw;
+            margin-top: 15%;
 
             Svg{
                 fill: #dbdbdb;
-                width: 3vw;
+                
+                @include devices(TV) {
+                    width: 3vw;
+                }
+                @include devices(desktop) {
+                    width: 3vw;
+                }
+                @include devices(laptops) {
+                    width: 3vw;
+                }
+                @include devices(ipad) {
+                    width: 3vw;
+                }
+                @include devices(mobile) {
+                    width: 6vw;
+                }
                 padding: 5%;
             }
         }
@@ -199,14 +256,43 @@ body{
         background-blend-mode: overlay;
 
         bottom: 60vh;
-        width: 6vw;
+        @include devices(TV) {
+            width: 6vw;
+        }
+        @include devices(desktop) {
+            width: 6vw;
+        }
+        @include devices(laptops) {
+            width: 6vw;
+        }
+        @include devices(ipad) {
+            width: 6vw;
+        }
+        @include devices(mobile) {
+            width: 15vw;
+        }
         color: white;
         font-size: 2rem;
         div{
-            transform: rotate(-90deg);
+            transform: rotate(-180deg);
+
             Svg{
                 fill: #dbdbdb;
-                width: 3vw;
+                @include devices(TV) {
+                    width: 3vw;
+                }
+                @include devices(desktop) {
+                    width: 3vw;
+                }
+                @include devices(laptops) {
+                    width: 3vw;
+                }
+                @include devices(ipad) {
+                    width: 3vw;
+                }
+                @include devices(mobile) {
+                    width: 6vw;
+                }
                 padding: 5%;
             }
         }

@@ -10,7 +10,7 @@
   display: flex;
 }
 
-.flexRow {
+.flexRow, .containerMatches .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,7 +30,7 @@
           flex-direction: row-reverse;
 }
 
-.flexColumn {
+.flexColumn, .containerMatches {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,7 +225,7 @@
       justify-content: space-around;
 }
 
-.spaceBetween {
+.spaceBetween, .containerMatches .pagination {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -292,48 +292,123 @@ body {
   background: url("../../img/formsMatches.png") #1f1f1f;
   background-size: auto;
   mix-blend-mode: overlay;
-  position: absolute;
   width: 100vw;
   height: 100vh;
   z-index: 2;
 }
 
 .containerMatches .mainHeader {
-  position: absolute;
   z-index: 3;
   -webkit-animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+.containerMatches .mainHeader a {
+  text-decoration: none;
+}
+
 .containerMatches .mainHeader p {
-  color: white;
-  text-transform: uppercase;
-  font-size: 5rem;
-  margin-top: 1%;
+  text-decoration: none;
   text-align: left;
   margin-left: 4%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: white;
+  text-transform: uppercase;
   width: 82vw;
-  text-shadow: #3f553d 7px 7px;
+  text-shadow: #553d3d 7px 7px;
+}
+
+@media only screen and (min-width: 1201px) {
+  .containerMatches .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerMatches .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatches .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatches .mainHeader p {
+    font-size: 7vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatches .mainHeader p {
+    font-size: 9vw;
+  }
 }
 
 .containerMatches .secondHeader {
-  position: absolute;
   z-index: 3;
+  height: auto;
   -webkit-animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 2.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .containerMatches .secondHeader p {
+  text-align: left;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3rem;
   color: transparent;
-  margin-top: 40%;
-  margin-left: 22%;
+}
+
+@media only screen and (min-width: 1201px) {
+  .containerMatches .secondHeader p {
+    font-size: 3vw;
+    margin-top: 0%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerMatches .secondHeader p {
+    font-size: 3vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatches .secondHeader p {
+    font-size: 3vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatches .secondHeader p {
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatches .secondHeader p {
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
 }
 
 .containerMatches .thirdHeader {
-  position: absolute;
   z-index: 3;
   -webkit-animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 3s cubic-bezier(0.23, 1, 0.32, 1);
@@ -343,15 +418,55 @@ body {
   text-align: left;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3rem;
   color: transparent;
-  margin-top: 20%;
-  margin-left: 7%;
-  width: 50vw;
+}
+
+@media only screen and (min-width: 1201px) {
+  .containerMatches .thirdHeader p {
+    font-size: 3vw;
+    margin-top: 0%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerMatches .thirdHeader p {
+    font-size: 3vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatches .thirdHeader p {
+    font-size: 3vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatches .thirdHeader p {
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatches .thirdHeader p {
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
 }
 
 .containerMatches .fourthHeader {
-  position: absolute;
   z-index: 3;
   -webkit-animation: slideInLeft 3.5s cubic-bezier(0.23, 1, 0.32, 1);
           animation: slideInLeft 3.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -361,42 +476,92 @@ body {
   text-align: left;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3rem;
   color: transparent;
-  margin-top: 13%;
-  margin-left: 100%;
-  width: 50vw;
 }
 
-.containerMatches .fifthHeader {
-  position: absolute;
-  z-index: 3;
-  -webkit-animation: slideInLeft 4s cubic-bezier(0.23, 1, 0.32, 1);
-          animation: slideInLeft 4s cubic-bezier(0.23, 1, 0.32, 1);
+@media only screen and (min-width: 1201px) {
+  .containerMatches .fourthHeader p {
+    font-size: 3vw;
+    margin-top: 0%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
 }
 
-.containerMatches .fifthHeader p {
-  text-align: left;
-  text-decoration: none;
-  -webkit-text-stroke: 1px white;
-  font-size: 3rem;
-  color: transparent;
-  margin-top: 27%;
-  margin-left: 100%;
-  width: 50vw;
+@media only screen and (max-width: 1200px) {
+  .containerMatches .fourthHeader p {
+    font-size: 3vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatches .fourthHeader p {
+    font-size: 3vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatches .fourthHeader p {
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatches .fourthHeader p {
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 5%;
+  }
 }
 
 .containerMatches .table {
-  position: absolute;
   background: #1a1418 url("../../img/noises.svg");
   background-blend-mode: overlay;
   width: 100vw;
-  height: 60vh;
-  bottom: 0;
+  margin-bottom: auto;
+}
+
+@media only screen and (min-width: 1201px) {
+  .containerMatches .table {
+    height: 53vh;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerMatches .table {
+    height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatches .table {
+    height: 82vh;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatches .table {
+    height: 83vh;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatches .table {
+    height: 63vh;
+  }
 }
 
 .containerMatches .table .leagues {
-  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   position: relative;
@@ -404,15 +569,7 @@ body {
 }
 
 .containerMatches .table .leagues td {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding-inline: 1.5vw;
   padding-block: 0.975vh;
-  width: 300px;
-}
-
-.containerMatches .table .leagues td .imgLeague {
-  height: 48px;
 }
 
 .containerMatches .table .leagues td .series {
@@ -421,7 +578,6 @@ body {
 
 .containerMatches .table .leagues td .series a {
   text-decoration: none;
-  font-size: 1.05rem;
   -webkit-transition: 2s;
   transition: 2s;
   background-color: #dbdbdb;
@@ -433,63 +589,206 @@ body {
   transition: .5s ease-out;
 }
 
+@media only screen and (min-width: 1201px) {
+  .containerMatches .table .leagues td .series a {
+    font-size: 1vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerMatches .table .leagues td .series a {
+    font-size: 1vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatches .table .leagues td .series a {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatches .table .leagues td .series a {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatches .table .leagues td .series a {
+    font-size: 2.5vw;
+  }
+}
+
 .containerMatches .table .leagues td .series a:hover {
-  font-size: 1.05rem;
   background-position: left;
   color: black;
 }
 
-.paginationNext {
-  position: absolute;
+.containerMatches .pagination {
+  width: 100%;
+}
+
+.containerMatches .paginationNextTest {
   background: #1a1418 url("../../img/noises.svg");
   background-blend-mode: overlay;
-  right: 0;
-  bottom: 60vh;
-  width: 6vw;
   color: white;
   font-size: 2rem;
 }
 
-.paginationNext div {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+@media only screen and (min-width: 1201px) {
+  .containerMatches .paginationNextTest {
+    width: 6vw;
+  }
 }
 
-.paginationNext div Svg {
+@media only screen and (max-width: 1200px) {
+  .containerMatches .paginationNextTest {
+    width: 6vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatches .paginationNextTest {
+    width: 6vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatches .paginationNextTest {
+    width: 6vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatches .paginationNextTest {
+    width: 15vw;
+  }
+}
+
+.containerMatches .paginationNextTest div {
+  margin-top: 15%;
+}
+
+.containerMatches .paginationNextTest div Svg {
   fill: #dbdbdb;
-  width: 3vw;
   padding: 5%;
 }
 
-.paginationNext :hover {
+@media only screen and (min-width: 1201px) {
+  .containerMatches .paginationNextTest div Svg {
+    width: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerMatches .paginationNextTest div Svg {
+    width: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatches .paginationNextTest div Svg {
+    width: 3vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatches .paginationNextTest div Svg {
+    width: 3vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatches .paginationNextTest div Svg {
+    width: 6vw;
+  }
+}
+
+.containerMatches .paginationNextTest :hover {
   cursor: pointer;
   -webkit-animation: blinkingArrow 2s  infinite;
           animation: blinkingArrow 2s  infinite;
 }
 
-.paginationPrevious {
-  position: absolute;
+.containerMatches .paginationPreviousTest {
   background: #1a1418 url("../../img/noises.svg");
   background-blend-mode: overlay;
-  left: 0;
   bottom: 60vh;
-  width: 6vw;
   color: white;
   font-size: 2rem;
 }
 
-.paginationPrevious div {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+@media only screen and (min-width: 1201px) {
+  .containerMatches .paginationPreviousTest {
+    width: 6vw;
+  }
 }
 
-.paginationPrevious div Svg {
+@media only screen and (max-width: 1200px) {
+  .containerMatches .paginationPreviousTest {
+    width: 6vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatches .paginationPreviousTest {
+    width: 6vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatches .paginationPreviousTest {
+    width: 6vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatches .paginationPreviousTest {
+    width: 15vw;
+  }
+}
+
+.containerMatches .paginationPreviousTest div {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.containerMatches .paginationPreviousTest div Svg {
   fill: #dbdbdb;
-  width: 3vw;
   padding: 5%;
 }
 
-.paginationPrevious :hover {
+@media only screen and (min-width: 1201px) {
+  .containerMatches .paginationPreviousTest div Svg {
+    width: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerMatches .paginationPreviousTest div Svg {
+    width: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerMatches .paginationPreviousTest div Svg {
+    width: 3vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerMatches .paginationPreviousTest div Svg {
+    width: 3vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerMatches .paginationPreviousTest div Svg {
+    width: 6vw;
+  }
+}
+
+.containerMatches .paginationPreviousTest :hover {
   cursor: pointer;
   -webkit-animation: blinkingArrow 2s  infinite;
           animation: blinkingArrow 2s  infinite;

@@ -7,7 +7,6 @@ import Arrow from '../../components/SVG/Arrow.js';
 export default function Valorant(props) {
     const [data, setData] = useState(false);
     const [table, setTable] = useState([])
-    //setData will prevent from infinite call to the api
     const {game} = useParams()
     const [page, setPage] = useState(1)
     const [perPage,setPerPage] = useState(3);
@@ -25,39 +24,16 @@ export default function Valorant(props) {
         fetchDataBy(options,setData,4)
     }, [setData])
 
-    // useEffect(() => {
-    //     if(data){
-    //         const paginatedData = data.slice(0, perPage);
-    //         setTotalPagesData(Math.ceil(data.length / perPage))
-    //         let html = "<p>"+totalPagesData+"</p>";
-    //         for (let i in paginatedData){
-    //             html += "<tr class='leagues'>"
-    //             for( let j in paginatedData[page]){
-    //                 console.log(paginatedData[page]);
-    //                 html += "<td>"+
-    //                             "<p class='series'><a target='_parent' href='/"+game +"/Leagues/"+  data[i][j].id +"/Series'>"+data[i][j].name+"</a></p>"+
-    //                         "</td>"
-    //             }
-    //             html += "</tr>"
-    //         }
-    //         setTable(html)
-
-    //     }
-    // },[data,totalPagesData])
-    
     if(data){
         const paginatedData = data.slice(offset).slice(0, perPage);
-        console.log(data);
         const totalPagesData = Math.ceil(data.length / perPage)
         function nextPage(){
             if(page < totalPagesData){
-                // console.log(totalPagesData + " " + page);
                 setPage(page +1)
             }  
         }
         function previousPage(){
             if(page > 1){
-                // console.log(totalPagesData + " " + page);
                 setPage(page - 1)
             }  
         }
@@ -70,7 +46,7 @@ export default function Valorant(props) {
                 <div className='fourthBorder'></div>
                 <div className='fifthBorder'></div>
                 <div className='mainHeader'>
-                    <p>{matchFullName(game)}</p>
+                    <a href='/'><p>{matchFullName(game)}</p></a>
                 </div>
                 <div className='secondHeader'>
                     <p>LEAGUES</p>

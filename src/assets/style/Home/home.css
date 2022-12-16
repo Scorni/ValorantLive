@@ -304,15 +304,53 @@ body {
           animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+.containerHome .mainHeader a {
+  text-decoration: none;
+}
+
 .containerHome .mainHeader p {
+  text-decoration: none;
+  text-align: left;
+  margin-left: 4%;
+  margin-top: 0%;
+  margin-bottom: 0%;
   color: white;
-  font-size: 5rem;
-  margin-top: 50px;
-  margin-left: 50px;
+  text-transform: uppercase;
+  width: 82vw;
   text-shadow: #553d3d 7px 7px;
 }
 
-.firstBorder {
+@media only screen and (min-width: 1201px) {
+  .containerHome .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .containerHome .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerHome .mainHeader p {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .containerHome .mainHeader p {
+    font-size: 7vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .containerHome .mainHeader p {
+    font-size: 12vw;
+  }
+}
+
+.firstBorderHome {
   position: absolute;
   z-index: 1;
   height: 100%;
@@ -321,7 +359,7 @@ body {
   border-inline: 1px #929292 solid;
 }
 
-.secondBorder {
+.secondBorderHome {
   position: absolute;
   z-index: 1;
   height: 100%;
@@ -330,7 +368,7 @@ body {
   border-right: 1px #929292 solid;
 }
 
-.fourthBorder {
+.fourthBorderHome {
   position: absolute;
   text-align: center;
   z-index: 1;
@@ -340,7 +378,7 @@ body {
   border-right: 1px #929292 solid;
 }
 
-.fifthBorder {
+.fifthBorderHome {
   position: absolute;
   z-index: 1;
   height: 100%;
@@ -352,13 +390,71 @@ body {
 .moba, .fps, .rts, .card, .other {
   -webkit-transition: 2s;
   transition: 2s;
-  margin-top: 90vh;
+}
+
+@media only screen and (min-width: 1201px) {
+  .moba, .fps, .rts, .card, .other {
+    margin-top: 85vh;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .moba, .fps, .rts, .card, .other {
+    margin-top: 90vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .moba, .fps, .rts, .card, .other {
+    margin-top: 90vh;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .moba, .fps, .rts, .card, .other {
+    margin-top: 90vh;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .moba, .fps, .rts, .card, .other {
+    margin-top: 95vh;
+  }
 }
 
 .moba .gameType, .fps .gameType, .rts .gameType, .card .gameType, .other .gameType {
   text-align: left;
-  font-size: 3rem;
   color: white;
+}
+
+@media only screen and (min-width: 1201px) {
+  .moba .gameType, .fps .gameType, .rts .gameType, .card .gameType, .other .gameType {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .moba .gameType, .fps .gameType, .rts .gameType, .card .gameType, .other .gameType {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .moba .gameType, .fps .gameType, .rts .gameType, .card .gameType, .other .gameType {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .moba .gameType, .fps .gameType, .rts .gameType, .card .gameType, .other .gameType {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .moba .gameType, .fps .gameType, .rts .gameType, .card .gameType, .other .gameType {
+    font-size: 5vw;
+  }
 }
 
 .moba .game, .fps .game, .rts .game, .card .game, .other .game {
@@ -368,120 +464,480 @@ body {
 .moba .game a, .fps .game a, .rts .game a, .card .game a, .other .game a {
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3rem;
   color: transparent;
 }
 
-.moba {
-  margin-left: 25%;
+@media only screen and (min-width: 1201px) {
+  .moba .game a, .fps .game a, .rts .game a, .card .game a, .other .game a {
+    font-size: 3vw;
+  }
 }
 
-.moba .game {
-  margin-left: -15%;
+@media only screen and (max-width: 1200px) {
+  .moba .game a, .fps .game a, .rts .game a, .card .game a, .other .game a {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .moba .game a, .fps .game a, .rts .game a, .card .game a, .other .game a {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .moba .game a, .fps .game a, .rts .game a, .card .game a, .other .game a {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .moba .game a, .fps .game a, .rts .game a, .card .game a, .other .game a {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .moba {
+    margin-left: 8%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .moba {
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .moba {
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .moba {
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .moba {
+    margin-left: 0%;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .moba .game {
+    margin-left: -15%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .moba .game {
+    margin-left: -15%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .moba .game {
+    margin-left: -15%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .moba .game {
+    margin-left: -15%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .moba .game {
+    margin-left: -5%;
+  }
 }
 
 .fps {
-  margin-left: 35%;
+  margin-left: 27%;
 }
 
-.fps .game {
-  margin-left: -35%;
+@media only screen and (min-width: 1201px) {
+  .fps .game {
+    margin-left: -45%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .fps .game {
+    margin-left: -35%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .fps .game {
+    margin-left: -35%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .fps .game {
+    margin-left: -35%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .fps .game {
+    margin-left: -40%;
+  }
 }
 
 .rts {
-  margin-left: 35%;
+  margin-left: 20%;
 }
 
-.rts .game {
-  margin-left: -35%;
+@media only screen and (min-width: 1201px) {
+  .rts .game {
+    margin-left: -35%;
+  }
 }
 
-.card {
-  margin-left: 15%;
+@media only screen and (max-width: 1200px) {
+  .rts .game {
+    margin-left: -35%;
+  }
 }
 
-.card .game {
-  margin-left: -35%;
+@media only screen and (max-width: 1024px) {
+  .rts .game {
+    margin-left: -35%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .rts .game {
+    margin-left: -35%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .rts .game {
+    margin-left: -30%;
+  }
 }
 
 .other {
-  margin-left: 15%;
+  margin-left: 0%;
 }
 
-.other .game {
-  margin-left: -10%;
+@media only screen and (min-width: 1201px) {
+  .other .game {
+    margin-left: -15%;
+  }
 }
 
-.firstBorder:hover .moba, .firstBorder:hover .fps, .firstBorder:hover .rts, .firstBorder:hover .card, .firstBorder:hover .other, .secondBorder:hover .moba, .secondBorder:hover .fps, .secondBorder:hover .rts, .secondBorder:hover .card, .secondBorder:hover .other, .thirdBorder:hover .moba, .thirdBorder:hover .fps, .thirdBorder:hover .rts, .thirdBorder:hover .card, .thirdBorder:hover .other, .fourthBorder:hover .moba, .fourthBorder:hover .fps, .fourthBorder:hover .rts, .fourthBorder:hover .card, .fourthBorder:hover .other, .fifthBorder:hover .moba, .fifthBorder:hover .fps, .fifthBorder:hover .rts, .fifthBorder:hover .card, .fifthBorder:hover .other {
-  margin-top: 20vh;
+@media only screen and (max-width: 1200px) {
+  .other .game {
+    margin-left: -15%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .other .game {
+    margin-left: -15%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .other .game {
+    margin-left: -15%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .other .game {
+    margin-left: -10%;
+  }
+}
+
+.firstBorderHome:hover .moba, .firstBorderHome:hover .fps, .firstBorderHome:hover .rts, .firstBorderHome:hover .other, .secondBorderHome:hover .moba, .secondBorderHome:hover .fps, .secondBorderHome:hover .rts, .secondBorderHome:hover .other, .thirdBorderHome:hover .moba, .thirdBorderHome:hover .fps, .thirdBorderHome:hover .rts, .thirdBorderHome:hover .other, .fourthBorderHome:hover .moba, .fourthBorderHome:hover .fps, .fourthBorderHome:hover .rts, .fourthBorderHome:hover .other, .fifthBorderHome:hover .moba, .fifthBorderHome:hover .fps, .fifthBorderHome:hover .rts, .fifthBorderHome:hover .other {
+  margin-top: 10vh;
   -webkit-transition: 2s;
   transition: 2s;
 }
 
-.firstBorder:hover .moba .gameType, .firstBorder:hover .fps .gameType, .firstBorder:hover .rts .gameType, .firstBorder:hover .card .gameType, .firstBorder:hover .other .gameType, .secondBorder:hover .moba .gameType, .secondBorder:hover .fps .gameType, .secondBorder:hover .rts .gameType, .secondBorder:hover .card .gameType, .secondBorder:hover .other .gameType, .thirdBorder:hover .moba .gameType, .thirdBorder:hover .fps .gameType, .thirdBorder:hover .rts .gameType, .thirdBorder:hover .card .gameType, .thirdBorder:hover .other .gameType, .fourthBorder:hover .moba .gameType, .fourthBorder:hover .fps .gameType, .fourthBorder:hover .rts .gameType, .fourthBorder:hover .card .gameType, .fourthBorder:hover .other .gameType, .fifthBorder:hover .moba .gameType, .fifthBorder:hover .fps .gameType, .fifthBorder:hover .rts .gameType, .fifthBorder:hover .card .gameType, .fifthBorder:hover .other .gameType {
+@media only screen and (min-width: 1201px) {
+  .firstBorderHome:hover .moba, .firstBorderHome:hover .fps, .firstBorderHome:hover .rts, .firstBorderHome:hover .other, .secondBorderHome:hover .moba, .secondBorderHome:hover .fps, .secondBorderHome:hover .rts, .secondBorderHome:hover .other, .thirdBorderHome:hover .moba, .thirdBorderHome:hover .fps, .thirdBorderHome:hover .rts, .thirdBorderHome:hover .other, .fourthBorderHome:hover .moba, .fourthBorderHome:hover .fps, .fourthBorderHome:hover .rts, .fourthBorderHome:hover .other, .fifthBorderHome:hover .moba, .fifthBorderHome:hover .fps, .fifthBorderHome:hover .rts, .fifthBorderHome:hover .other {
+    margin-top: 15vh;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .firstBorderHome:hover .moba, .firstBorderHome:hover .fps, .firstBorderHome:hover .rts, .firstBorderHome:hover .other, .secondBorderHome:hover .moba, .secondBorderHome:hover .fps, .secondBorderHome:hover .rts, .secondBorderHome:hover .other, .thirdBorderHome:hover .moba, .thirdBorderHome:hover .fps, .thirdBorderHome:hover .rts, .thirdBorderHome:hover .other, .fourthBorderHome:hover .moba, .fourthBorderHome:hover .fps, .fourthBorderHome:hover .rts, .fourthBorderHome:hover .other, .fifthBorderHome:hover .moba, .fifthBorderHome:hover .fps, .fifthBorderHome:hover .rts, .fifthBorderHome:hover .other {
+    margin-top: 15vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .firstBorderHome:hover .moba, .firstBorderHome:hover .fps, .firstBorderHome:hover .rts, .firstBorderHome:hover .other, .secondBorderHome:hover .moba, .secondBorderHome:hover .fps, .secondBorderHome:hover .rts, .secondBorderHome:hover .other, .thirdBorderHome:hover .moba, .thirdBorderHome:hover .fps, .thirdBorderHome:hover .rts, .thirdBorderHome:hover .other, .fourthBorderHome:hover .moba, .fourthBorderHome:hover .fps, .fourthBorderHome:hover .rts, .fourthBorderHome:hover .other, .fifthBorderHome:hover .moba, .fifthBorderHome:hover .fps, .fifthBorderHome:hover .rts, .fifthBorderHome:hover .other {
+    margin-top: 10vh;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .firstBorderHome:hover .moba, .firstBorderHome:hover .fps, .firstBorderHome:hover .rts, .firstBorderHome:hover .other, .secondBorderHome:hover .moba, .secondBorderHome:hover .fps, .secondBorderHome:hover .rts, .secondBorderHome:hover .other, .thirdBorderHome:hover .moba, .thirdBorderHome:hover .fps, .thirdBorderHome:hover .rts, .thirdBorderHome:hover .other, .fourthBorderHome:hover .moba, .fourthBorderHome:hover .fps, .fourthBorderHome:hover .rts, .fourthBorderHome:hover .other, .fifthBorderHome:hover .moba, .fifthBorderHome:hover .fps, .fifthBorderHome:hover .rts, .fifthBorderHome:hover .other {
+    margin-top: 10vh;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .firstBorderHome:hover .moba, .firstBorderHome:hover .fps, .firstBorderHome:hover .rts, .firstBorderHome:hover .other, .secondBorderHome:hover .moba, .secondBorderHome:hover .fps, .secondBorderHome:hover .rts, .secondBorderHome:hover .other, .thirdBorderHome:hover .moba, .thirdBorderHome:hover .fps, .thirdBorderHome:hover .rts, .thirdBorderHome:hover .other, .fourthBorderHome:hover .moba, .fourthBorderHome:hover .fps, .fourthBorderHome:hover .rts, .fourthBorderHome:hover .other, .fifthBorderHome:hover .moba, .fifthBorderHome:hover .fps, .fifthBorderHome:hover .rts, .fifthBorderHome:hover .other {
+    margin-top: 35vh;
+  }
+}
+
+.firstBorderHome:hover .moba .gameType, .firstBorderHome:hover .fps .gameType, .firstBorderHome:hover .rts .gameType, .firstBorderHome:hover .other .gameType, .secondBorderHome:hover .moba .gameType, .secondBorderHome:hover .fps .gameType, .secondBorderHome:hover .rts .gameType, .secondBorderHome:hover .other .gameType, .thirdBorderHome:hover .moba .gameType, .thirdBorderHome:hover .fps .gameType, .thirdBorderHome:hover .rts .gameType, .thirdBorderHome:hover .other .gameType, .fourthBorderHome:hover .moba .gameType, .fourthBorderHome:hover .fps .gameType, .fourthBorderHome:hover .rts .gameType, .fourthBorderHome:hover .other .gameType, .fifthBorderHome:hover .moba .gameType, .fifthBorderHome:hover .fps .gameType, .fifthBorderHome:hover .rts .gameType, .fifthBorderHome:hover .other .gameType {
   text-align: left;
-  font-size: 3rem;
   color: white;
 }
 
-.firstBorder:hover .moba .game, .firstBorder:hover .fps .game, .firstBorder:hover .rts .game, .firstBorder:hover .card .game, .firstBorder:hover .other .game, .secondBorder:hover .moba .game, .secondBorder:hover .fps .game, .secondBorder:hover .rts .game, .secondBorder:hover .card .game, .secondBorder:hover .other .game, .thirdBorder:hover .moba .game, .thirdBorder:hover .fps .game, .thirdBorder:hover .rts .game, .thirdBorder:hover .card .game, .thirdBorder:hover .other .game, .fourthBorder:hover .moba .game, .fourthBorder:hover .fps .game, .fourthBorder:hover .rts .game, .fourthBorder:hover .card .game, .fourthBorder:hover .other .game, .fifthBorder:hover .moba .game, .fifthBorder:hover .fps .game, .fifthBorder:hover .rts .game, .fifthBorder:hover .card .game, .fifthBorder:hover .other .game {
+@media only screen and (min-width: 1201px) {
+  .firstBorderHome:hover .moba .gameType, .firstBorderHome:hover .fps .gameType, .firstBorderHome:hover .rts .gameType, .firstBorderHome:hover .other .gameType, .secondBorderHome:hover .moba .gameType, .secondBorderHome:hover .fps .gameType, .secondBorderHome:hover .rts .gameType, .secondBorderHome:hover .other .gameType, .thirdBorderHome:hover .moba .gameType, .thirdBorderHome:hover .fps .gameType, .thirdBorderHome:hover .rts .gameType, .thirdBorderHome:hover .other .gameType, .fourthBorderHome:hover .moba .gameType, .fourthBorderHome:hover .fps .gameType, .fourthBorderHome:hover .rts .gameType, .fourthBorderHome:hover .other .gameType, .fifthBorderHome:hover .moba .gameType, .fifthBorderHome:hover .fps .gameType, .fifthBorderHome:hover .rts .gameType, .fifthBorderHome:hover .other .gameType {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .firstBorderHome:hover .moba .gameType, .firstBorderHome:hover .fps .gameType, .firstBorderHome:hover .rts .gameType, .firstBorderHome:hover .other .gameType, .secondBorderHome:hover .moba .gameType, .secondBorderHome:hover .fps .gameType, .secondBorderHome:hover .rts .gameType, .secondBorderHome:hover .other .gameType, .thirdBorderHome:hover .moba .gameType, .thirdBorderHome:hover .fps .gameType, .thirdBorderHome:hover .rts .gameType, .thirdBorderHome:hover .other .gameType, .fourthBorderHome:hover .moba .gameType, .fourthBorderHome:hover .fps .gameType, .fourthBorderHome:hover .rts .gameType, .fourthBorderHome:hover .other .gameType, .fifthBorderHome:hover .moba .gameType, .fifthBorderHome:hover .fps .gameType, .fifthBorderHome:hover .rts .gameType, .fifthBorderHome:hover .other .gameType {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .firstBorderHome:hover .moba .gameType, .firstBorderHome:hover .fps .gameType, .firstBorderHome:hover .rts .gameType, .firstBorderHome:hover .other .gameType, .secondBorderHome:hover .moba .gameType, .secondBorderHome:hover .fps .gameType, .secondBorderHome:hover .rts .gameType, .secondBorderHome:hover .other .gameType, .thirdBorderHome:hover .moba .gameType, .thirdBorderHome:hover .fps .gameType, .thirdBorderHome:hover .rts .gameType, .thirdBorderHome:hover .other .gameType, .fourthBorderHome:hover .moba .gameType, .fourthBorderHome:hover .fps .gameType, .fourthBorderHome:hover .rts .gameType, .fourthBorderHome:hover .other .gameType, .fifthBorderHome:hover .moba .gameType, .fifthBorderHome:hover .fps .gameType, .fifthBorderHome:hover .rts .gameType, .fifthBorderHome:hover .other .gameType {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .firstBorderHome:hover .moba .gameType, .firstBorderHome:hover .fps .gameType, .firstBorderHome:hover .rts .gameType, .firstBorderHome:hover .other .gameType, .secondBorderHome:hover .moba .gameType, .secondBorderHome:hover .fps .gameType, .secondBorderHome:hover .rts .gameType, .secondBorderHome:hover .other .gameType, .thirdBorderHome:hover .moba .gameType, .thirdBorderHome:hover .fps .gameType, .thirdBorderHome:hover .rts .gameType, .thirdBorderHome:hover .other .gameType, .fourthBorderHome:hover .moba .gameType, .fourthBorderHome:hover .fps .gameType, .fourthBorderHome:hover .rts .gameType, .fourthBorderHome:hover .other .gameType, .fifthBorderHome:hover .moba .gameType, .fifthBorderHome:hover .fps .gameType, .fifthBorderHome:hover .rts .gameType, .fifthBorderHome:hover .other .gameType {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .firstBorderHome:hover .moba .gameType, .firstBorderHome:hover .fps .gameType, .firstBorderHome:hover .rts .gameType, .firstBorderHome:hover .other .gameType, .secondBorderHome:hover .moba .gameType, .secondBorderHome:hover .fps .gameType, .secondBorderHome:hover .rts .gameType, .secondBorderHome:hover .other .gameType, .thirdBorderHome:hover .moba .gameType, .thirdBorderHome:hover .fps .gameType, .thirdBorderHome:hover .rts .gameType, .thirdBorderHome:hover .other .gameType, .fourthBorderHome:hover .moba .gameType, .fourthBorderHome:hover .fps .gameType, .fourthBorderHome:hover .rts .gameType, .fourthBorderHome:hover .other .gameType, .fifthBorderHome:hover .moba .gameType, .fifthBorderHome:hover .fps .gameType, .fifthBorderHome:hover .rts .gameType, .fifthBorderHome:hover .other .gameType {
+    font-size: 5vw;
+  }
+}
+
+.firstBorderHome:hover .moba .game, .firstBorderHome:hover .fps .game, .firstBorderHome:hover .rts .game, .firstBorderHome:hover .other .game, .secondBorderHome:hover .moba .game, .secondBorderHome:hover .fps .game, .secondBorderHome:hover .rts .game, .secondBorderHome:hover .other .game, .thirdBorderHome:hover .moba .game, .thirdBorderHome:hover .fps .game, .thirdBorderHome:hover .rts .game, .thirdBorderHome:hover .other .game, .fourthBorderHome:hover .moba .game, .fourthBorderHome:hover .fps .game, .fourthBorderHome:hover .rts .game, .fourthBorderHome:hover .other .game, .fifthBorderHome:hover .moba .game, .fifthBorderHome:hover .fps .game, .fifthBorderHome:hover .rts .game, .fifthBorderHome:hover .other .game {
   text-align: left;
 }
 
-.firstBorder:hover .moba .game a, .firstBorder:hover .fps .game a, .firstBorder:hover .rts .game a, .firstBorder:hover .card .game a, .firstBorder:hover .other .game a, .secondBorder:hover .moba .game a, .secondBorder:hover .fps .game a, .secondBorder:hover .rts .game a, .secondBorder:hover .card .game a, .secondBorder:hover .other .game a, .thirdBorder:hover .moba .game a, .thirdBorder:hover .fps .game a, .thirdBorder:hover .rts .game a, .thirdBorder:hover .card .game a, .thirdBorder:hover .other .game a, .fourthBorder:hover .moba .game a, .fourthBorder:hover .fps .game a, .fourthBorder:hover .rts .game a, .fourthBorder:hover .card .game a, .fourthBorder:hover .other .game a, .fifthBorder:hover .moba .game a, .fifthBorder:hover .fps .game a, .fifthBorder:hover .rts .game a, .fifthBorder:hover .card .game a, .fifthBorder:hover .other .game a {
+.firstBorderHome:hover .moba .game a, .firstBorderHome:hover .fps .game a, .firstBorderHome:hover .rts .game a, .firstBorderHome:hover .other .game a, .secondBorderHome:hover .moba .game a, .secondBorderHome:hover .fps .game a, .secondBorderHome:hover .rts .game a, .secondBorderHome:hover .other .game a, .thirdBorderHome:hover .moba .game a, .thirdBorderHome:hover .fps .game a, .thirdBorderHome:hover .rts .game a, .thirdBorderHome:hover .other .game a, .fourthBorderHome:hover .moba .game a, .fourthBorderHome:hover .fps .game a, .fourthBorderHome:hover .rts .game a, .fourthBorderHome:hover .other .game a, .fifthBorderHome:hover .moba .game a, .fifthBorderHome:hover .fps .game a, .fifthBorderHome:hover .rts .game a, .fifthBorderHome:hover .other .game a {
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3rem;
   color: transparent;
 }
 
-.firstBorder:hover .moba .game a:hover, .firstBorder:hover .fps .game a:hover, .firstBorder:hover .rts .game a:hover, .firstBorder:hover .card .game a:hover, .firstBorder:hover .other .game a:hover, .secondBorder:hover .moba .game a:hover, .secondBorder:hover .fps .game a:hover, .secondBorder:hover .rts .game a:hover, .secondBorder:hover .card .game a:hover, .secondBorder:hover .other .game a:hover, .thirdBorder:hover .moba .game a:hover, .thirdBorder:hover .fps .game a:hover, .thirdBorder:hover .rts .game a:hover, .thirdBorder:hover .card .game a:hover, .thirdBorder:hover .other .game a:hover, .fourthBorder:hover .moba .game a:hover, .fourthBorder:hover .fps .game a:hover, .fourthBorder:hover .rts .game a:hover, .fourthBorder:hover .card .game a:hover, .fourthBorder:hover .other .game a:hover, .fifthBorder:hover .moba .game a:hover, .fifthBorder:hover .fps .game a:hover, .fifthBorder:hover .rts .game a:hover, .fifthBorder:hover .card .game a:hover, .fifthBorder:hover .other .game a:hover {
+@media only screen and (min-width: 1201px) {
+  .firstBorderHome:hover .moba .game a, .firstBorderHome:hover .fps .game a, .firstBorderHome:hover .rts .game a, .firstBorderHome:hover .other .game a, .secondBorderHome:hover .moba .game a, .secondBorderHome:hover .fps .game a, .secondBorderHome:hover .rts .game a, .secondBorderHome:hover .other .game a, .thirdBorderHome:hover .moba .game a, .thirdBorderHome:hover .fps .game a, .thirdBorderHome:hover .rts .game a, .thirdBorderHome:hover .other .game a, .fourthBorderHome:hover .moba .game a, .fourthBorderHome:hover .fps .game a, .fourthBorderHome:hover .rts .game a, .fourthBorderHome:hover .other .game a, .fifthBorderHome:hover .moba .game a, .fifthBorderHome:hover .fps .game a, .fifthBorderHome:hover .rts .game a, .fifthBorderHome:hover .other .game a {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .firstBorderHome:hover .moba .game a, .firstBorderHome:hover .fps .game a, .firstBorderHome:hover .rts .game a, .firstBorderHome:hover .other .game a, .secondBorderHome:hover .moba .game a, .secondBorderHome:hover .fps .game a, .secondBorderHome:hover .rts .game a, .secondBorderHome:hover .other .game a, .thirdBorderHome:hover .moba .game a, .thirdBorderHome:hover .fps .game a, .thirdBorderHome:hover .rts .game a, .thirdBorderHome:hover .other .game a, .fourthBorderHome:hover .moba .game a, .fourthBorderHome:hover .fps .game a, .fourthBorderHome:hover .rts .game a, .fourthBorderHome:hover .other .game a, .fifthBorderHome:hover .moba .game a, .fifthBorderHome:hover .fps .game a, .fifthBorderHome:hover .rts .game a, .fifthBorderHome:hover .other .game a {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .firstBorderHome:hover .moba .game a, .firstBorderHome:hover .fps .game a, .firstBorderHome:hover .rts .game a, .firstBorderHome:hover .other .game a, .secondBorderHome:hover .moba .game a, .secondBorderHome:hover .fps .game a, .secondBorderHome:hover .rts .game a, .secondBorderHome:hover .other .game a, .thirdBorderHome:hover .moba .game a, .thirdBorderHome:hover .fps .game a, .thirdBorderHome:hover .rts .game a, .thirdBorderHome:hover .other .game a, .fourthBorderHome:hover .moba .game a, .fourthBorderHome:hover .fps .game a, .fourthBorderHome:hover .rts .game a, .fourthBorderHome:hover .other .game a, .fifthBorderHome:hover .moba .game a, .fifthBorderHome:hover .fps .game a, .fifthBorderHome:hover .rts .game a, .fifthBorderHome:hover .other .game a {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .firstBorderHome:hover .moba .game a, .firstBorderHome:hover .fps .game a, .firstBorderHome:hover .rts .game a, .firstBorderHome:hover .other .game a, .secondBorderHome:hover .moba .game a, .secondBorderHome:hover .fps .game a, .secondBorderHome:hover .rts .game a, .secondBorderHome:hover .other .game a, .thirdBorderHome:hover .moba .game a, .thirdBorderHome:hover .fps .game a, .thirdBorderHome:hover .rts .game a, .thirdBorderHome:hover .other .game a, .fourthBorderHome:hover .moba .game a, .fourthBorderHome:hover .fps .game a, .fourthBorderHome:hover .rts .game a, .fourthBorderHome:hover .other .game a, .fifthBorderHome:hover .moba .game a, .fifthBorderHome:hover .fps .game a, .fifthBorderHome:hover .rts .game a, .fifthBorderHome:hover .other .game a {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .firstBorderHome:hover .moba .game a, .firstBorderHome:hover .fps .game a, .firstBorderHome:hover .rts .game a, .firstBorderHome:hover .other .game a, .secondBorderHome:hover .moba .game a, .secondBorderHome:hover .fps .game a, .secondBorderHome:hover .rts .game a, .secondBorderHome:hover .other .game a, .thirdBorderHome:hover .moba .game a, .thirdBorderHome:hover .fps .game a, .thirdBorderHome:hover .rts .game a, .thirdBorderHome:hover .other .game a, .fourthBorderHome:hover .moba .game a, .fourthBorderHome:hover .fps .game a, .fourthBorderHome:hover .rts .game a, .fourthBorderHome:hover .other .game a, .fifthBorderHome:hover .moba .game a, .fifthBorderHome:hover .fps .game a, .fifthBorderHome:hover .rts .game a, .fifthBorderHome:hover .other .game a {
+    font-size: 5vw;
+  }
+}
+
+.firstBorderHome:hover .moba .game a:hover, .firstBorderHome:hover .fps .game a:hover, .firstBorderHome:hover .rts .game a:hover, .firstBorderHome:hover .other .game a:hover, .secondBorderHome:hover .moba .game a:hover, .secondBorderHome:hover .fps .game a:hover, .secondBorderHome:hover .rts .game a:hover, .secondBorderHome:hover .other .game a:hover, .thirdBorderHome:hover .moba .game a:hover, .thirdBorderHome:hover .fps .game a:hover, .thirdBorderHome:hover .rts .game a:hover, .thirdBorderHome:hover .other .game a:hover, .fourthBorderHome:hover .moba .game a:hover, .fourthBorderHome:hover .fps .game a:hover, .fourthBorderHome:hover .rts .game a:hover, .fourthBorderHome:hover .other .game a:hover, .fifthBorderHome:hover .moba .game a:hover, .fifthBorderHome:hover .fps .game a:hover, .fifthBorderHome:hover .rts .game a:hover, .fifthBorderHome:hover .other .game a:hover {
   -webkit-transition: 1s;
   transition: 1s;
   text-decoration: none;
   -webkit-text-stroke: 1px white;
-  font-size: 3rem;
   color: white;
 }
 
-.firstBorder:hover .moba, .secondBorder:hover .moba, .thirdBorder:hover .moba, .fourthBorder:hover .moba, .fifthBorder:hover .moba {
-  margin-left: 25%;
+@media only screen and (min-width: 1201px) {
+  .firstBorderHome:hover .moba .game a:hover, .firstBorderHome:hover .fps .game a:hover, .firstBorderHome:hover .rts .game a:hover, .firstBorderHome:hover .other .game a:hover, .secondBorderHome:hover .moba .game a:hover, .secondBorderHome:hover .fps .game a:hover, .secondBorderHome:hover .rts .game a:hover, .secondBorderHome:hover .other .game a:hover, .thirdBorderHome:hover .moba .game a:hover, .thirdBorderHome:hover .fps .game a:hover, .thirdBorderHome:hover .rts .game a:hover, .thirdBorderHome:hover .other .game a:hover, .fourthBorderHome:hover .moba .game a:hover, .fourthBorderHome:hover .fps .game a:hover, .fourthBorderHome:hover .rts .game a:hover, .fourthBorderHome:hover .other .game a:hover, .fifthBorderHome:hover .moba .game a:hover, .fifthBorderHome:hover .fps .game a:hover, .fifthBorderHome:hover .rts .game a:hover, .fifthBorderHome:hover .other .game a:hover {
+    font-size: 3vw;
+  }
 }
 
-.firstBorder:hover .moba .game, .secondBorder:hover .moba .game, .thirdBorder:hover .moba .game, .fourthBorder:hover .moba .game, .fifthBorder:hover .moba .game {
-  margin-left: -15%;
+@media only screen and (max-width: 1200px) {
+  .firstBorderHome:hover .moba .game a:hover, .firstBorderHome:hover .fps .game a:hover, .firstBorderHome:hover .rts .game a:hover, .firstBorderHome:hover .other .game a:hover, .secondBorderHome:hover .moba .game a:hover, .secondBorderHome:hover .fps .game a:hover, .secondBorderHome:hover .rts .game a:hover, .secondBorderHome:hover .other .game a:hover, .thirdBorderHome:hover .moba .game a:hover, .thirdBorderHome:hover .fps .game a:hover, .thirdBorderHome:hover .rts .game a:hover, .thirdBorderHome:hover .other .game a:hover, .fourthBorderHome:hover .moba .game a:hover, .fourthBorderHome:hover .fps .game a:hover, .fourthBorderHome:hover .rts .game a:hover, .fourthBorderHome:hover .other .game a:hover, .fifthBorderHome:hover .moba .game a:hover, .fifthBorderHome:hover .fps .game a:hover, .fifthBorderHome:hover .rts .game a:hover, .fifthBorderHome:hover .other .game a:hover {
+    font-size: 5vw;
+  }
 }
 
-.firstBorder:hover .fps, .secondBorder:hover .fps, .thirdBorder:hover .fps, .fourthBorder:hover .fps, .fifthBorder:hover .fps {
-  margin-left: 35%;
+@media only screen and (max-width: 1024px) {
+  .firstBorderHome:hover .moba .game a:hover, .firstBorderHome:hover .fps .game a:hover, .firstBorderHome:hover .rts .game a:hover, .firstBorderHome:hover .other .game a:hover, .secondBorderHome:hover .moba .game a:hover, .secondBorderHome:hover .fps .game a:hover, .secondBorderHome:hover .rts .game a:hover, .secondBorderHome:hover .other .game a:hover, .thirdBorderHome:hover .moba .game a:hover, .thirdBorderHome:hover .fps .game a:hover, .thirdBorderHome:hover .rts .game a:hover, .thirdBorderHome:hover .other .game a:hover, .fourthBorderHome:hover .moba .game a:hover, .fourthBorderHome:hover .fps .game a:hover, .fourthBorderHome:hover .rts .game a:hover, .fourthBorderHome:hover .other .game a:hover, .fifthBorderHome:hover .moba .game a:hover, .fifthBorderHome:hover .fps .game a:hover, .fifthBorderHome:hover .rts .game a:hover, .fifthBorderHome:hover .other .game a:hover {
+    font-size: 5vw;
+  }
 }
 
-.firstBorder:hover .fps .game, .secondBorder:hover .fps .game, .thirdBorder:hover .fps .game, .fourthBorder:hover .fps .game, .fifthBorder:hover .fps .game {
-  margin-left: -35%;
+@media only screen and (max-width: 820px) {
+  .firstBorderHome:hover .moba .game a:hover, .firstBorderHome:hover .fps .game a:hover, .firstBorderHome:hover .rts .game a:hover, .firstBorderHome:hover .other .game a:hover, .secondBorderHome:hover .moba .game a:hover, .secondBorderHome:hover .fps .game a:hover, .secondBorderHome:hover .rts .game a:hover, .secondBorderHome:hover .other .game a:hover, .thirdBorderHome:hover .moba .game a:hover, .thirdBorderHome:hover .fps .game a:hover, .thirdBorderHome:hover .rts .game a:hover, .thirdBorderHome:hover .other .game a:hover, .fourthBorderHome:hover .moba .game a:hover, .fourthBorderHome:hover .fps .game a:hover, .fourthBorderHome:hover .rts .game a:hover, .fourthBorderHome:hover .other .game a:hover, .fifthBorderHome:hover .moba .game a:hover, .fifthBorderHome:hover .fps .game a:hover, .fifthBorderHome:hover .rts .game a:hover, .fifthBorderHome:hover .other .game a:hover {
+    font-size: 7vw;
+  }
 }
 
-.firstBorder:hover .rts, .secondBorder:hover .rts, .thirdBorder:hover .rts, .fourthBorder:hover .rts, .fifthBorder:hover .rts {
-  margin-left: 35%;
+@media only screen and (max-width: 481px) {
+  .firstBorderHome:hover .moba .game a:hover, .firstBorderHome:hover .fps .game a:hover, .firstBorderHome:hover .rts .game a:hover, .firstBorderHome:hover .other .game a:hover, .secondBorderHome:hover .moba .game a:hover, .secondBorderHome:hover .fps .game a:hover, .secondBorderHome:hover .rts .game a:hover, .secondBorderHome:hover .other .game a:hover, .thirdBorderHome:hover .moba .game a:hover, .thirdBorderHome:hover .fps .game a:hover, .thirdBorderHome:hover .rts .game a:hover, .thirdBorderHome:hover .other .game a:hover, .fourthBorderHome:hover .moba .game a:hover, .fourthBorderHome:hover .fps .game a:hover, .fourthBorderHome:hover .rts .game a:hover, .fourthBorderHome:hover .other .game a:hover, .fifthBorderHome:hover .moba .game a:hover, .fifthBorderHome:hover .fps .game a:hover, .fifthBorderHome:hover .rts .game a:hover, .fifthBorderHome:hover .other .game a:hover {
+    font-size: 5vw;
+  }
 }
 
-.firstBorder:hover .rts .game, .secondBorder:hover .rts .game, .thirdBorder:hover .rts .game, .fourthBorder:hover .rts .game, .fifthBorder:hover .rts .game {
-  margin-left: -35%;
+@media only screen and (min-width: 1201px) {
+  .firstBorderHome:hover .moba .game, .secondBorderHome:hover .moba .game, .thirdBorderHome:hover .moba .game, .fourthBorderHome:hover .moba .game, .fifthBorderHome:hover .moba .game {
+    margin-left: -15%;
+  }
 }
 
-.firstBorder:hover .card, .secondBorder:hover .card, .thirdBorder:hover .card, .fourthBorder:hover .card, .fifthBorder:hover .card {
-  margin-left: 15%;
+@media only screen and (max-width: 1200px) {
+  .firstBorderHome:hover .moba .game, .secondBorderHome:hover .moba .game, .thirdBorderHome:hover .moba .game, .fourthBorderHome:hover .moba .game, .fifthBorderHome:hover .moba .game {
+    margin-left: -15%;
+  }
 }
 
-.firstBorder:hover .card .game, .secondBorder:hover .card .game, .thirdBorder:hover .card .game, .fourthBorder:hover .card .game, .fifthBorder:hover .card .game {
-  margin-left: -35%;
+@media only screen and (max-width: 1024px) {
+  .firstBorderHome:hover .moba .game, .secondBorderHome:hover .moba .game, .thirdBorderHome:hover .moba .game, .fourthBorderHome:hover .moba .game, .fifthBorderHome:hover .moba .game {
+    margin-left: -15%;
+  }
 }
 
-.firstBorder:hover .other, .secondBorder:hover .other, .thirdBorder:hover .other, .fourthBorder:hover .other, .fifthBorder:hover .other {
-  margin-left: 15%;
+@media only screen and (max-width: 820px) {
+  .firstBorderHome:hover .moba .game, .secondBorderHome:hover .moba .game, .thirdBorderHome:hover .moba .game, .fourthBorderHome:hover .moba .game, .fifthBorderHome:hover .moba .game {
+    margin-left: -15%;
+  }
 }
 
-.firstBorder:hover .other .game, .secondBorder:hover .other .game, .thirdBorder:hover .other .game, .fourthBorder:hover .other .game, .fifthBorder:hover .other .game {
-  margin-left: -10%;
+@media only screen and (max-width: 481px) {
+  .firstBorderHome:hover .moba .game, .secondBorderHome:hover .moba .game, .thirdBorderHome:hover .moba .game, .fourthBorderHome:hover .moba .game, .fifthBorderHome:hover .moba .game {
+    margin-left: -5%;
+  }
+}
+
+.firstBorderHome:hover .fps, .secondBorderHome:hover .fps, .thirdBorderHome:hover .fps, .fourthBorderHome:hover .fps, .fifthBorderHome:hover .fps {
+  margin-left: 27%;
+}
+
+@media only screen and (min-width: 1201px) {
+  .firstBorderHome:hover .fps .game, .secondBorderHome:hover .fps .game, .thirdBorderHome:hover .fps .game, .fourthBorderHome:hover .fps .game, .fifthBorderHome:hover .fps .game {
+    margin-left: -45%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .firstBorderHome:hover .fps .game, .secondBorderHome:hover .fps .game, .thirdBorderHome:hover .fps .game, .fourthBorderHome:hover .fps .game, .fifthBorderHome:hover .fps .game {
+    margin-left: -35%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .firstBorderHome:hover .fps .game, .secondBorderHome:hover .fps .game, .thirdBorderHome:hover .fps .game, .fourthBorderHome:hover .fps .game, .fifthBorderHome:hover .fps .game {
+    margin-left: -35%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .firstBorderHome:hover .fps .game, .secondBorderHome:hover .fps .game, .thirdBorderHome:hover .fps .game, .fourthBorderHome:hover .fps .game, .fifthBorderHome:hover .fps .game {
+    margin-left: -35%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .firstBorderHome:hover .fps .game, .secondBorderHome:hover .fps .game, .thirdBorderHome:hover .fps .game, .fourthBorderHome:hover .fps .game, .fifthBorderHome:hover .fps .game {
+    margin-left: -40%;
+  }
+}
+
+.firstBorderHome:hover .rts, .secondBorderHome:hover .rts, .thirdBorderHome:hover .rts, .fourthBorderHome:hover .rts, .fifthBorderHome:hover .rts {
+  margin-left: 20%;
+}
+
+@media only screen and (min-width: 1201px) {
+  .firstBorderHome:hover .rts .game, .secondBorderHome:hover .rts .game, .thirdBorderHome:hover .rts .game, .fourthBorderHome:hover .rts .game, .fifthBorderHome:hover .rts .game {
+    margin-left: -35%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .firstBorderHome:hover .rts .game, .secondBorderHome:hover .rts .game, .thirdBorderHome:hover .rts .game, .fourthBorderHome:hover .rts .game, .fifthBorderHome:hover .rts .game {
+    margin-left: -35%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .firstBorderHome:hover .rts .game, .secondBorderHome:hover .rts .game, .thirdBorderHome:hover .rts .game, .fourthBorderHome:hover .rts .game, .fifthBorderHome:hover .rts .game {
+    margin-left: -35%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .firstBorderHome:hover .rts .game, .secondBorderHome:hover .rts .game, .thirdBorderHome:hover .rts .game, .fourthBorderHome:hover .rts .game, .fifthBorderHome:hover .rts .game {
+    margin-left: -35%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .firstBorderHome:hover .rts .game, .secondBorderHome:hover .rts .game, .thirdBorderHome:hover .rts .game, .fourthBorderHome:hover .rts .game, .fifthBorderHome:hover .rts .game {
+    margin-left: -30%;
+  }
+}
+
+.firstBorderHome:hover .other, .secondBorderHome:hover .other, .thirdBorderHome:hover .other, .fourthBorderHome:hover .other, .fifthBorderHome:hover .other {
+  margin-left: 0%;
+}
+
+@media only screen and (min-width: 1201px) {
+  .firstBorderHome:hover .other .game, .secondBorderHome:hover .other .game, .thirdBorderHome:hover .other .game, .fourthBorderHome:hover .other .game, .fifthBorderHome:hover .other .game {
+    margin-left: -15%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .firstBorderHome:hover .other .game, .secondBorderHome:hover .other .game, .thirdBorderHome:hover .other .game, .fourthBorderHome:hover .other .game, .fifthBorderHome:hover .other .game {
+    margin-left: -15%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .firstBorderHome:hover .other .game, .secondBorderHome:hover .other .game, .thirdBorderHome:hover .other .game, .fourthBorderHome:hover .other .game, .fifthBorderHome:hover .other .game {
+    margin-left: -15%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .firstBorderHome:hover .other .game, .secondBorderHome:hover .other .game, .thirdBorderHome:hover .other .game, .fourthBorderHome:hover .other .game, .fifthBorderHome:hover .other .game {
+    margin-left: -15%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .firstBorderHome:hover .other .game, .secondBorderHome:hover .other .game, .thirdBorderHome:hover .other .game, .fourthBorderHome:hover .other .game, .fifthBorderHome:hover .other .game {
+    margin-left: -10%;
+  }
 }
 
 /*
