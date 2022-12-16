@@ -17,7 +17,7 @@ export function withoutHyphen(string,game){
 export function rawToEmbeddedUrl(string){
     if(string.includes('twitch')){
         string = string.slice(22)
-        string = 'https://player.twitch.tv/?channel=' + string + '&parent=www.esports-stats.up.railway.app&muted=true'
+        string = 'https://player.twitch.tv/?channel=' + string + '&parent=esports-stats.up.railway.app&muted=true'
     }else{
         string = string.slice(24)
         string = 'https://www.youtube.com/embed/live_stream?channel=' + string
