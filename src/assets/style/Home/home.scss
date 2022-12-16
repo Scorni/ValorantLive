@@ -20,12 +20,10 @@ body{
 
         }
     }
-    @media all { 
-        @supports (-webkit-appearance: none) {
+    @supports (contain: paint) {
           /* Safari Only CSS here */
           mix-blend-mode: multiply;
 
-        }
     }
     width: 100vw;
     height: 100vh;
@@ -35,13 +33,11 @@ body{
     background: url('../../img/formshm.png') #1F1F1F  ;
     background-size: auto;
     @media not all and (min-resolution:.001dpcm) { 
-        @supports (-webkit-appearance: none) {
           /* Safari Only CSS here */
           background-blend-mode: overlay;
 
-        }
     }
-    @media all { 
+    @supports (contain: paint) { 
         @supports (-webkit-appearance: none) {
           /* Safari Only CSS here */
           mix-blend-mode: overlay;

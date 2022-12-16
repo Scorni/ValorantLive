@@ -296,12 +296,10 @@ body {
   }
 }
 
-@media all {
-  @supports (-webkit-appearance: none) {
-    .background {
-      /* Safari Only CSS here */
-      mix-blend-mode: multiply;
-    }
+@supports (contain: paint) {
+  .background {
+    /* Safari Only CSS here */
+    mix-blend-mode: multiply;
   }
 }
 
@@ -315,15 +313,13 @@ body {
 }
 
 @media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) {
-    .containerHome {
-      /* Safari Only CSS here */
-      background-blend-mode: overlay;
-    }
+  .containerHome {
+    /* Safari Only CSS here */
+    background-blend-mode: overlay;
   }
 }
 
-@media all {
+@supports (contain: paint) {
   @supports (-webkit-appearance: none) {
     .containerHome {
       /* Safari Only CSS here */
