@@ -21,8 +21,19 @@ body{
 .containerHome{
     background: url('../../img/formshm.png') #1F1F1F  ;
     background-size: auto;
-    mix-blend-mode: overlay;
+    @media not all and (min-resolution:.001dpcm) { 
+        @supports (-webkit-appearance: none) {
+          /* Safari Only CSS here */
+          background-blend-mode: overlay;
 
+        }
+      }
+    @media  all{ 
+    @supports (-webkit-appearance: none) {
+        mix-blend-mode: non;
+
+    }
+    }
     position: absolute;
     width: 100vw;
     height: 100vh;
