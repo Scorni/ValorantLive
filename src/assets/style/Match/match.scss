@@ -3,6 +3,10 @@
 @import  '../Helpers/ceaser' ;
 @import  '../Helpers/font.scss';
 
+html{
+    overflow-x: hidden;
+
+}
 body{
     margin: 0;
     width: 100%;
@@ -10,6 +14,7 @@ body{
     font-family: 'Monument_Regular';
     overflow-y: hidden;
     overflow-x: hidden;
+
 }
 .firstBorder{
     pointer-events: none;
@@ -59,6 +64,8 @@ body{
     z-index: -1;
 }
 .containerMatch{
+    position: relative;
+
     background: url('../../img/formsMatch.png') #1f1f1f  ;
     background-size: auto;
     mix-blend-mode: overlay;
@@ -103,47 +110,107 @@ body{
     }
 
     .sixthHeader{
-        position: absolute;
         z-index: 3;
-        
-        animation: slideInLeft 3s $easeOutQuint  ;
+        height: auto;
 
+        animation: slideInLeft 2.5s $easeOutQuint  ;
         p{
-            // white-space: nowrap;
-            // text-overflow: ellipsis;
+            text-align: left;
             text-decoration: none;
-            text-align: center;
             -webkit-text-stroke: 1px white;
-            font-size: 2.35rem;
+            @include devices(TV) {
+                font-size: 3vw;
+                margin-top: 0%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(desktop) {
+                font-size: 3vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(laptops) {
+                font-size: 3vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(ipad) {
+                font-size: 5vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(mobile) {
+                font-size: 5vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
             color: transparent;
-            margin-top: 12%;
-            width: 100vw;
-
         }
     }
     .seventhHeader{
-        position: absolute;
         z-index: 3;
-        
-        animation: slideInLeft 3s $easeOutQuint  ;
+        height: auto;
+
+        animation: slideInLeft 2.5s $easeOutQuint  ;
         p{
             text-align: left;
-            
             text-decoration: none;
             -webkit-text-stroke: 1px white;
-            font-size: 2.75rem;
-            color: white;
-            margin-top: 57%;
-            margin-left: 135%;
-            width: 60vw;
+            @include devices(TV) {
+                font-size: 3vw;
+                margin-top: 0%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(desktop) {
+                font-size: 3vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(laptops) {
+                font-size: 3vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(ipad) {
+                font-size: 5vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            @include devices(mobile) {
+                font-size: 5vw;
+                margin-top: 3%;
+                margin-left: 4%;
+                margin-bottom: 0%;
+            }
+            color: transparent;
         }
     }
     .table{
-        position: absolute;
-        width: 100vw;
-        height: 60vh;
         bottom: 10%;
-        
+        margin-left: 10vw;
+        @include devices(TV) {
+            height: 70vh;
+        }
+        @include devices(desktop) {
+            height: 50vh;
+        }
+        @include devices(laptops) {
+            height: 70vh;
+        }
+        @include devices(ipad) {
+            height: 70vh;
+        }
+        @include devices(mobile) {
+            height: 70vh;
+        }
     
         .leagues{
             white-space: nowrap;
@@ -152,15 +219,12 @@ body{
             position: relative;
             z-index: 3;
             td{
-                .imgLeague{
-                    height: 48px;
-                 }
+                
                  white-space: nowrap;
     
                 text-overflow: ellipsis;
                 padding-inline: 1.5vw;
                 padding-block: 0.975vh;
-                width: 300px;
                 .series{
                     text-align: center;
                     a{
@@ -225,7 +289,29 @@ body{
 }
 .player{
     box-shadow: #000000 17px 17px  ;
+    margin-left: -15%;
+    @include devices(TV) {
+        width: 50vw;
+    }
+    @include devices(desktop) {
+        width: 70vw;
+        height: 55vh;
 
+    }
+    @include devices(laptops) {
+        width: 70vw;
+        height: 40vh;
+
+    }
+    @include devices(ipad) {
+        width: 60vw;
+        height: 35vh;
+
+    }
+    @include devices(mobile) {
+        width: 80vw;
+        height: 35vh;
+    }
 }
 .banderoll{
     z-index: 5;
@@ -233,9 +319,12 @@ body{
     display: flex;
     align-items: center;
     height: 4vh;
-    overflow: hidden;
+    
+    overflow-x: hidden;
     white-space: nowrap;
     bottom: 0vh;
+    animation: movingBanderoll 28s linear  infinite ;
+
     .marquee-top__item{
         padding: 0 10px;
     }
@@ -243,17 +332,8 @@ body{
         margin: 0 60px -3px 100px ;
         fill: #ffffff;
     }
-    animation: movingBanderoll 28s linear  infinite ;
 }
-@keyframes movingBanderoll {
-    0%{
-        transform: translate(0%, 0%);
-    }
-    100%{
-        transform: translate(-33.3%, 0%);
 
-    }
-}
 /*
 *** Animation
 */
@@ -281,5 +361,14 @@ body{
     }
     100%{
         fill: #1a1418;
+    }
+}
+@keyframes movingBanderoll {
+    0%{
+        transform: translate(0%, 0%);
+    }
+    100%{
+        transform: translate(-33.3%, 0%);
+
     }
 }

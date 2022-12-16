@@ -161,10 +161,24 @@ body{
     
 }
 .moba{
-    margin-left: 0%;
+    @include devices(TV) {
+        margin-left: 8%;
+    }
+    @include devices(desktop) {
+        margin-left: 10%;
+    }
+    @include devices(laptops) {
+        margin-left: 10%;
+    }
+    @include devices(ipad) {
+        margin-left: 10%;
+    }
+    @include devices(mobile) {
+        margin-left: 0%;
+    }
     .game{
         @include devices(TV) {
-            margin-left: -10%;
+            margin-left: -15%;
         }
         @include devices(desktop) {
             margin-left: -15%;
@@ -332,7 +346,7 @@ body{
         
         .game{
             @include devices(TV) {
-                margin-left: -10%;
+                margin-left: -15%;
             }
             @include devices(desktop) {
                 margin-left: -15%;

@@ -65,7 +65,7 @@ export default function Match(props) {
                                 '<p class="starting">Starting at :'+data[i][j].begin_at+'</p>'
                         }
                         if(YT){
-                            html += '<iframe class="player" type="video/webm" src="'+rawToEmbeddedUrl(YT.items[0].id)+'" width="900" height="500" allowfullscreen></iframe>'
+                            html += '<iframe class="player" type="video/webm" src="'+rawToEmbeddedUrl(YT.items[0].id)+'"  allowfullscreen></iframe>'
                         }else{
                             for(let k in data[i][j].streams_list){
                                 html += '<iframe class="player" type="video/webm" src="'+rawToEmbeddedUrl(data[i][j].streams_list[k].raw_url)+'" width="900" height="500" allowfullscreen></iframe>'
@@ -105,7 +105,7 @@ export default function Match(props) {
             <div className='sixthHeader'>
                 <p>{match}</p>
             </div>
-             <div className='banderoll'>
+            <div className='banderoll'>
                         <div class="marquee-top__item">
                             <strong>{league}</strong>
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +196,7 @@ export default function Match(props) {
                                 <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
                             </svg>
                         </div>
-                    </div>
+            </div>
             <table className='table'>
                 <tbody className='tbody' dangerouslySetInnerHTML={{ __html: table }}>
                     

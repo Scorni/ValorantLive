@@ -497,13 +497,39 @@ body {
   }
 }
 
-.moba {
-  margin-left: 0%;
+@media only screen and (min-width: 1201px) {
+  .moba {
+    margin-left: 8%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .moba {
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .moba {
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .moba {
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .moba {
+    margin-left: 0%;
+  }
 }
 
 @media only screen and (min-width: 1201px) {
   .moba .game {
-    margin-left: -10%;
+    margin-left: -15%;
   }
 }
 
@@ -784,7 +810,7 @@ body {
 
 @media only screen and (min-width: 1201px) {
   .firstBorderHome:hover .moba .game, .secondBorderHome:hover .moba .game, .thirdBorderHome:hover .moba .game, .fourthBorderHome:hover .moba .game, .fifthBorderHome:hover .moba .game {
-    margin-left: -10%;
+    margin-left: -15%;
   }
 }
 

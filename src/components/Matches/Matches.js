@@ -19,7 +19,7 @@ export default function Matches(props) {
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'http://localhost:8000/matches',
+            url: 'https://backend-api-pandascore.up.railway.app/matches',
             params:{
                 games: matchingGame(game),
                 id: tournamentsid
