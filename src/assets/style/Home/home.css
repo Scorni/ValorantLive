@@ -296,14 +296,6 @@ body {
   }
 }
 
-@media all {
-  @supports (-webkit-appearance: none) {
-    .background {
-      mix-blend-mode: multiply;
-    }
-  }
-}
-
 .containerHome {
   background: url("../../img/formshm.png") #1F1F1F;
   background-size: auto;
@@ -318,14 +310,6 @@ body {
     .containerHome {
       /* Safari Only CSS here */
       background-blend-mode: overlay;
-    }
-  }
-}
-
-@media all {
-  @supports (-webkit-appearance: none) {
-    .containerHome {
-      mix-blend-mode: overlay;
     }
   }
 }

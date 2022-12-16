@@ -283,7 +283,6 @@ body {
 .background {
   background: url("../../img/noises.svg");
   position: absolute;
-  mix-blend-mode: multiply;
   width: 100vw;
   height: 100vh;
   z-index: -1;
@@ -292,7 +291,6 @@ body {
 .containerSeriesTournaments {
   background: url("../../img/formsTournamentsSeries.png") #1F1F1F;
   background-size: auto;
-  mix-blend-mode: overlay;
   position: absolute;
   width: 100vw;
   height: 100vh;
