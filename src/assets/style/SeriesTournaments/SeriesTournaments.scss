@@ -36,19 +36,19 @@ body{
             text-transform: uppercase;
             color: white;
             @include devices(TV) {
-                font-size: 6vw;
+                font-size: 4vw;
             }
             @include devices(desktop) {
-                font-size: 8vw;
+                font-size: 5vw;
             }
             @include devices(laptops) {
-                font-size: 10vw;
+                font-size: 5vw;
             }
             @include devices(ipad) {
-                font-size: 10vw;
+                font-size: 5vw;
             }
             @include devices(mobile) {
-                font-size: 12vw;
+                font-size: 6vw;
             }
             text-align: left;
             margin-left: 4%;

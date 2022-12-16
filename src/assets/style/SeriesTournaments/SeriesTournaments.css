@@ -315,31 +315,31 @@ body {
 
 @media only screen and (min-width: 1201px) {
   .containerSeriesTournaments .mainHeader p {
-    font-size: 6vw;
+    font-size: 4vw;
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .containerSeriesTournaments .mainHeader p {
-    font-size: 8vw;
+    font-size: 5vw;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .containerSeriesTournaments .mainHeader p {
-    font-size: 10vw;
+    font-size: 5vw;
   }
 }
 
 @media only screen and (max-width: 820px) {
   .containerSeriesTournaments .mainHeader p {
-    font-size: 10vw;
+    font-size: 5vw;
   }
 }
 
 @media only screen and (max-width: 481px) {
   .containerSeriesTournaments .mainHeader p {
-    font-size: 12vw;
+    font-size: 6vw;
   }
 }
 
