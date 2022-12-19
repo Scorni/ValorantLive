@@ -127,7 +127,7 @@ export default function Tournaments(props) {
     else{
         return (
 
-            <div className='containerLeagues'>
+            <div className='containerTournaments'>
                 <div className='background'></div>
                 <div className='firstBorder'></div>
                 <div className='secondBorder'></div>

@@ -108,7 +108,7 @@ export default function Valorant(props) {
     else{
         return (
 
-            <div className='containerLeagues'>
+            <div className='containerSeries'>
                 <div className='background'></div>
                 <div className='firstBorder'></div>
                 <div className='secondBorder'></div>
