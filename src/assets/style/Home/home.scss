@@ -10,24 +10,29 @@ body{
     font-family: 'Monument_Regular';
     overflow-y: hidden;
 }
-.background{
-    background: url('../../img/noises.svg');
-    position: absolute;
-    @media not all and (min-resolution:.001dpcm) { 
-        @supports (-webkit-appearance: none) and (stroke-color:transparent){
-          /* Safari Only CSS here */
-          background-blend-mode: multiply;
 
-        }
+//chrome
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+    .background{
+        background: url('../../img/noises.svg');
+        position: absolute;
+        mix-blend-mode: overlay;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
     }
-   
-    // @media screen and(-webkit-min-device-pixel-ratio: 0) and (min-resolution:.001dpcm) {
-    //     mix-blend-mode: overlay;
-    // }
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-}
+ }
+ //safari
+ @media not all and (min-resolution:.001dpcm) { 
+    .background{
+        background: url('../../img/noises.svg');
+        position: absolute;
+        mix-blend-mode: overlay;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+    }
+ }
 .containerHome{
     background: url('../../img/formshm.png') #1F1F1F  ;
     background-size: auto;
