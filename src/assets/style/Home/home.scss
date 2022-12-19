@@ -14,11 +14,8 @@ body{
     background: url('../../img/noises.svg');
     position: absolute;
     @media not all and (min-resolution:.001dpcm) { 
-        @supports (-webkit-appearance: none) {
           /* Safari Only CSS here */
           background-blend-mode: multiply;
-
-        }
     }
    
     @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
