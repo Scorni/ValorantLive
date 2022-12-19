@@ -105,5 +105,45 @@ export default function Valorant(props) {
             </div>
         );
     }
+    else{
+        return (
+
+            <div className='containerLeagues'>
+                <div className='background'></div>
+                <div className='firstBorder'></div>
+                <div className='secondBorder'></div>
+                <div className='fourthBorder'></div>
+                <div className='fifthBorder'></div>
+                <div className='mainHeader'>
+                    <a href='/'><p>{matchFullName(game)}</p></a>
+                </div>
+                <div className='secondHeader'>
+                    <p>LEAGUES</p>
+                </div>
+                
+                <div>
+                    <div className='pagination'>
+                        <div onClick={() => previousPage() } className='paginationPreviousTest'>
+                                <Arrow  className="previousArrow"/>
+                            </div>
+                            <div onClick={() => nextPage()} className='paginationNextTest'>
+                                <Arrow  className="nextArrow"/>
+                            </div>
+                    </div>
+                    <table className='table'>
+                        <tbody className='tbody' >
+                            <tr className='leagues' >
+                                <td >
+                                    <p className='series'>
+                                        Loading..
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        );
+    }
     
 }

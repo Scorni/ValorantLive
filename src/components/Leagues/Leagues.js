@@ -121,7 +121,14 @@ export default function Valorant(props) {
                 </div>
                 
                 <div>
-                    
+                    <div className='pagination'>
+                        <div onClick={() => previousPage() } className='paginationPreviousTest'>
+                                <Arrow  className="previousArrow"/>
+                            </div>
+                            <div onClick={() => nextPage()} className='paginationNextTest'>
+                                <Arrow  className="nextArrow"/>
+                            </div>
+                    </div>
                     <table className='table'>
                         <tbody className='tbody' >
                             <tr className='leagues' >
