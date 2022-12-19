@@ -14,7 +14,7 @@ body{
     background: url('../../img/noises.svg');
     position: absolute;
     @media not all and (min-resolution:.001dpcm) { 
-        @supports (-webkit-appearance: none) {
+        @supports (-webkit-appearance: none) and (stroke-color:transparent){
           /* Safari Only CSS here */
           background-blend-mode: multiply;
 
@@ -22,9 +22,7 @@ body{
     }
    
     @media screen and(-webkit-min-device-pixel-ratio: 0) and (min-resolution:.001dpcm) {
-        .selector {
-            mix-blend-mode: overlay;
-        }
+        mix-blend-mode: overlay;
     }
     width: 100vw;
     height: 100vh;
@@ -34,17 +32,14 @@ body{
     background: url('../../img/formshm.png') #1F1F1F  ;
     background-size: auto;
     @media not all and (min-resolution:.001dpcm) { 
-          @supports (-webkit-appearance: none) {
+          @supports (-webkit-appearance: none) and (stroke-color:transparent){
             /* Safari Only CSS here */
             background-blend-mode: overlay;
   
           }
     }
     @media screen and(-webkit-min-device-pixel-ratio: 0) and (min-resolution:.001dpcm){
-        .selector {
-            mix-blend-mode: overlay;
-        }
-        
+        mix-blend-mode: overlay;
     }
     position: absolute;
     width: 100vw;
