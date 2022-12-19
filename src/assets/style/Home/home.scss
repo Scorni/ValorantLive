@@ -20,7 +20,10 @@ body{
 
         }
     }
-    
+   
+    @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+        mix-blend-mode: overlay;
+    }
     width: 100vw;
     height: 100vh;
     z-index: -1;
@@ -33,7 +36,9 @@ body{
           background-blend-mode: overlay;
 
     }
-    
+    @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+        mix-blend-mode: overlay;
+    }
     position: absolute;
     width: 100vw;
     height: 100vh;
