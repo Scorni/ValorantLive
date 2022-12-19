@@ -68,7 +68,7 @@ export default function Match(props) {
                             html += '<iframe class="player" type="video/webm" src="'+rawToEmbeddedUrl(YT.items[0].id)+'"  allowfullscreen></iframe>'
                         }else{
                             for(let k in data[i][j].streams_list){
-                                html += '<iframe class="player" type="video/webm" src="'+rawToEmbeddedUrl(data[i][j].streams_list[k].raw_url)+'" width="900" height="500" allowfullscreen></iframe>'
+                                html += '<iframe class="player" type="video/webm" src="'+rawToEmbeddedUrl(data[i][j].streams_list[k].raw_url)+'"  allowfullscreen></iframe>'
                             }
                         }
                     html += "</td>"

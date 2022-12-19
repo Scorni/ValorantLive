@@ -410,7 +410,7 @@ body {
 
 @media only screen and (min-width: 1201px) {
   .containerMatch .sixthHeader p {
-    font-size: 3vw;
+    font-size: 2.25vw;
     margin-top: 0%;
     margin-left: 4%;
     margin-bottom: 0%;
@@ -513,6 +513,7 @@ body {
 }
 
 .containerMatch .table {
+  z-index: 4;
   bottom: 10%;
   margin-left: 10vw;
 }

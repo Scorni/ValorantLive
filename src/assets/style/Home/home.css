@@ -279,27 +279,25 @@ body {
   overflow-y: hidden;
 }
 
-.background {
-  background: url("../../img/noises.svg");
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-}
-
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) {
-    .background {
-      /* Safari Only CSS here */
-      background-blend-mode: multiply;
-    }
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .background {
+    background: url("../../img/noises.svg");
+    position: absolute;
+    mix-blend-mode: overlay;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
   }
 }
 
-@supports (contain: paint) {
+@media not all and (min-resolution: 0.001dpcm) {
   .background {
-    /* Safari Only CSS here */
-    mix-blend-mode: multiply;
+    background: url("../../img/noises.svg");
+    position: absolute;
+    mix-blend-mode: overlay;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
   }
 }
 
@@ -313,16 +311,11 @@ body {
 }
 
 @media not all and (min-resolution: 0.001dpcm) {
-  .containerHome {
-    /* Safari Only CSS here */
-    background-blend-mode: overlay;
-  }
-}
-
-@supports (contain: paint) {
-  .containerHome {
-    /* Safari Only CSS here */
-    mix-blend-mode: overlay;
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .containerHome {
+      /* Safari Only CSS here */
+      background-blend-mode: overlay;
+    }
   }
 }
 
