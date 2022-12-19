@@ -37,9 +37,8 @@ body{
           background-blend-mode: overlay;
 
     }
-    @supports (contain: paint) { 
-          /* Safari Only CSS here */
-          mix-blend-mode: overlay;
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        mix-blend-mode: overlay;
     }
     position: absolute;
     width: 100vw;
