@@ -194,6 +194,7 @@ body{
         }
     }
     .table{
+        z-index:4 ;
         bottom: 10%;
         margin-left: 10vw;
         @include devices(TV) {
