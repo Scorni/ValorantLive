@@ -146,12 +146,12 @@ export default function Matches(props) {
                 
                 <div>
                     <div className='pagination'>
-                        <div onClick={() => previousPage() } className='paginationPreviousTest'>
-                                <Arrow  className="previousArrow"/>
-                            </div>
-                            <div onClick={() => nextPage()} className='paginationNextTest'>
-                                <Arrow  className="nextArrow"/>
-                            </div>
+                        <div className='paginationPreviousTest'>
+                            <Arrow  className="previousArrow"/>
+                        </div>
+                        <div className='paginationNextTest'>
+                            <Arrow  className="nextArrow"/>
+                        </div>
                     </div>
                     <table className='table'>
                         <tbody className='tbody' >
