@@ -20,10 +20,8 @@ body{
 
         }
     }
-    @supports (contain: paint) {
-          /* Safari Only CSS here */
-          mix-blend-mode: multiply;
-
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        mix-blend-mode: overlay;
     }
     width: 100vw;
     height: 100vh;
