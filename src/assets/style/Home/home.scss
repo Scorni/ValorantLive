@@ -22,7 +22,9 @@ body{
     }
    
     @media screen and(-webkit-min-device-pixel-ratio: 0) and (min-resolution:.001dpcm) {
-        mix-blend-mode: overlay;
+        .selector {
+            mix-blend-mode: overlay;
+        }
     }
     width: 100vw;
     height: 100vh;
@@ -39,7 +41,10 @@ body{
           }
     }
     @media screen and(-webkit-min-device-pixel-ratio: 0) and (min-resolution:.001dpcm){
-        mix-blend-mode: overlay;
+        .selector {
+            mix-blend-mode: overlay;
+        }
+        
     }
     position: absolute;
     width: 100vw;
