@@ -64,103 +64,20 @@ export default function Valorant(props) {
                         </div>
                         
                     }
-                    {/* <div className='banderoll'>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                        <div class="marquee-top__item">
-                            <strong>LEAGUES</strong>
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#020202"/>
-                            </svg>
-                        </div>
-                    </div> */}
+                    
                     
                     <table className='table'>
                         <tbody className='tbody' >
                         
-
+                        {!paginatedData &&
+                            <tr className='leagues' >
+                                <td >
+                                    <p className='series'>
+                                        Loading..
+                                    </p>
+                                </td>
+                            </tr>
+                        }
                         {paginatedData &&
                         (paginatedData).map((value, index) => {
                             return (
@@ -182,6 +99,38 @@ export default function Valorant(props) {
                         })
                         
                     }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        );
+    }else{
+        return (
+
+            <div className='containerLeagues'>
+                <div className='background'></div>
+                <div className='firstBorder'></div>
+                <div className='secondBorder'></div>
+                <div className='fourthBorder'></div>
+                <div className='fifthBorder'></div>
+                <div className='mainHeader'>
+                    <a href='/'><p>{matchFullName(game)}</p></a>
+                </div>
+                <div className='secondHeader'>
+                    <p>LEAGUES</p>
+                </div>
+                
+                <div>
+                    
+                    <table className='table'>
+                        <tbody className='tbody' >
+                            <tr className='leagues' >
+                                <td >
+                                    <p className='series'>
+                                        Loading..
+                                    </p>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
