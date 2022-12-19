@@ -21,7 +21,7 @@ body{
         }
     }
    
-    @media screen and(-webkit-min-device-pixel-ratio: 0) {
+    @media screen and(-webkit-min-device-pixel-ratio: 0) and (min-resolution:.001dpcm) {
         mix-blend-mode: overlay;
     }
     width: 100vw;
@@ -38,7 +38,7 @@ body{
   
           }
     }
-    @media screen and(-webkit-min-device-pixel-ratio: 0){
+    @media screen and(-webkit-min-device-pixel-ratio: 0) and (min-resolution:.001dpcm){
         mix-blend-mode: overlay;
     }
     position: absolute;
