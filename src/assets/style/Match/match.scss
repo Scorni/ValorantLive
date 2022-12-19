@@ -293,6 +293,8 @@ body{
     margin-left: -15%;
     @include devices(TV) {
         width: 50vw;
+        height: 50vh;
+
     }
     @include devices(desktop) {
         width: 70vw;
