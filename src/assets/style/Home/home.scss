@@ -9,6 +9,7 @@ body{
     height: 100%;
     font-family: 'Monument_Regular';
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 //chrome
@@ -34,6 +35,7 @@ body{
     }
  }
 .containerHome{
+    overflow-y: hidden;
     background: url('../../img/formshm.png') #1F1F1F  ;
     background-size: auto;
     @media not all and (min-resolution:.001dpcm) { 
