@@ -63,13 +63,13 @@ body{
        
         mix-blend-mode: overlay;
     }
- }
+}
  //safari
  @media not all and (min-resolution:.001dpcm) { 
     .containerLeagues{
         background-blend-mode: overlay;
     }
- }
+}
 .containerLeagues{
     background: url('../../img/formsLeagues.png') #1F1F1F  ;
     background-size: auto;
@@ -80,7 +80,7 @@ body{
           background-blend-mode: overlay;
 
         }
-  }
+    }
     @extend 
         .flexColumn;
     width: 100vw;
@@ -131,7 +131,7 @@ body{
             text-decoration: none;
             -webkit-text-stroke: 1px white;
             @include devices(TV) {
-                font-size: 3vw;
+                font-size: 2.5vw;
             }
             @include devices(desktop) {
                 font-size: 3vw;
@@ -156,7 +156,7 @@ body{
         background-blend-mode: overlay;
         width: 100vw;
         @include devices(TV) {
-            height: 77vh;
+            height: 100%;
         }
         @include devices(desktop) {
             height: 80vh;

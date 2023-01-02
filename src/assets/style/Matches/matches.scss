@@ -18,10 +18,21 @@ body{
     height: 100vh;
     z-index: -1;
 }
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+    .containerMatches{
+       
+        mix-blend-mode: overlay;
+    }
+}
+ //safari
+ @media not all and (min-resolution:.001dpcm) { 
+    .containerMatches{
+        background-blend-mode: overlay;
+    }
+}
 .containerMatches{
     background: url('../../img/formsMatches.png') #1f1f1f  ;
     background-size: auto;
-    // mix-blend-mode: overlay;
     @extend 
     .flexColumn;
     width: 100vw;
@@ -71,7 +82,7 @@ body{
             text-decoration: none;
             -webkit-text-stroke: 1px white;
             @include devices(TV) {
-                font-size: 3vw;
+                font-size: 2.5vw;
                 margin-top: 0%;
                 margin-left: 4%;
                 margin-bottom: 0%;
@@ -112,7 +123,7 @@ body{
             text-decoration: none;
             -webkit-text-stroke: 1px white;
             @include devices(TV) {
-                font-size: 3vw;
+                font-size: 2.5vw;
                 margin-top: 0%;
                 margin-left: 4%;
                 margin-bottom: 0%;
@@ -153,7 +164,7 @@ body{
             text-decoration: none;
             -webkit-text-stroke: 1px white;
             @include devices(TV) {
-                font-size: 3vw;
+                font-size: 2.5vw;
                 margin-top: 0%;
                 margin-left: 4%;
                 margin-bottom: 0%;
@@ -190,7 +201,7 @@ body{
         background-blend-mode: overlay;
         width: 100vw;
         @include devices(TV) {
-            height: 53vh;
+            height: 100%;
         }
         @include devices(desktop) {
             height: 80vh;

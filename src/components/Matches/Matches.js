@@ -144,7 +144,6 @@ export default function Matches(props) {
                     <p>LEAGUES</p>
                 </div>
                 
-                <div>
                     <div className='pagination'>
                         <div className='paginationPreviousTest'>
                             <Arrow  className="previousArrow"/>
@@ -165,7 +164,6 @@ export default function Matches(props) {
                         </tbody>
                     </table>
                 </div>
-            </div>
         );
     };
 }

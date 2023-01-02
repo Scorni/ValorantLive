@@ -287,6 +287,18 @@ body {
   z-index: -1;
 }
 
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .containerMatches {
+    mix-blend-mode: overlay;
+  }
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  .containerMatches {
+    background-blend-mode: overlay;
+  }
+}
+
 .containerMatches {
   background: url("../../img/formsMatches.png") #1f1f1f;
   background-size: auto;
@@ -363,7 +375,7 @@ body {
 
 @media only screen and (min-width: 1201px) {
   .containerMatches .secondHeader p {
-    font-size: 3vw;
+    font-size: 2.5vw;
     margin-top: 0%;
     margin-left: 4%;
     margin-bottom: 0%;
@@ -421,7 +433,7 @@ body {
 
 @media only screen and (min-width: 1201px) {
   .containerMatches .thirdHeader p {
-    font-size: 3vw;
+    font-size: 2.5vw;
     margin-top: 0%;
     margin-left: 4%;
     margin-bottom: 0%;
@@ -479,7 +491,7 @@ body {
 
 @media only screen and (min-width: 1201px) {
   .containerMatches .fourthHeader p {
-    font-size: 3vw;
+    font-size: 2.5vw;
     margin-top: 0%;
     margin-left: 4%;
     margin-bottom: 0%;
@@ -531,7 +543,7 @@ body {
 
 @media only screen and (min-width: 1201px) {
   .containerMatches .table {
-    height: 53vh;
+    height: 100%;
   }
 }
 
