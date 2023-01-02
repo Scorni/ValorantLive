@@ -49,6 +49,7 @@ body{
     width: 20%;
     border-right: 1px #929292 solid;
 }
+
 .background{
     background: url('../../img/noises.svg');
     position: absolute;
@@ -57,11 +58,29 @@ body{
     height: 100vh;
     z-index: -1;
 }
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+    .containerLeagues{
+       
+        mix-blend-mode: overlay;
+    }
+ }
+ //safari
+ @media not all and (min-resolution:.001dpcm) { 
+    .containerLeagues{
+        background-blend-mode: overlay;
+    }
+ }
 .containerLeagues{
     background: url('../../img/formsLeagues.png') #1F1F1F  ;
     background-size: auto;
     // mix-blend-mode: overlay;
+    @media not all and (min-resolution:.001dpcm) { 
+        @supports (-webkit-appearance: none) and (stroke-color:transparent){
+          /* Safari Only CSS here */
+          background-blend-mode: overlay;
 
+        }
+  }
     @extend 
         .flexColumn;
     width: 100vw;
