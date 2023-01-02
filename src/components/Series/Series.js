@@ -120,28 +120,25 @@ export default function Valorant(props) {
                 <div className='secondHeader'>
                     <p>LEAGUES</p>
                 </div>
-                
-                <div>
-                    <div className='pagination'>
-                        <div className='paginationPreviousTest'>
-                            <Arrow  className="previousArrow"/>
-                        </div>
-                        <div className='paginationNextTest'>
-                            <Arrow  className="nextArrow"/>
-                        </div>
+                <div className='pagination'>
+                    <div className='paginationPreviousTest'>
+                        <Arrow  className="previousArrow"/>
                     </div>
-                    <table className='table'>
-                        <tbody className='tbody' >
-                            <tr className='leagues' >
-                                <td >
-                                    <p className='series'>
-                                        Loading..
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div className='paginationNextTest'>
+                        <Arrow  className="nextArrow"/>
+                    </div>
                 </div>
+                <table className='table'>
+                    <tbody className='tbody' >
+                        <tr className='leagues' >
+                            <td >
+                                <p className='series'>
+                                    Loading..
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         );
     }

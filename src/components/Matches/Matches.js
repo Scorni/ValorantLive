@@ -87,7 +87,6 @@ export default function Matches(props) {
                     <p>{tournament} - {matches}</p>
                 </div>
                 
-                <div>
                     {totalPagesData > 1 &&
                         <div className='pagination'>
                             <div onClick={() => previousPage() } className='paginationPreviousTest'>
@@ -125,7 +124,6 @@ export default function Matches(props) {
                         </tbody>
                     </table>
                 </div>
-            </div>
         );
     }
     else{
@@ -144,26 +142,26 @@ export default function Matches(props) {
                     <p>LEAGUES</p>
                 </div>
                 
-                    <div className='pagination'>
+                <div className='pagination'>
                         <div className='paginationPreviousTest'>
                             <Arrow  className="previousArrow"/>
                         </div>
                         <div className='paginationNextTest'>
                             <Arrow  className="nextArrow"/>
                         </div>
-                    </div>
-                    <table className='table'>
-                        <tbody className='tbody' >
-                            <tr className='leagues' >
-                                <td >
-                                    <p className='series'>
-                                        Loading..
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
+                <table className='table'>
+                    <tbody className='tbody' >
+                        <tr className='leagues' >
+                            <td >
+                                <p className='series'>
+                                    Loading..
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         );
     };
 }
