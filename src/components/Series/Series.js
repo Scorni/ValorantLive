@@ -63,7 +63,6 @@ export default function Valorant(props) {
                 <div className='thirdHeader'>
                     <p>{league}</p>
                 </div>
-                <div>
                     {totalPagesData > 1 &&
                        <div className='pagination'>
                             <div onClick={() => previousPage() } className='paginationPreviousTest'>
@@ -102,7 +101,6 @@ export default function Valorant(props) {
                         </tbody>
                     </table>
                 </div>
-            </div>
         );
     }
     else{

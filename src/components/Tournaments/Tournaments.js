@@ -83,7 +83,6 @@ export default function Tournaments(props) {
                 <div className='fourthHeader'>
                     <p>{tournament}</p>
                 </div>
-                <div>
                     {totalPagesData > 1 &&
                         <div className='pagination'>
                             <div onClick={() => previousPage() } className='paginationPreviousTest'>
@@ -121,7 +120,6 @@ export default function Tournaments(props) {
                         </tbody>
                     </table>
                 </div>
-            </div>
         );
     }
     else{
